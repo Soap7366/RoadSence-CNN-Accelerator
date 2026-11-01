@@ -320,7 +320,7 @@ class Demo(tk.Tk):
         global SYSTEM_FONT
         SYSTEM_FONT = tkfont.nametofont('TkDefaultFont').actual('family')
         self.dpi_scale = self.winfo_fpixels('1i') / 96
-        self.title('roadsense')
+        self.title('RoadSense')
         self.app_icon = tk.PhotoImage(file=str(Path(__file__).resolve().parents[2] / 'build/roadsense.png'))
         self.iconphoto(True, self.app_icon)
         if sys.platform == 'win32':
@@ -449,7 +449,7 @@ class Demo(tk.Tk):
                         sliderthickness=round(6*self.dpi_scale), gripcount=0)
         header = self.header = tk.Frame(self, bg=BG)
         header.pack(fill='x', padx=30, pady=20)
-        self.label(header, 'roadsense', 22).pack(side='left')
+        self.label(header, 'RoadSense', 22).pack(side='left')
         self.connection_label = self.label(header, 'PYNQ-Z2 · 未连接', 10, ACCENT)
         # Connection status is displayed beside task progress.
         self.setup = tk.Frame(self, bg=BG)
@@ -483,7 +483,7 @@ class Demo(tk.Tk):
         self.file_label.pack(anchor='w', pady=6)
         row = tk.Frame(card, bg=PANEL)
         row.pack(fill='x')
-        self.process_button = self.button(row, '处理视频', self.process_video)
+        self.process_button = self.button(row, '处理录像', self.process_video)
         self.process_button.pack(side='right')
         self.cancel_button = self.button(row, '取消任务', self.cancel_task)
         self.cancel_button.pack(side='right', padx=8)
@@ -774,7 +774,7 @@ class Demo(tk.Tk):
         self.start_button.configure(state='disabled')
         self.process_button.configure(state='normal' if self.board.ready else 'disabled')
         self.progress.configure(value=0)
-        self.progress_text.configure(text='视频已选择，点击处理视频')
+        self.progress_text.configure(text='录像已选择，点击处理录像')
         self.cap, self.frame = capture, frame
         fps = capture.get(cv2.CAP_PROP_FPS)
         self.fps = fps if math.isfinite(fps) and fps > 0 else 30
