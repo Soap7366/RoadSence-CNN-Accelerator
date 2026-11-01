@@ -142,7 +142,11 @@ class Wizard(tk.Tk):
     def __init__(self):
         super().__init__()
         from pscnn.runtime_config import load_config
-        self.title('PYNQ CNN · 一键准备')
+        self.title('roadsense · 一键准备')
+        self.app_icon = tk.PhotoImage(file=str(ROOT/'build/roadsense.png'))
+        self.iconphoto(True, self.app_icon)
+        if sys.platform == 'win32':
+            self.iconbitmap(str(ROOT/'build/roadsense.ico'))
         self.geometry('800x640')
         self.events = queue.Queue()
         self.busy = False

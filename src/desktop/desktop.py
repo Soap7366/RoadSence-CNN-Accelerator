@@ -320,7 +320,11 @@ class Demo(tk.Tk):
         global SYSTEM_FONT
         SYSTEM_FONT = tkfont.nametofont('TkDefaultFont').actual('family')
         self.dpi_scale = self.winfo_fpixels('1i') / 96
-        self.title('PATH · PYNQ-Z2 碰撞预警演示')
+        self.title('roadsense')
+        self.app_icon = tk.PhotoImage(file=str(Path(__file__).resolve().parents[2] / 'build/roadsense.png'))
+        self.iconphoto(True, self.app_icon)
+        if sys.platform == 'win32':
+            self.iconbitmap(str(Path(__file__).resolve().parents[2] / 'build/roadsense.ico'))
         self.geometry('1280x850')
         self.minsize(960, 700)
         self.configure(bg=BG)
@@ -445,15 +449,15 @@ class Demo(tk.Tk):
                         sliderthickness=round(6*self.dpi_scale), gripcount=0)
         header = self.header = tk.Frame(self, bg=BG)
         header.pack(fill='x', padx=30, pady=20)
-        self.label(header, 'PATH  /  碰撞预警', 22).pack(side='left')
+        self.label(header, 'roadsense', 22).pack(side='left')
         self.connection_label = self.label(header, 'PYNQ-Z2 · 未连接', 10, ACCENT)
         # Connection status is displayed beside task progress.
         self.setup = tk.Frame(self, bg=BG)
         self.setup.pack(fill='both', expand=True, padx=50, pady=12)
         tagline = tk.Frame(header, bg=BG)
-        tagline.pack(side='left', padx=(40, 0))
-        self.label(tagline, 'VISION INTO MOTION', 9, ACCENT).pack(anchor='w')
-        self.label(tagline, '看见前方，预见风险。', 18).pack(anchor='w', pady=(3, 0))
+        tagline.pack(side='right')
+        self.label(tagline, 'VISION INTO MOTION', 9, ACCENT).pack(anchor='e')
+        self.label(tagline, '看见前方，预见风险。', 18).pack(anchor='e', pady=(3, 0))
         card = tk.Frame(self.setup, bg=PANEL, padx=22, pady=14)
         card.pack(fill='x', pady=8)
         row = tk.Frame(card, bg=PANEL)
@@ -471,11 +475,11 @@ class Demo(tk.Tk):
         self.connect_button.pack(side='right')
         row = tk.Frame(card, bg=PANEL)
         row.pack(fill='x', pady=(12, 0))
-        self.label(row, '02 / 行驶视频', 12, ACCENT).pack(side='left')
-        self.choose_button = self.button(row, '选择视频…', self.choose)
+        self.label(row, '真实行驶录像', 12, ACCENT).pack(side='left')
+        self.choose_button = self.button(row, '选择录像…', self.choose)
         self.choose_button.pack(side='right')
         self.choose_button.configure(state='disabled')
-        self.file_label = self.label(card, '板卡初始化完成后，选择本地视频', 11, MUTED)
+        self.file_label = self.label(card, '板卡初始化完成后，选择本地录像', 11, MUTED)
         self.file_label.pack(anchor='w', pady=6)
         row = tk.Frame(card, bg=PANEL)
         row.pack(fill='x')
@@ -514,7 +518,7 @@ class Demo(tk.Tk):
         self.metrics_canvas.bind('<Configure>', lambda event: self.metrics_canvas.itemconfigure(metrics_window, width=event.width))
         self.bind('<MouseWheel>', self.scroll_metrics, add='+')
         self.metric_values = {}
-        self.metrics_body.columnconfigure(0, minsize=round(260*self.dpi_scale))
+        self.metrics_body.columnconfigure(0, minsize=round(520*self.dpi_scale))
         self.metrics_body.columnconfigure(1, weight=1)
         for column, title in enumerate(['项目', '耗时 / 速率']):
             self.label(self.metrics_body, title, 11, ACCENT, anchor='w').grid(row=0, column=column, sticky='ew', padx=12, pady=7)
@@ -526,8 +530,7 @@ class Demo(tk.Tk):
             value.grid(row=number, column=1, sticky='w', padx=12, pady=5)
             self.metric_values[key] = value
         self.metric_values['pl'].configure(text='待实测')
-        self.label(self.metrics_body, 'PL：本次采样逐图平均，PS侧计时，含启动检查与完成检测开销。', 10, MUTED).grid(row=5, column=0, columnspan=2, sticky='w', pady=(6, 0))
-        self.label(self.metrics_body, '传输：PS接收JPEG正文的计时与有效速率，包含SSH缓冲影响。', 10, MUTED).grid(row=6, column=0, columnspan=2, sticky='w')
+        self.label(self.metrics_body, '传输：PS接收JPEG正文的计时与有效速率，包含SSH缓冲影响。', 10, MUTED).grid(row=5, column=0, columnspan=2, sticky='w', pady=(6, 0))
 
         self.dashboard = tk.Frame(self, bg=BG)
         workspace = tk.Frame(self.dashboard, bg=BG)
@@ -684,7 +687,7 @@ class Demo(tk.Tk):
                 self.busy = False
                 self.cancel_button.configure(state='disabled')
                 self.connection_label.configure(text='PYNQ-Z2 · 已就绪')
-                self.progress_text.configure(text=f"连接就绪 · {value['connection_s']:.2f} s · 请选择视频")
+                self.progress_text.configure(text=f"连接就绪 · {value['connection_s']:.2f} s · 请选择录像")
                 self.metric_values['initialization'].configure(text=f"{value['initialization_s']:.3f} s")
                 self.choose_button.configure(state='normal')
                 self.connect_button.configure(state='normal', text='重新连接')
@@ -754,7 +757,7 @@ class Demo(tk.Tk):
     def choose(self):
         if self.busy:
             return
-        path = filedialog.askopenfilename(title='选择行驶视频', filetypes=[('视频文件', '*.mp4 *.avi *.mov *.mkv *.webm *.m4v'), ('所有文件', '*.*')])
+        path = filedialog.askopenfilename(title='选择行驶录像', filetypes=[('录像文件', '*.mp4 *.avi *.mov *.mkv *.webm *.m4v'), ('所有文件', '*.*')])
         if not path:
             return
         capture = cv2.VideoCapture(path)
@@ -957,7 +960,7 @@ class Demo(tk.Tk):
             for y in range(int(h * .55), int(h), 45):
                 c.create_line(0, y, w, y, fill='#29232e')
             c.create_text(w / 2, h * .26, text='等待行驶画面', fill=TEXT, font=(SYSTEM_FONT, 22, 'bold'))
-            c.create_text(w / 2, h * .35, text='仪表预览 · 返回后可选择视频', fill=MUTED, font=(SYSTEM_FONT, 13))
+            c.create_text(w / 2, h * .35, text='仪表预览 · 返回后可选择录像', fill=MUTED, font=(SYSTEM_FONT, 13))
         radius = min(100, w * .20)
         cx, cy = radius + 40, h - 55
         # RGBA image keeps the video visible beneath the instrument panel.

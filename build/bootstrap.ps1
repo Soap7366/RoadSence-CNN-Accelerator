@@ -22,7 +22,7 @@ try {
     }
     if ($Mode -eq 'start') {
         Add-Type -AssemblyName System.Windows.Forms
-        [System.Windows.Forms.MessageBox]::Show('Please run Prepare.exe or Prepare.cmd first.', 'PYNQ CNN') | Out-Null
+        [System.Windows.Forms.MessageBox]::Show('Please run Prepare.exe or Prepare.cmd first.', 'roadsense') | Out-Null
         exit 1
     }
     $candidates = @()
