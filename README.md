@@ -1,6 +1,6 @@
-# PYNQ CNN reproducible project
+# RoadSense
 
-这是独立的源码与运行交付包。PC端不再读取原工作区的vendor、SSH依赖、Tcl或交接包路径。统一入口是 `manage.py`，可从任意工作目录调用。首次setup后，Windows可双击根目录start.cmd，Linux/macOS可执行sh start.sh。
+这是 RoadSense 行驶录像碰撞预警演示软件的独立源码与运行交付包。PC端不再读取原工作区的vendor、SSH依赖、Tcl或交接包路径。Windows首次使用运行 `Prepare.exe`，准备完成后运行 `roadsense.exe`；原 `Start.exe`、`start.cmd` 入口保留。命令行统一入口是 `manage.py`，可从任意工作目录调用；Linux/macOS先setup，再执行 `sh start.sh`。
 
 ## Windows 一键准备与启动
 
@@ -8,13 +8,13 @@
 2. 双击根目录 `Prepare.exe`（也可双击 `Prepare.cmd`）。已有可用环境会直接打开准备窗口；缺少环境时自动下载依赖，缺少 Python 时从 python.org 下载并验证签名后，在本文件夹的 `.runtime/python312` 中安装 Python 3.12.10，不修改 PATH。
 3. 输入板卡实际 IP（默认 `192.168.2.99`）和密码，点击“开始准备”。无需填写电脑 IP。
 4. 已能连接板卡或有线网卡已在相同网段时不修改网卡；需要配置时选择直连板卡的有线网卡，程序添加同网段 `/24` 地址，Windows 会请求管理员授权。不修改 Wi-Fi；带默认网关的有线网卡不会自动配置。准备窗口可恢复程序修改前的网卡设置。
-5. 等待“准备完成”。以后双击 `Start.exe` 或 `start.cmd` 即可使用，软件内连接板卡时再次输入密码。
+5. 等待“准备完成”。以后双击 `roadsense.exe`（也可用 `Start.exe` 或 `start.cmd`）即可使用，软件内连接板卡时再次输入密码。
 
 准备程序会完成首次 SSH 指纹登记、密码验证、独立版本部署、文件读回校验、板端构建、镜像加载与真实图像推理检查。首次登记依赖你输入正确地址并连接可信板卡；已有指纹发生变化时拒绝覆盖。密码只保留在当前进程内存中，不写入配置、环境变量或启动参数。已有可用部署会先检查并复用；部署检查返回错误时创建新版本，网络超时直接停止并提示，不把网络问题当成部署损坏。
 
 窗口显示当前步骤、总用时、上传进度和等待时间，支持取消并终止相关子进程。上传/读回连续30秒无传输会中止，远程命令和每个阶段都有上限；SSH结束通知延迟时会回查板端完成记录。日志位于 `.runtime/prepare.log`。准备期间退出其他推理客户端；首次环境下载时间取决于网速，本轮实测已有部署准备约60秒，全新部署约105秒，详见 report/one_click_validation.md。
 
-`Start.exe` 和 `Prepare.exe` 是 Windows 启动器，必须与整个文件夹一起保留；不需要安装 Vivado。源码位于 `build/launcher.cs`，可通过 `powershell -ExecutionPolicy Bypass -File build/build_launchers.ps1` 重建。安装程序不会制作 SD 卡或替换 PYNQ 系统；板端仍需满足下文的参考环境要求。Linux/macOS 保持原命令行流程。
+`roadsense.exe`、`Start.exe` 和 `Prepare.exe` 是 Windows 启动器，必须与整个文件夹一起保留；不需要安装 Vivado。源码位于 `build/launcher.cs`，图标位于 `build/roadsense.png` 和 `build/roadsense.ico`，可通过 `powershell -ExecutionPolicy Bypass -File build/build_launchers.ps1` 重建启动器。软件显示名为 RoadSense，入口与资源文件名保持原样。安装程序不会制作 SD 卡或替换 PYNQ 系统；板端仍需满足下文的参考环境要求。Linux/macOS 保持原命令行流程。
 
 ## 支持范围
 
@@ -44,7 +44,7 @@ setup自动创建`.runtime/pc_env`、从官方PyPI下载锁定版本的wheel并�
 python manage.py setup --python /path/to/python
 ```
 
-这台机器已经用 `D:\Anaconda3\python.exe` 完成独立安装与验证，当前可直接运行 `python manage.py start`。这是本机解释器选择，不是源码中的硬编码依赖。
+本机已准备好独立运行环境，可直接启动；新电脑按上方 Prepare 流程准备。Python基础解释器路径属于本机状态，不是源码中的固定依赖。无Python分支也已在独立副本中实测安装私有Python3.12.10。
 
 Linux需预先安装发行版的Tk和OpenCV运行库，例如Ubuntu：`sudo apt-get install python3-venv python3-tk libgl1 libglib2.0-0`。macOS建议使用python.org的完整Python安装。无图形桌面的服务器可运行test，不能打开Tk窗口。
 
@@ -71,9 +71,9 @@ python manage.py start
 
 首次信任所需指纹可在板卡本地控制台执行 `ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub -E sha256` 取得；trust仅在网络取得的公钥与给定指纹一致时保存。不能填示例指纹。
 
-configure写入`board/local_config.json`，密码只交互输入，不落盘。deploy自动上传到独立release、逐文件读回比对、验证模型/镜像、构建ARM原生库并运行板端测试；全部通过后才更新本地运行路径。board-check --boot会加载本包镜像，先退出其他推理客户端。smoke执行30条golden及两批JPEG推理，下载板端报告。失败会返回非零退出码并保留证据。
+configure写入`board/local_config.json`，密码只交互输入，不落盘。deploy打包上传到独立release，完整压缩包SHA256读回比对后解压，再逐文件校验清单、验证模型/镜像、构建ARM原生库并运行板端测试；全部通过后才更新本地运行路径。board-check --boot会加载本包镜像，先退出其他推理客户端。smoke执行30条golden及两批JPEG推理，下载板端报告。失败会返回非零退出码并保留证据。
 
-桌面中连接→选短视频→等待全部采样推理成功→播放→再选第二段视频。记录保存在src/desktop/records。每4帧采样1帧（从0计为0、4、8……），视频按原帧率播放，未采样帧复用最近采样结果，跳转播放也按原视频帧号匹配；界面同时显示当前帧和采样帧。该演示不提供车辆闭环控制。
+桌面中“连接板子”→“选择录像…”→“处理录像”→等待全部采样推理成功→“开始播放展示”→再选第二段录像。记录保存在src/desktop/records。每4帧采样1帧（从0计为0、4、8……），录像按原帧率播放，未采样帧复用最近采样结果，跳转播放也按原视频帧号匹配；界面同时显示当前帧和采样帧。该演示不提供车辆闭环控制。
 
 ## RTL与完整板级镜像构建
 
@@ -111,8 +111,8 @@ python manage.py verify
 python manage.py export --output /path/to/new_delivery
 ```
 
-export只复制manifest定义的交付内容，不携带虚拟环境、机器配置、公钥信任文件和本机运行产物。可把导出目录交给其他人，在其机器重新setup。Git保留原始字节，避免换行转换破坏golden与来源SHA。
+export按 `build/package_files.py` 定义的交付范围复制文件，`verify` 用manifest检查这一范围的完整性。不携带虚拟环境、机器配置、公钥信任文件和本机运行产物。导出前先运行verify；Windows新电脑可在导出目录双击Prepare.exe准备环境，其他平台按setup流程操作。Git保留原始字节，避免换行转换破坏golden与来源SHA。
 
 维护时可用`python sim/rehearse_relocation.py --python /path/to/base/python`自动导出到临时新目录，离线重装、测试并创建真实桌面。需先setup准备当前平台的wheel缓存；该检查验证同平台迁移，跨操作系统实跑另由CI或目标机器完成。
 
-入口文档：[文件取舍](report/file_inventory.md)、[验证状态](report/validation_status.md)、[技能包](skill/README.md)。历史性能不冒充当前实测；纯PL周期、PS检测耗时、批吞吐和视频展示帧率分开报告。
+入口文档：[文件取舍](report/file_inventory.md)、[验证状态](report/validation_status.md)、[一键准备实测](report/one_click_validation.md)、[本次文件整理](report/maintenance.md)、[技能包](skill/README.md)。历史性能不冒充当前实测；纯PL周期、PS检测耗时、批吞吐和视频展示帧率分开报告。

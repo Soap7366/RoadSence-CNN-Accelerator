@@ -1,0 +1,84 @@
+{
+  "date": "2026-11-01",
+  "baseline": "cd1cd95",
+  "scope": "Current offline regression after RoadSense documentation and disposable-file maintenance",
+  "result": {
+    "status": "PASS",
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "scope": "offline and software mock; no PL, GUI or Vivado execution",
+    "suites": [
+      {
+        "suite": "skill",
+        "exit_code": 0,
+        "command": [
+          "D:\\work\\FPGA\\pynq_cnn_delivery\\.runtime\\pc_env\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "sim",
+          "-p",
+          "test_skill.py"
+        ],
+        "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.015s\n\nOK\n"
+      },
+      {
+        "suite": "automation",
+        "exit_code": 0,
+        "command": [
+          "D:\\work\\FPGA\\pynq_cnn_delivery\\.runtime\\pc_env\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "sim",
+          "-p",
+          "test_automation.py"
+        ],
+        "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.244s\n\nOK\n"
+      },
+      {
+        "suite": "prepare",
+        "exit_code": 0,
+        "command": [
+          "D:\\work\\FPGA\\pynq_cnn_delivery\\.runtime\\pc_env\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "sim",
+          "-p",
+          "test_prepare.py"
+        ],
+        "output": ".首次连接已登记 SSH 指纹：SHA256:MPIvmf4Q1W/d6yIlhVqOgXJWYcom1Em87jPbXpeTCQg\n.等待板端命令完成 · 7 秒（上限 180 秒）\ncompleted without SSH exit\n.result\nresult\n..检查本地交付包……\n验证板卡身份和密码……\n检查已有板端部署……\n加载板端镜像……\n验证真实图像推理……\n真实图像推理通过。\n.done\n.检查本地交付包……\n验证板卡身份和密码……\n检查已有板端部署……\n......\n----------------------------------------------------------------------\nRan 13 tests in 10.903s\n\nOK\n"
+      },
+      {
+        "suite": "stream",
+        "exit_code": 0,
+        "command": [
+          "D:\\work\\FPGA\\pynq_cnn_delivery\\.runtime\\pc_env\\Scripts\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests"
+        ],
+        "output": "ssss..........ssssssssssssss\n----------------------------------------------------------------------\nRan 28 tests in 0.107s\n\nOK (skipped=18)\n"
+      },
+      {
+        "suite": "desktop",
+        "exit_code": 0,
+        "command": [
+          "D:\\work\\FPGA\\pynq_cnn_delivery\\.runtime\\pc_env\\Scripts\\python.exe",
+          "-B",
+          "test_board_adapter.py"
+        ],
+        "output": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.173s\n\nOK\n"
+      }
+    ]
+  }
+}

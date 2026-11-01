@@ -1,0 +1,434 @@
+{
+  "date": "2026-11-01",
+  "scope": "Previously completed real-board acceptance; no new board execution during file maintenance",
+  "records": {
+    "main": {
+      "acceptance_prepare.json": {
+        "status": "PASS",
+        "mode": "prepare",
+        "package": "D:\\work\\FPGA\\pynq_cnn_delivery",
+        "message": "准备完成，可以双击 Start.exe 或 start.cmd 使用。",
+        "elapsed_s": 60.45
+      },
+      "acceptance_desktop.json": {
+        "status": "PASS",
+        "mode": "desktop",
+        "package": "D:\\work\\FPGA\\pynq_cnn_delivery",
+        "sampled_frames": [
+          0,
+          4,
+          8,
+          12
+        ],
+        "displayed_frame_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "elapsed_s": 17.05
+      }
+    },
+    "independent": {
+      "acceptance_prepare.json": {
+        "status": "PASS",
+        "mode": "prepare",
+        "package": "D:\\work\\FPGA\\experiments\\prepare independent 20261101",
+        "message": "准备完成，可以双击 Start.exe 或 start.cmd 使用。",
+        "elapsed_s": 152.92
+      },
+      "acceptance_desktop.json": {
+        "status": "PASS",
+        "mode": "desktop",
+        "package": "D:\\work\\FPGA\\experiments\\prepare independent 20261101",
+        "sampled_frames": [
+          0,
+          4,
+          8,
+          12
+        ],
+        "displayed_frame_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "elapsed_s": 17.31
+      },
+      "board_result_equivalence.json": {
+        "status": "PASS",
+        "compared": "exact original JPEG hash, INT8 input hash, raw INT32 outputs, all decoded values",
+        "results": [
+          {
+            "release": "/home/xilinx/pynq_cnn_delivery/releases/release_20261101_084049_cca25f4d",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "a5b656eb795f4068ba585f4bab0c26977a50d2d361f510da8a3141338d9e2a12",
+                "input_sha256": "e4a848af6b3a7ab6cf8cae9303dc39f32944fa66435f3cc2b238412a83b7a0e9",
+                "raw": {
+                  "collision_int32": -20778,
+                  "steering_int32": 877
+                },
+                "decoded": {
+                  "collision_int32": -20778,
+                  "steering_int32": 877,
+                  "collision_logit": -2.309752664742713,
+                  "risk_score": 0.0903184639656201,
+                  "steering_value": 0.04276768640565871,
+                  "steering_units": "rad_label_space"
+                }
+              },
+              {
+                "frame": 4,
+                "source_sha256": "1fd91f8ae24160b769416aca6a45ac71bcbe6ea2c188e3aac693c515c0c9525f",
+                "input_sha256": "bd9607bf9cc887e5a2ecfc5aaf7f8debf8ef607cd0ea2a96128c5edc9d50f079",
+                "raw": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601
+                },
+                "decoded": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601,
+                  "collision_logit": -2.287186499041357,
+                  "risk_score": 0.09218974405247773,
+                  "steering_value": 0.029308300490080822,
+                  "steering_units": "rad_label_space"
+                }
+              },
+              {
+                "frame": 8,
+                "source_sha256": "e1c950a63ddb099794109acfdba9a50aa520841a22882a431ec52487bf5c55cc",
+                "input_sha256": "1da8171303ed7fd2a8f6fa9506474cad0fc26556210bd08e914d005e6ef2d5fd",
+                "raw": {
+                  "collision_int32": -21966,
+                  "steering_int32": 998
+                },
+                "decoded": {
+                  "collision_int32": -21966,
+                  "steering_int32": 998,
+                  "collision_logit": -2.441814757615672,
+                  "risk_score": 0.08003918440166867,
+                  "steering_value": 0.048668359216473646,
+                  "steering_units": "rad_label_space"
+                }
+              },
+              {
+                "frame": 12,
+                "source_sha256": "1fd91f8ae24160b769416aca6a45ac71bcbe6ea2c188e3aac693c515c0c9525f",
+                "input_sha256": "bd9607bf9cc887e5a2ecfc5aaf7f8debf8ef607cd0ea2a96128c5edc9d50f079",
+                "raw": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601
+                },
+                "decoded": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601,
+                  "collision_logit": -2.287186499041357,
+                  "risk_score": 0.09218974405247773,
+                  "steering_value": 0.029308300490080822,
+                  "steering_units": "rad_label_space"
+                }
+              }
+            ]
+          },
+          {
+            "release": "/home/xilinx/pynq_cnn_delivery/releases/release_20261101_094948_1674b525",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "a5b656eb795f4068ba585f4bab0c26977a50d2d361f510da8a3141338d9e2a12",
+                "input_sha256": "e4a848af6b3a7ab6cf8cae9303dc39f32944fa66435f3cc2b238412a83b7a0e9",
+                "raw": {
+                  "collision_int32": -20778,
+                  "steering_int32": 877
+                },
+                "decoded": {
+                  "collision_int32": -20778,
+                  "steering_int32": 877,
+                  "collision_logit": -2.309752664742713,
+                  "risk_score": 0.0903184639656201,
+                  "steering_value": 0.04276768640565871,
+                  "steering_units": "rad_label_space"
+                }
+              },
+              {
+                "frame": 4,
+                "source_sha256": "1fd91f8ae24160b769416aca6a45ac71bcbe6ea2c188e3aac693c515c0c9525f",
+                "input_sha256": "bd9607bf9cc887e5a2ecfc5aaf7f8debf8ef607cd0ea2a96128c5edc9d50f079",
+                "raw": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601
+                },
+                "decoded": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601,
+                  "collision_logit": -2.287186499041357,
+                  "risk_score": 0.09218974405247773,
+                  "steering_value": 0.029308300490080822,
+                  "steering_units": "rad_label_space"
+                }
+              },
+              {
+                "frame": 8,
+                "source_sha256": "e1c950a63ddb099794109acfdba9a50aa520841a22882a431ec52487bf5c55cc",
+                "input_sha256": "1da8171303ed7fd2a8f6fa9506474cad0fc26556210bd08e914d005e6ef2d5fd",
+                "raw": {
+                  "collision_int32": -21966,
+                  "steering_int32": 998
+                },
+                "decoded": {
+                  "collision_int32": -21966,
+                  "steering_int32": 998,
+                  "collision_logit": -2.441814757615672,
+                  "risk_score": 0.08003918440166867,
+                  "steering_value": 0.048668359216473646,
+                  "steering_units": "rad_label_space"
+                }
+              },
+              {
+                "frame": 12,
+                "source_sha256": "1fd91f8ae24160b769416aca6a45ac71bcbe6ea2c188e3aac693c515c0c9525f",
+                "input_sha256": "bd9607bf9cc887e5a2ecfc5aaf7f8debf8ef607cd0ea2a96128c5edc9d50f079",
+                "raw": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601
+                },
+                "decoded": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601,
+                  "collision_logit": -2.287186499041357,
+                  "risk_score": 0.09218974405247773,
+                  "steering_value": 0.029308300490080822,
+                  "steering_units": "rad_label_space"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "private_python": {
+      "acceptance_prepare.json": {
+        "status": "PASS",
+        "mode": "prepare",
+        "package": "D:\\work\\FPGA\\experiments\\prepare clean Python 20261101",
+        "message": "准备完成，可以双击 Start.exe 或 start.cmd 使用。",
+        "elapsed_s": 104.86
+      },
+      "acceptance_desktop.json": {
+        "status": "PASS",
+        "mode": "desktop",
+        "package": "D:\\work\\FPGA\\experiments\\prepare clean Python 20261101",
+        "sampled_frames": [
+          0,
+          4,
+          8,
+          12
+        ],
+        "displayed_frame_ids": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "elapsed_s": 17.17
+      },
+      "reuse_acceptance_prepare.json": {
+        "status": "PASS",
+        "mode": "prepare",
+        "package": "D:\\work\\FPGA\\experiments\\prepare clean Python 20261101",
+        "message": "准备完成，可以双击 Start.exe 或 start.cmd 使用。",
+        "elapsed_s": 65.84
+      },
+      "board_result_equivalence.json": {
+        "status": "PASS",
+        "compared": "exact original JPEG hash, INT8 input hash, raw INT32 outputs, all decoded values",
+        "results": [
+          {
+            "release": "/home/xilinx/pynq_cnn_delivery/releases/release_20261101_084049_cca25f4d",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "a5b656eb795f4068ba585f4bab0c26977a50d2d361f510da8a3141338d9e2a12",
+                "input_sha256": "e4a848af6b3a7ab6cf8cae9303dc39f32944fa66435f3cc2b238412a83b7a0e9",
+                "raw": {
+                  "collision_int32": -20778,
+                  "steering_int32": 877
+                },
+                "decoded": {
+                  "collision_int32": -20778,
+                  "steering_int32": 877,
+                  "collision_logit": -2.309752664742713,
+                  "risk_score": 0.0903184639656201,
+                  "steering_value": 0.04276768640565871,
+                  "steering_units": "rad_label_space"
+                }
+              },
+              {
+                "frame": 4,
+                "source_sha256": "1fd91f8ae24160b769416aca6a45ac71bcbe6ea2c188e3aac693c515c0c9525f",
+                "input_sha256": "bd9607bf9cc887e5a2ecfc5aaf7f8debf8ef607cd0ea2a96128c5edc9d50f079",
+                "raw": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601
+                },
+                "decoded": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601,
+                  "collision_logit": -2.287186499041357,
+                  "risk_score": 0.09218974405247773,
+                  "steering_value": 0.029308300490080822,
+                  "steering_units": "rad_label_space"
+                }
+              },
+              {
+                "frame": 8,
+                "source_sha256": "e1c950a63ddb099794109acfdba9a50aa520841a22882a431ec52487bf5c55cc",
+                "input_sha256": "1da8171303ed7fd2a8f6fa9506474cad0fc26556210bd08e914d005e6ef2d5fd",
+                "raw": {
+                  "collision_int32": -21966,
+                  "steering_int32": 998
+                },
+                "decoded": {
+                  "collision_int32": -21966,
+                  "steering_int32": 998,
+                  "collision_logit": -2.441814757615672,
+                  "risk_score": 0.08003918440166867,
+                  "steering_value": 0.048668359216473646,
+                  "steering_units": "rad_label_space"
+                }
+              },
+              {
+                "frame": 12,
+                "source_sha256": "1fd91f8ae24160b769416aca6a45ac71bcbe6ea2c188e3aac693c515c0c9525f",
+                "input_sha256": "bd9607bf9cc887e5a2ecfc5aaf7f8debf8ef607cd0ea2a96128c5edc9d50f079",
+                "raw": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601
+                },
+                "decoded": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601,
+                  "collision_logit": -2.287186499041357,
+                  "risk_score": 0.09218974405247773,
+                  "steering_value": 0.029308300490080822,
+                  "steering_units": "rad_label_space"
+                }
+              }
+            ]
+          },
+          {
+            "release": "/home/xilinx/pynq_cnn_delivery/releases/release_20261101_101059_04b49ba8",
+            "samples": [
+              {
+                "frame": 0,
+                "source_sha256": "a5b656eb795f4068ba585f4bab0c26977a50d2d361f510da8a3141338d9e2a12",
+                "input_sha256": "e4a848af6b3a7ab6cf8cae9303dc39f32944fa66435f3cc2b238412a83b7a0e9",
+                "raw": {
+                  "collision_int32": -20778,
+                  "steering_int32": 877
+                },
+                "decoded": {
+                  "collision_int32": -20778,
+                  "steering_int32": 877,
+                  "collision_logit": -2.309752664742713,
+                  "risk_score": 0.0903184639656201,
+                  "steering_value": 0.04276768640565871,
+                  "steering_units": "rad_label_space"
+                }
+              },
+              {
+                "frame": 4,
+                "source_sha256": "1fd91f8ae24160b769416aca6a45ac71bcbe6ea2c188e3aac693c515c0c9525f",
+                "input_sha256": "bd9607bf9cc887e5a2ecfc5aaf7f8debf8ef607cd0ea2a96128c5edc9d50f079",
+                "raw": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601
+                },
+                "decoded": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601,
+                  "collision_logit": -2.287186499041357,
+                  "risk_score": 0.09218974405247773,
+                  "steering_value": 0.029308300490080822,
+                  "steering_units": "rad_label_space"
+                }
+              },
+              {
+                "frame": 8,
+                "source_sha256": "e1c950a63ddb099794109acfdba9a50aa520841a22882a431ec52487bf5c55cc",
+                "input_sha256": "1da8171303ed7fd2a8f6fa9506474cad0fc26556210bd08e914d005e6ef2d5fd",
+                "raw": {
+                  "collision_int32": -21966,
+                  "steering_int32": 998
+                },
+                "decoded": {
+                  "collision_int32": -21966,
+                  "steering_int32": 998,
+                  "collision_logit": -2.441814757615672,
+                  "risk_score": 0.08003918440166867,
+                  "steering_value": 0.048668359216473646,
+                  "steering_units": "rad_label_space"
+                }
+              },
+              {
+                "frame": 12,
+                "source_sha256": "1fd91f8ae24160b769416aca6a45ac71bcbe6ea2c188e3aac693c515c0c9525f",
+                "input_sha256": "bd9607bf9cc887e5a2ecfc5aaf7f8debf8ef607cd0ea2a96128c5edc9d50f079",
+                "raw": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601
+                },
+                "decoded": {
+                  "collision_int32": -20575,
+                  "steering_int32": 601,
+                  "collision_logit": -2.287186499041357,
+                  "risk_score": 0.09218974405247773,
+                  "steering_value": 0.029308300490080822,
+                  "steering_units": "rad_label_space"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

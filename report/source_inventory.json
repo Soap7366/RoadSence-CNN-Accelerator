@@ -3848,14 +3848,14 @@
       "source": "obstacle-demo/desktop.py",
       "destination": "src/desktop/desktop.py",
       "source_sha256": "c262ccdbea54898369726e27577fc04ab4e0367afb7e3164b9500289ba91d3a4",
-      "packaged_sha256": "2eeddf67ccab652630c611d68abdc05fa6b95a7a9ef5afc66dd36f9ed2e23e09",
+      "packaged_sha256": "7deb49af2e5ff636564c1a6d160ee9ff25ea825ad1d06d8a4b499d483903b490",
       "adapted": true
     },
     {
       "source": "obstacle-demo/test_board_adapter.py",
       "destination": "src/desktop/test_board_adapter.py",
       "source_sha256": "001987783f0cafe56678387e63695f6ccbcd0e87accdfbbf3e45d7cef5b7d5f5",
-      "packaged_sha256": "b650127c47fe3b68e417719c97fd0839a42f94904fde24b7f594315f12678eea",
+      "packaged_sha256": "d670ea1c883fb35b504fef97f0344c67516f2f8313fcd6ff36ee3e8a45d64f56",
       "adapted": true
     },
     {

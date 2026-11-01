@@ -2,11 +2,14 @@
 
 统一调用项目根manage.py，可从其他工作目录用其绝对路径调用。
 
+Windows普通使用入口为 Prepare.exe → roadsense.exe，Start.exe/start.cmd保留兼容。bootstrap.ps1准备本地环境；prepare.py提供向导；prepare_worker.py、task_runner.py负责隔离执行、超时和取消；process_lock.py防止同一目录重复准备。launcher.cs和build_launchers.ps1生成三个启动器，roadsense.png/roadsense.ico是窗口和EXE图标。资源文件名不随显示名RoadSense的大小写调整。
+
 - setup：检查Python/Tk，创建项目内隔离环境，下载锁定wheel，以no-index安装，再做pip check和模块来源检查。
 - doctor / doctor --gui：验证实际运行环境；有GUI时检查真实Tk窗口。
-- test：manifest、skill、自动化、stream及桌面mock；不访问板卡。
+- test：manifest、skill、自动化、prepare、stream及桌面mock；不访问板卡。
+- prepare：运行一键准备向导，检查本地包、网络、SSH身份、已有部署或新release、镜像加载与真实单帧推理。
 - configure / trust：目标配置与指纹匹配信任，不存密码。
-- deploy：新release上传、完整读回、身份检查、ARM库构建及测试，成功后激活配置。
+- deploy：单压缩包上传、完整SHA256读回、解压后逐文件校验、身份检查、ARM库构建及测试，成功后激活配置。
 - board-check --boot / smoke：显式加载镜像、执行golden与两批JPEG端到端；需真实板卡。
 - rtl / overlay：跨Windows/Linux调度Vivado；产物进入.runtime新目录。
 - export：导出交付文件，排除虚拟环境、配置、公钥与生成结果。
