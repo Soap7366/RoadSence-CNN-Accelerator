@@ -652,7 +652,7 @@ class Demo(tk.Tk):
     def process_video(self):
         if self.busy or not self.board.ready or not self.video_path:
             return
-        stride = 2
+        stride = 4
         self.busy = True
         self.cancel_button.configure(state='normal')
         self.inference_samples = []
@@ -918,7 +918,7 @@ class Demo(tk.Tk):
                 sample = self.held_sample(self.display_index)
                 risk = sample['risk']
                 angle = max(-limit, min(limit, sample['steering_deg']))
-                status = f'● 板端推理 · 采样帧 {sample["video_frame_id"]} · 标签角度显示'
+                status = f'● 板端推理 · 当前帧 {self.display_index} / 采样帧 {sample["video_frame_id"]}（从0计） · 每4帧检测1帧 · 标签角度显示'
             elif self.display_index in self.frame_data:
                 risk, angle = self.frame_data[self.display_index]
                 valid = abs(angle) <= limit
