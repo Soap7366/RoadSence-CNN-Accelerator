@@ -522,12 +522,23 @@ class Demo(tk.Tk):
         self.metrics_body.columnconfigure(1, weight=1)
         for column, title in enumerate(['项目', '耗时 / 速率']):
             self.label(self.metrics_body, title, 11, ACCENT, anchor='w').grid(row=0, column=column, sticky='ew', padx=12, pady=7)
+        pl_background = '#382832'
+        pl_highlight = tk.Frame(self.metrics_body, bg=pl_background)
+        pl_highlight.grid(row=4, column=0, columnspan=2, sticky='nsew', pady=3)
+        pl_highlight.lower()
+        tk.Frame(pl_highlight, bg=ACCENT, width=3).pack(side='left', fill='y')
         for number, (key, title) in enumerate([('initialization', '板端初始化'),
                 ('transfer', '数据传输 / 每张'), ('preprocess', 'PS 预处理 / 每张'),
                 ('pl', 'PL 计算耗时（含检测开销）')], 1):
-            self.label(self.metrics_body, title, 11, MUTED).grid(row=number, column=0, sticky='w', padx=12, pady=5)
+            title_label = self.label(self.metrics_body, title, 11, MUTED)
+            title_label.grid(row=number, column=0, sticky='w', padx=12, pady=5)
             value = self.label(self.metrics_body, '待测量', 12, ACCENT if key == 'pl' else TEXT)
             value.grid(row=number, column=1, sticky='w', padx=12, pady=5)
+            if key == 'pl':
+                title_label.configure(bg=pl_background, fg=ACCENT, font=(SYSTEM_FONT, 11, 'bold'))
+                value.configure(bg=pl_background, font=(SYSTEM_FONT, 13, 'bold'))
+                title_label.grid_configure(pady=12)
+                value.grid_configure(pady=12)
             self.metric_values[key] = value
         self.metric_values['pl'].configure(text='待实测')
         self.label(self.metrics_body, '传输：PS接收JPEG正文的计时与有效速率，包含SSH缓冲影响。', 10, MUTED).grid(row=5, column=0, columnspan=2, sticky='w', pady=(6, 0))

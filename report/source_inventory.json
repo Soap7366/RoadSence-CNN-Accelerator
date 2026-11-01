@@ -3848,7 +3848,7 @@
       "source": "obstacle-demo/desktop.py",
       "destination": "src/desktop/desktop.py",
       "source_sha256": "c262ccdbea54898369726e27577fc04ab4e0367afb7e3164b9500289ba91d3a4",
-      "packaged_sha256": "7deb49af2e5ff636564c1a6d160ee9ff25ea825ad1d06d8a4b499d483903b490",
+      "packaged_sha256": "630b9d6f2ada78c283e17101317ca174dcc1435b3a6a9724cbcfeec40802d55c",
       "adapted": true
     },
     {
