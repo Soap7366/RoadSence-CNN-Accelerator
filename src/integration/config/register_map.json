@@ -1,0 +1,50 @@
+{
+  "schema": "pscnn.axi-registers.v1",
+  "abi_version": 65536,
+  "magic": 1396919886,
+  "address_width": 13,
+  "data_width": 32,
+  "aperture_bytes": 8192,
+  "clock_mhz": 50,
+  "input_bytes": 4096,
+  "registers": {
+    "MAGIC": 0,
+    "VERSION": 4,
+    "CONTROL": 8,
+    "STATUS": 12,
+    "ERROR": 16,
+    "INPUT_COUNT": 20,
+    "RESET_SEQ": 24,
+    "START_SEQ": 28,
+    "COLLISION": 32,
+    "STEERING": 36,
+    "RESULT_SEQ": 40,
+    "INPUT_BYTES": 44,
+    "QUANT_SHA_FIRST": 48,
+    "MODEL_COMMIT_FIRST": 80,
+    "INPUT_WINDOW": 4096
+  },
+  "control": {
+    "reset": 1,
+    "start": 2
+  },
+  "status": {
+    "busy": 1,
+    "host_ready": 2,
+    "result_valid": 4,
+    "frame_loaded": 8,
+    "error": 16
+  },
+  "errors": {
+    "input": 1,
+    "incomplete": 2,
+    "busy_or_state": 4,
+    "native_timeout": 8,
+    "core_error": 16,
+    "compute_timeout": 32,
+    "command": 64
+  },
+  "input_layout": "4 consecutive logical bytes packed little-endian per aligned word; no row-bank rearrangement",
+  "identity_word_layout": "hex strings left-to-right in 32-bit groups; not byte reversal",
+  "physical_base": "assigned by this build and discovered from its HWH; not hardcoded"
+}

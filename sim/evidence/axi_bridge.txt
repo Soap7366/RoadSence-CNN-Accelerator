@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Nov  1 15:41:09 2026
+# Process ID: 35448
+# Current directory: D:/work/FPGA/pynq_cnn_delivery/.runtime/o_08f54e0e/build/sim_bridge
+# Command line: xsim.exe -log xsim.log -mode tcl -source {xsim.dir/sim_axi_bridge/xsim_script.tcl}
+# Log file: D:/work/FPGA/pynq_cnn_delivery/.runtime/o_08f54e0e/build/sim_bridge/xsim.log
+# Journal file: D:/work/FPGA/pynq_cnn_delivery/.runtime/o_08f54e0e/build/sim_bridge\xsim.jou
+# Running On: LAPTOP-ABFF0DL3, OS: Windows, CPU Frequency: 2995 MHz, CPU Physical cores: 16, Host memory: 16450 MB
+#-----------------------------------------------------------
+source xsim.dir/sim_axi_bridge/xsim_script.tcl
+# xsim {sim_axi_bridge} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS AXI identity/read-only/decode/alignment
+PASS independent AW/W, WSTRB prefix, B/R backpressure, duplicate protection
+PASS hole/range/incomplete-start/illegal-command rejection
+PASS complete 4096-byte write/read, last address, accepted start, held dual result
+PASS immediate result and generation association
+PASS native-ready/read timeout and reset recovery
+PASS busy traffic rejection, compute timeout, reset abort/recovery
+PASS core-error capture and invalid result
+PASS soft reset preserves outstanding AXI response
+PASS tb_axi_bridge: groups=9; AXI/native stub only; no CNN arithmetic
+$finish called at time : 1377840 ns : File "D:/work/FPGA/pynq_cnn_delivery/.runtime/o_08f54e0e/sim/tb_axi_bridge.sv" Line 331
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 15:41:11 2026...

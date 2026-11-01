@@ -1,0 +1,18 @@
+{
+  "equals": {
+    "result.event": "image_result",
+    "result.native.readback_verified": true,
+    "result.native.count_checks": 1024,
+    "result.native.bytes_read": 4096,
+    "result.native.bytes_written": 4096,
+    "result.decoded.steering_units": "rad_label_space"
+  },
+  "finite": ["result.decoded.risk_score", "result.decoded.steering_value", "risk", "steering_deg"],
+  "ranges": {"result.decoded.risk_score": [0, 1], "risk": [0, 1]},
+  "matching_fields": [["run_id", "result.run_id"], ["protocol_frame_id", "result.frame_id"], ["risk", "result.decoded.risk_score"]],
+  "sha256": ["result.source_sha256", "result.input_sha256"],
+  "frame": "protocol_frame_id",
+  "sequence": "result.native.result_seq",
+  "sequence_bits": 32,
+  "constant": ["session_id", "run_id"]
+}

@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "artifacts": "build/rebuilt_overlay",
+  "hardware_verified": false,
+  "manifest": {
+    "schema": "pscnn.overlay.v1",
+    "model_id": "dual_task_baseline2_int8_qat@619308c77fd9",
+    "quant_params_sha256": "346bafa31f56bd5a28bff0d8ee7d8cd850e5e2da7f56e536037e46d033dc4225",
+    "model_commit": "619308c77fd9af7d03bc89c494a33dda5d07386d",
+    "rtl_commit": "8c8dcfafc901f0c54276e6aaba86d817cb82538d",
+    "part": "xc7z020clg400-1",
+    "clock_mhz": 50,
+    "abi_version": 65536,
+    "magic": 1396919886,
+    "ip_name": "cnn_axi_accelerator_0",
+    "hwh_phys_addr": 1073741824,
+    "hwh_addr_range": 8192,
+    "files": {
+      "bit": {
+        "path": "cnn.bit",
+        "bytes": 4045678,
+        "sha256": "276ee72d52e3a89c2c3d716a1ad256e39d637e73a218c215fb30f1844dccdb81"
+      },
+      "hwh": {
+        "path": "cnn.hwh",
+        "bytes": 141398,
+        "sha256": "0d18013bfe503109983bf1aeeb3f442b4750b2363b0f20cf6d2f32a022f74577"
+      }
+    },
+    "build_verified": {
+      "setup_slack_ns": 4.6,
+      "hold_slack_ns": 0.023,
+      "rtl_golden_samples": 30,
+      "protocol_groups": 9
+    },
+    "integration_source_sha256": {
+      "cnn_axi_accelerator.sv": "09386e5a122c949a6a7e94348733fa572ea18a098a650b69e84903f83df34e2d",
+      "cnn_axi_lite_bridge.sv": "46863bbe43347e8b2c79b89ad7f19280e106139dcefd208ddbbc6da53b99e492"
+    },
+    "source_provenance_sha256": "c4a1d928fdace79d4ba0b00ff0ce08b146a91dfcb5a11afb538dac7aa8bdd096",
+    "board_verified": false,
+    "note": "This manifest identifies local build and simulation evidence. Physical inference is verified separately."
+  },
+  "automation_exit_code": 0,
+  "command": "python manage.py overlay finish --workspace <routed_workspace> --vivado-bin <vivado_bin>",
+  "synthesis_and_route_completed": true,
+  "resumed_existing_routed_workspace": true,
+  "original_powershell_outer_exit_code": 1
+}

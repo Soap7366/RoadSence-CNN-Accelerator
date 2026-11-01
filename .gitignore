@@ -1,0 +1,14 @@
+.runtime/
+.venv/
+__pycache__/
+*.pyc
+*.so
+board/local_config.json
+board/known_hosts
+sim/results/
+src/desktop/records/
+src/stream/results/
+src/stream/reports/
+src/core/build/
+src/core/.Xil/
+src/core/xsim.dir/

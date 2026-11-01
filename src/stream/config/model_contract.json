@@ -1,0 +1,38 @@
+{
+  "model_id": "dual_task_baseline2_int8_qat@619308c77fd9",
+  "model_repository": "https://github.com/Soap7366/FPGA_CNN",
+  "model_commit": "619308c77fd9af7d03bc89c494a33dda5d07386d",
+  "export_directory": "artifacts_dual_task_baseline2_int8_qat/export",
+  "rtl_repository": "https://github.com/Soap7366/SystolicCNN",
+  "rtl_commit": "8c8dcfafc901f0c54276e6aaba86d817cb82538d",
+  "rtl_top": "rtl/cnn_accelerator.v",
+  "quant_params_url": "https://raw.githubusercontent.com/Soap7366/FPGA_CNN/619308c77fd9af7d03bc89c494a33dda5d07386d/artifacts_dual_task_baseline2_int8_qat/export/quant_params.json",
+  "quant_params_sha256": "346bafa31f56bd5a28bff0d8ee7d8cd850e5e2da7f56e536037e46d033dc4225",
+  "golden_samples_csv_sha256": "9814edec6a3a9453672b477d2d5811b5c40aa1087bda7a51ed67d8010667dfdd",
+  "reference_sources": {
+    "dual_task_lite/dual_dataset.py": {
+      "url": "https://raw.githubusercontent.com/Soap7366/FPGA_CNN/619308c77fd9af7d03bc89c494a33dda5d07386d/dual_task_lite/dual_dataset.py",
+      "sha256": "3ca2a722bf6314d011ee347078e7352984ffa70e2330cd6ffd9b8bfecaaac329"
+    },
+    "int8_reference.py": {
+      "url": "https://raw.githubusercontent.com/Soap7366/FPGA_CNN/619308c77fd9af7d03bc89c494a33dda5d07386d/int8_reference.py",
+      "sha256": "86e4810986471a539b470d841aaffa782816e6be8a37db73feaee8f638ed7f88"
+    }
+  },
+  "input_shape": [
+    1,
+    1,
+    64,
+    64
+  ],
+  "input_bytes": 4096,
+  "input_dtype": "int8",
+  "input_pixel_range": [
+    0,
+    127
+  ],
+  "layout": "NCHW, C-order",
+  "hardware_backend_implemented": false,
+  "axi_register_map": null,
+  "created_utc": "2026-10-27T10:17:17.474966+00:00"
+}

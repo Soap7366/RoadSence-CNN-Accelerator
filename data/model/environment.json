@@ -1,0 +1,15 @@
+{
+  "time": "2026-10-26T19:27:34+08:00",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.10.20",
+  "executable": "D:\\programm\\anaconda\\envs\\vision_attention\\python.exe",
+  "cwd": "D:\\Workspace\\FPGA_CNN",
+  "torch": "2.9.1+cu128",
+  "cuda_available": true,
+  "torch_cuda": "12.8",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "vram_total_gb": 7.96,
+  "nvidia_smi": "NVIDIA GeForce RTX 5060 Laptop GPU, 8151 MiB, 577.05",
+  "disk_total_gb": 699.999,
+  "disk_free_gb": 412.254
+}

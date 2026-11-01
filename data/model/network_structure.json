@@ -1,0 +1,352 @@
+{
+  "original": {
+    "params": 6010,
+    "fp32_size_bytes": 24040,
+    "macs": 2654272,
+    "max_activation_elements": 32768,
+    "layers": [
+      {
+        "name": "features.conv1",
+        "type": "Conv2d",
+        "output_shape": [
+          1,
+          8,
+          64,
+          64
+        ],
+        "macs": 294912
+      },
+      {
+        "name": "features.bn1",
+        "type": "BatchNorm2d",
+        "output_shape": [
+          1,
+          8,
+          64,
+          64
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.relu1",
+        "type": "ReLU",
+        "output_shape": [
+          1,
+          8,
+          64,
+          64
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.pool1",
+        "type": "MaxPool2d",
+        "output_shape": [
+          1,
+          8,
+          32,
+          32
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.conv2",
+        "type": "Conv2d",
+        "output_shape": [
+          1,
+          16,
+          32,
+          32
+        ],
+        "macs": 1179648
+      },
+      {
+        "name": "features.bn2",
+        "type": "BatchNorm2d",
+        "output_shape": [
+          1,
+          16,
+          32,
+          32
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.relu2",
+        "type": "ReLU",
+        "output_shape": [
+          1,
+          16,
+          32,
+          32
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.pool2",
+        "type": "MaxPool2d",
+        "output_shape": [
+          1,
+          16,
+          16,
+          16
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.conv3",
+        "type": "Conv2d",
+        "output_shape": [
+          1,
+          32,
+          16,
+          16
+        ],
+        "macs": 1179648
+      },
+      {
+        "name": "features.bn3",
+        "type": "BatchNorm2d",
+        "output_shape": [
+          1,
+          32,
+          16,
+          16
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.relu3",
+        "type": "ReLU",
+        "output_shape": [
+          1,
+          32,
+          16,
+          16
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.pool3",
+        "type": "MaxPool2d",
+        "output_shape": [
+          1,
+          32,
+          8,
+          8
+        ],
+        "macs": 0
+      },
+      {
+        "name": "gap",
+        "type": "AdaptiveAvgPool2d",
+        "output_shape": [
+          1,
+          32,
+          1,
+          1
+        ],
+        "macs": 0
+      },
+      {
+        "name": "steering_head",
+        "type": "Linear",
+        "output_shape": [
+          1,
+          1
+        ],
+        "macs": 32
+      },
+      {
+        "name": "collision_head",
+        "type": "Linear",
+        "output_shape": [
+          1,
+          1
+        ],
+        "macs": 32
+      }
+    ],
+    "macs_note": "Conv/Linear multiply-accumulates for batch=1; BN/ReLU/Pool/GAP element ops are not counted."
+  },
+  "fused": {
+    "params": 5954,
+    "fp32_size_bytes": 23816,
+    "macs": 2654272,
+    "max_activation_elements": 32768,
+    "layers": [
+      {
+        "name": "features.conv1",
+        "type": "Conv2d",
+        "output_shape": [
+          1,
+          8,
+          64,
+          64
+        ],
+        "macs": 294912
+      },
+      {
+        "name": "features.bn1",
+        "type": "Identity",
+        "output_shape": [
+          1,
+          8,
+          64,
+          64
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.relu1",
+        "type": "ReLU",
+        "output_shape": [
+          1,
+          8,
+          64,
+          64
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.pool1",
+        "type": "MaxPool2d",
+        "output_shape": [
+          1,
+          8,
+          32,
+          32
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.conv2",
+        "type": "Conv2d",
+        "output_shape": [
+          1,
+          16,
+          32,
+          32
+        ],
+        "macs": 1179648
+      },
+      {
+        "name": "features.bn2",
+        "type": "Identity",
+        "output_shape": [
+          1,
+          16,
+          32,
+          32
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.relu2",
+        "type": "ReLU",
+        "output_shape": [
+          1,
+          16,
+          32,
+          32
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.pool2",
+        "type": "MaxPool2d",
+        "output_shape": [
+          1,
+          16,
+          16,
+          16
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.conv3",
+        "type": "Conv2d",
+        "output_shape": [
+          1,
+          32,
+          16,
+          16
+        ],
+        "macs": 1179648
+      },
+      {
+        "name": "features.bn3",
+        "type": "Identity",
+        "output_shape": [
+          1,
+          32,
+          16,
+          16
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.relu3",
+        "type": "ReLU",
+        "output_shape": [
+          1,
+          32,
+          16,
+          16
+        ],
+        "macs": 0
+      },
+      {
+        "name": "features.pool3",
+        "type": "MaxPool2d",
+        "output_shape": [
+          1,
+          32,
+          8,
+          8
+        ],
+        "macs": 0
+      },
+      {
+        "name": "gap",
+        "type": "AdaptiveAvgPool2d",
+        "output_shape": [
+          1,
+          32,
+          1,
+          1
+        ],
+        "macs": 0
+      },
+      {
+        "name": "steering_head",
+        "type": "Linear",
+        "output_shape": [
+          1,
+          1
+        ],
+        "macs": 32
+      },
+      {
+        "name": "collision_head",
+        "type": "Linear",
+        "output_shape": [
+          1,
+          1
+        ],
+        "macs": 32
+      }
+    ],
+    "macs_note": "Conv/Linear multiply-accumulates for batch=1; BN/ReLU/Pool/GAP element ops are not counted."
+  },
+  "input_layout": "NCHW",
+  "input_shape": [
+    1,
+    1,
+    64,
+    64
+  ],
+  "weight_layout": "OIHW / OI",
+  "preprocess": "PIL convert L, BILINEAR resize64, float32 /255",
+  "execution_order": "3x(conv INT32 -> requant INT8 -> ReLU -> pool) -> GAP -> 2xFC INT32; PS dequant/sigmoid"
+}

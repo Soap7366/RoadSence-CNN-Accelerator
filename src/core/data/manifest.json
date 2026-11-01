@@ -1,0 +1,58 @@
+{
+  "model_root": "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm",
+  "layers": [
+    {
+      "name": "conv1",
+      "weight_base": 0,
+      "bias_base": 0,
+      "quant_base": 0
+    },
+    {
+      "name": "conv2",
+      "weight_base": 72,
+      "bias_base": 8,
+      "quant_base": 8
+    },
+    {
+      "name": "conv3",
+      "weight_base": 1224,
+      "bias_base": 24,
+      "quant_base": 24
+    },
+    {
+      "name": "fc",
+      "weight_base": 5832,
+      "bias_base": 56,
+      "quant_base": 56
+    }
+  ],
+  "samples": [
+    "0000_y0",
+    "0399_y1"
+  ],
+  "sha256": {
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\quant_params.json": "fb43428c06d02bd2723059d2b95f6ec85c36fb53ebbec340c37137cdea915c06",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\weights\\conv1_weight_int8.npy": "3093e18dde07b1c1ccd9a146a0053d6cd5e3ce9bbd99caabe547dcb5994767c6",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\weights\\conv1_bias_int32.npy": "688149ebf0212f956d5662506624d3ae4777e3ed9b3a0358d15043de8a1cec84",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\weights\\conv2_weight_int8.npy": "b9d9f54d47fcd55d25d19851fc124259adca814243d394518ac9ce208d6b8250",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\weights\\conv2_bias_int32.npy": "1858dbd256801bc6903a6aae39f49895324151056a524d533b719dc1f3729978",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\weights\\conv3_weight_int8.npy": "786b2baed0280fdfdf06cc35ba3335837360b4d325c65d2ec8a0b1ce42be7d49",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\weights\\conv3_bias_int32.npy": "a52a05fb3b5edff8f01baf8a9d75bbf195389d4b36d18cb39a2ac24241dd1544",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\weights\\fc_weight_int8.npy": "ad5ff3c8e6ccda795a2ad2fd1d19230c4c2ff84aea03792413d3f870b8b8f1f4",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\weights\\fc_bias_int32.npy": "4c8feeb71c48c232590888f2c297ff02c5436a8a29a3f2b2a3e845723c93e811",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0000_y0_input_int8.npy": "47cbb82075a9dab1c9c06b3a4dfd6c8ce6ec74865cde8423977ac781a555bd33",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0000_y0_conv1_acc_int32.npy": "b8abec57281f5298c79e34c6e6707775a8fd5164c830250dc09c334ab838d939",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0000_y0_conv1_out_int8.npy": "b8736fbedc3eb721db76e9b90b1284732d9bbe06a566305ade3f41b57e85e47b",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0000_y0_conv2_acc_int32.npy": "4da4f8e549103b8c418b6dfbf4e21f37237c99610c72aac3fd4e86d251ff0c2c",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0000_y0_conv2_out_int8.npy": "bc93ba00287513e19722aaaebe868e3431b5acfeb26884713660894b1fb107d3",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0000_y0_conv3_acc_int32.npy": "43cbf109e134d84d6d714d5be98935fa375ec2c6be004eeaf7eb656f69b7a2d1",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0000_y0_conv3_out_int8.npy": "56ca24246f2b0392bbfcec3a22a90c553ff70876f0590681ef9d94df06459b23",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0399_y1_input_int8.npy": "b3c04d6f1ed3690a1d15e2034ee365f20733146f21a1c0ebac58c9e6816636ac",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0399_y1_conv1_acc_int32.npy": "27b15016bbab66fbeb107a58d5f6a5e19300302784622046e6ad3bdb0a2d66cb",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0399_y1_conv1_out_int8.npy": "05648c13d445b84ebbcb0f8463873511c48064ca34fbe92e25b3601fa73c53d9",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0399_y1_conv2_acc_int32.npy": "d612653e08347ad0948844ca0a0bf0239f9af4afc8f2e7e5c56b49a303287922",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0399_y1_conv2_out_int8.npy": "1c1344ae8d6b12c2614f681c05ecd98f7d77b574af2fbffe0ab9565fa2fedd16",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0399_y1_conv3_acc_int32.npy": "8ef9662e4a8cf2383c456914fcda9ae0800b703996f558d177cc3b9349de373a",
+    "D:\\Workspace\\FPGA_CNN\\artifacts_int8_hnm\\golden_validation\\0399_y1_conv3_out_int8.npy": "fc76227b1b8356fe77699b99ddb0a33ad4c799996ca9602ddc0b1d6726c85756"
+  }
+}

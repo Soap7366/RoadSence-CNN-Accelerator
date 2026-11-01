@@ -1,0 +1,477 @@
+{
+  "layers": {
+    "conv1": {
+      "weight_int8": "weights/conv1_weight_int8.npy",
+      "bias_int32": "weights/conv1_bias_int32.npy",
+      "weight_scales": [
+        0.026989515870809555,
+        0.018876466900110245,
+        0.05602448433637619,
+        0.04903443902730942,
+        0.04399196431040764,
+        0.06326275318861008,
+        0.0654885545372963,
+        0.09944448620080948
+      ],
+      "input_scale": 0.007874015748031496,
+      "output_scale": 0.060995353488471564,
+      "worst_case_accumulator_abs_bound": [
+        105019,
+        70124,
+        57517,
+        94443,
+        70579,
+        81735,
+        54680,
+        86842
+      ]
+    },
+    "conv2": {
+      "weight_int8": "weights/conv2_weight_int8.npy",
+      "bias_int32": "weights/conv2_bias_int32.npy",
+      "weight_scales": [
+        0.002511479426175356,
+        0.0026424569077789783,
+        0.002059133490547538,
+        0.0018893746891990304,
+        0.0022431560792028904,
+        0.0025631661992520094,
+        0.002626241184771061,
+        0.002751534106209874,
+        0.0026482923422008753,
+        0.0017518064705654979,
+        0.0023774593137204647,
+        0.002524849260225892,
+        0.0024118213914334774,
+        0.0024118239525705576,
+        0.002413410460576415,
+        0.0019245620351284742
+      ],
+      "input_scale": 0.060995353488471564,
+      "output_scale": 0.03337568373192014,
+      "worst_case_accumulator_abs_bound": [
+        407440,
+        305222,
+        472570,
+        384026,
+        400961,
+        317329,
+        336531,
+        341548,
+        417839,
+        402091,
+        399009,
+        371334,
+        363024,
+        280608,
+        428532,
+        332221
+      ]
+    },
+    "conv3": {
+      "weight_int8": "weights/conv3_weight_int8.npy",
+      "bias_int32": "weights/conv3_bias_int32.npy",
+      "weight_scales": [
+        0.006950163282454014,
+        0.00741230882704258,
+        0.006797341164201498,
+        0.005803964100778103,
+        0.0071100108325481415,
+        0.007140103727579117,
+        0.007180355489253998,
+        0.005734692327678204,
+        0.005390596110373735,
+        0.007728446740657091,
+        0.008054656907916069,
+        0.008363684639334679,
+        0.006642624735832214,
+        0.007377509959042072,
+        0.007572665810585022,
+        0.005190710071474314,
+        0.007195016834884882,
+        0.005689543671905994,
+        0.0067437440156936646,
+        0.007004940416663885,
+        0.0062621599063277245,
+        0.006635773926973343,
+        0.006706928368657827,
+        0.0072910659946501255,
+        0.005995024926960468,
+        0.00636177696287632,
+        0.00580615596845746,
+        0.008728988468647003,
+        0.006561098154634237,
+        0.008977566845715046,
+        0.0077042896300554276,
+        0.007786039263010025
+      ],
+      "input_scale": 0.03337568373192014,
+      "output_scale": 0.057662982640303964,
+      "worst_case_accumulator_abs_bound": [
+        700019,
+        682247,
+        640590,
+        798140,
+        636755,
+        553450,
+        569655,
+        743894,
+        718312,
+        630881,
+        575466,
+        523556,
+        551071,
+        634447,
+        720580,
+        696125,
+        514323,
+        824124,
+        635210,
+        719124,
+        747914,
+        751116,
+        629621,
+        724140,
+        710154,
+        750156,
+        779448,
+        521188,
+        634017,
+        544201,
+        647212,
+        630309
+      ]
+    },
+    "collision": {
+      "weight_int8": "weights/collision_weight_int8.npy",
+      "bias_int32": "weights/collision_bias_int32.npy",
+      "weight_scales": [
+        0.005172815639525652
+      ],
+      "input_scale": 0.021489916823980375,
+      "logit_scales": [
+        0.0001111633778391911
+      ],
+      "worst_case_accumulator_abs_bound": [
+        346541
+      ]
+    },
+    "steering": {
+      "weight_int8": "weights/steering_weight_int8.npy",
+      "bias_int32": "weights/steering_bias_int32.npy",
+      "weight_scales": [
+        0.002269245218485594
+      ],
+      "input_scale": 0.021489916823980375,
+      "logit_scales": [
+        4.8765890998470586e-05
+      ],
+      "worst_case_accumulator_abs_bound": [
+        179005
+      ]
+    }
+  },
+  "requant": {
+    "conv1": [
+      {
+        "multiplier": 7482117,
+        "shift": 31,
+        "real_multiplier": 0.0034841321648978888
+      },
+      {
+        "multiplier": 5232992,
+        "shift": 31,
+        "real_multiplier": 0.0024368019715920795
+      },
+      {
+        "multiplier": 15531280,
+        "shift": 31,
+        "real_multiplier": 0.007232316016060916
+      },
+      {
+        "multiplier": 13593478,
+        "shift": 31,
+        "real_multiplier": 0.006329956677272131
+      },
+      {
+        "multiplier": 12195588,
+        "shift": 31,
+        "real_multiplier": 0.0056790132355321035
+      },
+      {
+        "multiplier": 17537896,
+        "shift": 31,
+        "real_multiplier": 0.008166719043034893
+      },
+      {
+        "multiplier": 18154939,
+        "shift": 31,
+        "real_multiplier": 0.008454052321214149
+      },
+      {
+        "multiplier": 27568307,
+        "shift": 31,
+        "real_multiplier": 0.012837493441989329
+      }
+    ],
+    "conv2": [
+      {
+        "multiplier": 9856576,
+        "shift": 31,
+        "real_multiplier": 0.0045898258327538525
+      },
+      {
+        "multiplier": 10370611,
+        "shift": 31,
+        "real_multiplier": 0.004829192248543624
+      },
+      {
+        "multiplier": 8081295,
+        "shift": 31,
+        "real_multiplier": 0.003763146131918108
+      },
+      {
+        "multiplier": 7415058,
+        "shift": 31,
+        "real_multiplier": 0.0034529053536556833
+      },
+      {
+        "multiplier": 8803512,
+        "shift": 31,
+        "real_multiplier": 0.004099454533419463
+      },
+      {
+        "multiplier": 10059426,
+        "shift": 31,
+        "real_multiplier": 0.004684285410565399
+      },
+      {
+        "multiplier": 10306971,
+        "shift": 31,
+        "real_multiplier": 0.004799557387281049
+      },
+      {
+        "multiplier": 10798697,
+        "shift": 31,
+        "real_multiplier": 0.005028535049406206
+      },
+      {
+        "multiplier": 10393513,
+        "shift": 31,
+        "real_multiplier": 0.00483985673075113
+      },
+      {
+        "multiplier": 6875156,
+        "shift": 31,
+        "real_multiplier": 0.003201494110915911
+      },
+      {
+        "multiplier": 9330599,
+        "shift": 31,
+        "real_multiplier": 0.004344898891349122
+      },
+      {
+        "multiplier": 9909047,
+        "shift": 31,
+        "real_multiplier": 0.004614259721825455
+      },
+      {
+        "multiplier": 9465457,
+        "shift": 31,
+        "real_multiplier": 0.004407696918006447
+      },
+      {
+        "multiplier": 9465467,
+        "shift": 31,
+        "real_multiplier": 0.004407701598583564
+      },
+      {
+        "multiplier": 9471694,
+        "shift": 31,
+        "real_multiplier": 0.004410601003354019
+      },
+      {
+        "multiplier": 7553154,
+        "shift": 31,
+        "real_multiplier": 0.003517211589912198
+      }
+    ],
+    "conv3": [
+      {
+        "multiplier": 8638890,
+        "shift": 31,
+        "real_multiplier": 0.004022796618887599
+      },
+      {
+        "multiplier": 9213326,
+        "shift": 31,
+        "real_multiplier": 0.004290289260232914
+      },
+      {
+        "multiplier": 8448936,
+        "shift": 31,
+        "real_multiplier": 0.003934342250894622
+      },
+      {
+        "multiplier": 7214191,
+        "shift": 31,
+        "real_multiplier": 0.0033593695877186954
+      },
+      {
+        "multiplier": 8837577,
+        "shift": 31,
+        "real_multiplier": 0.0041153173493975554
+      },
+      {
+        "multiplier": 8874981,
+        "shift": 31,
+        "real_multiplier": 0.0041327352993741785
+      },
+      {
+        "multiplier": 8925013,
+        "shift": 31,
+        "real_multiplier": 0.004156033262916814
+      },
+      {
+        "multiplier": 7128088,
+        "shift": 31,
+        "real_multiplier": 0.0033192746657311604
+      },
+      {
+        "multiplier": 6700385,
+        "shift": 31,
+        "real_multiplier": 0.0031201096902781418
+      },
+      {
+        "multiplier": 9606278,
+        "shift": 31,
+        "real_multiplier": 0.00447327180011097
+      },
+      {
+        "multiplier": 10011750,
+        "shift": 31,
+        "real_multiplier": 0.004662084221426175
+      },
+      {
+        "multiplier": 10395864,
+        "shift": 31,
+        "real_multiplier": 0.0048409513447686845
+      },
+      {
+        "multiplier": 8256627,
+        "shift": 31,
+        "real_multiplier": 0.0038447914447284452
+      },
+      {
+        "multiplier": 9170072,
+        "shift": 31,
+        "real_multiplier": 0.00427014746458806
+      },
+      {
+        "multiplier": 9412646,
+        "shift": 31,
+        "real_multiplier": 0.00438310485390941
+      },
+      {
+        "multiplier": 6451931,
+        "shift": 31,
+        "real_multiplier": 0.003004414439854685
+      },
+      {
+        "multiplier": 8943237,
+        "shift": 31,
+        "real_multiplier": 0.004164519338600988
+      },
+      {
+        "multiplier": 7071969,
+        "shift": 31,
+        "real_multiplier": 0.003293142350214735
+      },
+      {
+        "multiplier": 8382316,
+        "shift": 31,
+        "real_multiplier": 0.0039033198965934437
+      },
+      {
+        "multiplier": 8706977,
+        "shift": 31,
+        "real_multiplier": 0.004054501956062644
+      },
+      {
+        "multiplier": 7783718,
+        "shift": 31,
+        "real_multiplier": 0.0036245760961768217
+      },
+      {
+        "multiplier": 8248111,
+        "shift": 31,
+        "real_multiplier": 0.003840826155051915
+      },
+      {
+        "multiplier": 8336555,
+        "shift": 31,
+        "real_multiplier": 0.0038820107770232873
+      },
+      {
+        "multiplier": 9062624,
+        "shift": 31,
+        "real_multiplier": 0.004220113174234471
+      },
+      {
+        "multiplier": 7451675,
+        "shift": 31,
+        "real_multiplier": 0.003469956751549602
+      },
+      {
+        "multiplier": 7907540,
+        "shift": 31,
+        "real_multiplier": 0.0036822350520863763
+      },
+      {
+        "multiplier": 7216916,
+        "shift": 31,
+        "real_multiplier": 0.0033606382540120228
+      },
+      {
+        "multiplier": 10849928,
+        "shift": 31,
+        "real_multiplier": 0.005052391414548662
+      },
+      {
+        "multiplier": 8155291,
+        "shift": 31,
+        "real_multiplier": 0.0037976033655619246
+      },
+      {
+        "multiplier": 11158905,
+        "shift": 31,
+        "real_multiplier": 0.00519627008533074
+      },
+      {
+        "multiplier": 9576251,
+        "shift": 31,
+        "real_multiplier": 0.004459289518126919
+      },
+      {
+        "multiplier": 9677864,
+        "shift": 31,
+        "real_multiplier": 0.004506606701001641
+      }
+    ],
+    "gap": [
+      90035185,
+      31
+    ]
+  },
+  "activation_scales": {
+    "input": 0.007874015748031496,
+    "pool1": 0.060995353488471564,
+    "pool2": 0.03337568373192014,
+    "pool3": 0.057662982640303964,
+    "gap": 0.021489916823980375
+  },
+  "qrange": [
+    -127,
+    127
+  ]
+}

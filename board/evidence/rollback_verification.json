@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "selected_version": "0.1.0",
+  "job": "job_b6c5912c5b98",
+  "original_jpeg_wire": true,
+  "matched_board_version": "0.1.0",
+  "actual_pl_inferences": 10,
+  "all_source_input_raw_decoded_match_v070": true,
+  "all_full_readback": true,
+  "all_per_word_count_checks": true,
+  "v010_runtime_matches_original_deployment": true,
+  "batch_s": 1.2122009,
+  "preserved_v020_commit": "52423f1dcf3b13b8e48a9395a0a6e2ac273a9cd3",
+  "preserved_v020_tag": "snapshot-v0.2.0-before-rollback",
+  "bundle_sha256": "191457b21d3f9937e2d887c7e59cd04058e6d26c9be8451b294b2f0f39bf36de"
+}

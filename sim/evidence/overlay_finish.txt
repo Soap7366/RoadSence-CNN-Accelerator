@@ -1,0 +1,191 @@
+Overlay workspace: D:\work\FPGA\pynq_cnn_delivery\.runtime\o_b955814e
++ D:\Xilinx\Vivado\Vivado\2023.2\bin\vivado.bat -mode batch -source D:\work\FPGA\pynq_cnn_delivery\.runtime\o_b955814e\scripts\finish_overlay.tcl -log D:\work\FPGA\pynq_cnn_delivery\.runtime\o_b955814e\vivado.log -journal D:\work\FPGA\pynq_cnn_delivery\.runtime\o_b955814e\vivado.jou -tclargs D:\work\FPGA\pynq_cnn_delivery\.runtime\o_b955814e
+ECHO is off.
+ECHO is off.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+Sourcing tcl script 'D:/Xilinx/Vivado/Vivado/2023.2/scripts/Vivado_init.tcl'
+source {D:\work\FPGA\pynq_cnn_delivery\.runtime\o_b955814e\scripts\finish_overlay.tcl}
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# if {[llength $argv] > 0 && [lindex $argv 0] ne ""} { set root [file normalize [lindex $argv 0]] }
+# if {[version -short] ne "2023.2"} { error "Expected Vivado 2023.2" }
+# set part xc7z020clg400-1
+# set project_dir [file join $root build overlay]
+# set xpr [file join $project_dir cnn_overlay.xpr]
+# if {![file isfile $xpr]} { error "Missing existing routed project: $xpr" }
+# open_project $xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/Vivado/2023.2/data/ip'.
+open_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 525.949 ; gain = 203.430
+# if {[get_property PART [current_project]] ne $part} { error "Unexpected project part" }
+# set run_status [get_property STATUS [get_runs impl_1]]
+# if {![string match "*route_design Complete*" $run_status] && ![string match "*write_bitstream Complete*" $run_status]} {
+#     error "Existing impl_1 must already be routed: status=$run_status"
+# }
+# open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.366 . Memory (MB): peak = 1022.129 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5486 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.125 . Memory (MB): peak = 1181.477 ; gain = 13.105
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1822.043 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1822.043 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1856.875 ; gain = 34.832
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1856.875 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.641 . Memory (MB): peak = 1868.703 ; gain = 11.828
+Read Physdb Files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1868.703 ; gain = 46.660
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1868.703 ; gain = 46.672
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1868.703 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 498 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 390 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 36 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 72 instances
+
+The system cannot find the path specified.
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1868.703 ; gain = 1342.754
+# set reports [file join $root reports overlay]
+# file mkdir $reports
+# report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -file [file join $reports finish_timing_summary.rpt]
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2205.512 ; gain = 336.809
+# report_utilization -file [file join $reports finish_utilization.rpt]
+# report_drc -file [file join $reports finish_drc.rpt]
+Command: report_drc -file D:/work/FPGA/pynq_cnn_delivery/.runtime/o_b955814e/reports/overlay/finish_drc.rpt
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file D:/work/FPGA/pynq_cnn_delivery/.runtime/o_b955814e/reports/overlay/finish_drc.rpt.
+report_drc completed successfully
+# set setup_path [get_timing_paths -quiet -delay_type max -max_paths 1]
+# set hold_path [get_timing_paths -quiet -delay_type min -max_paths 1]
+# if {[llength $setup_path] == 0 || [llength $hold_path] == 0} {
+#     error "Missing setup/hold paths; no artifact finalization"
+# }
+# set setup_slack [get_property SLACK $setup_path]
+# set hold_slack [get_property SLACK $hold_path]
+# if {$setup_slack < 0 || $hold_slack < 0} {
+#     error "Routed timing failed: setup=$setup_slack hold=$hold_slack"
+# }
+# set artifacts [file join $root artifacts]
+# file mkdir $artifacts
+# set bitfile [file join $artifacts cnn.bit]
+# write_bitstream -force $bitfile
+Command: write_bitstream -force D:/work/FPGA/pynq_cnn_delivery/.runtime/o_b955814e/artifacts/cnn.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__0 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__1 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__2 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__3 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__4 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__5 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__6 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0__0 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__1 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__2 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__3 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__4 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__5 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__6 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[0] multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[0]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[0]__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[0]__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[1] multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[1]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[1]__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[1]__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[2] multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[2]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[2]__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[2]__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[3] multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[3]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[3]__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[3]__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product_reg multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product_reg__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 30 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream D:/work/FPGA/pynq_cnn_delivery/.runtime/o_b955814e/artifacts/cnn.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+8 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 2783.195 ; gain = 401.078
+# set hwh [file join $project_dir cnn_overlay.gen sources_1 bd cnn_system hw_handoff cnn_system.hwh]
+# if {![file isfile $hwh]} { error "Missing HWH from this routed project's BD" }
+# file copy -force $hwh [file join $artifacts cnn.hwh]
+# write_hw_platform -fixed -force -file [file join $artifacts cnn.xsa]
+INFO: [Project 1-1918] Creating Hardware Platform: D:/work/FPGA/pynq_cnn_delivery/.runtime/o_b955814e/artifacts/cnn.xsa ...
+INFO: [Project 1-1943] The Hardware Platform can be used for Hardware
+INFO: [Project 1-1941] Successfully created Hardware Platform: D:/work/FPGA/pynq_cnn_delivery/.runtime/o_b955814e/artifacts/cnn.xsa
+INFO: [Hsi 55-2053] elapsed time for repository (D:/Xilinx/Vivado/Vivado/2023.2/data/embeddedsw) loading 0 seconds
+# set artifact_report [open [file join $artifacts build_info.txt] w]
+# puts $artifact_report "Vivado=[version -short]"
+# puts $artifact_report "part=$part"
+# puts $artifact_report "clock=50 MHz"
+# puts $artifact_report "setup_slack_ns=$setup_slack"
+# puts $artifact_report "hold_slack_ns=$hold_slack"
+# puts $artifact_report "bit=$bitfile"
+# puts $artifact_report "hwh_source=$hwh"
+# puts $artifact_report "Physical address and interface metadata must be read from cnn.hwh."
+# puts $artifact_report "XSA omits the bitstream; distribute cnn.bit separately with cnn.hwh."
+# puts $artifact_report "This build has not programmed or verified a board."
+# close $artifact_report
+# puts "PASS CNN_OVERLAY_FINISH: existing routed DCP, setup=$setup_slack ns hold=$hold_slack ns, paired cnn.bit/cnn.hwh and bit-free XSA exported"
+PASS CNN_OVERLAY_FINISH: existing routed DCP, setup=4.600 ns hold=0.023 ns, paired cnn.bit/cnn.hwh and bit-free XSA exported
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  1 16:01:37 2026...
++ C:\Users\april\miniconda3\python.exe -B D:\work\FPGA\pynq_cnn_delivery\.runtime\o_b955814e\scripts\make_overlay_manifest.py
+{
+  "status": "PASS",
+  "phys_addr": "0x40000000",
+  "addr_range": 8192,
+  "setup_slack_ns": 4.6,
+  "hold_slack_ns": 0.023,
+  "files": {
+    "bit": {
+      "path": "cnn.bit",
+      "bytes": 4045678,
+      "sha256": "276ee72d52e3a89c2c3d716a1ad256e39d637e73a218c215fb30f1844dccdb81"
+    },
+    "hwh": {
+      "path": "cnn.hwh",
+      "bytes": 141398,
+      "sha256": "0d18013bfe503109983bf1aeeb3f442b4750b2363b0f20cf6d2f32a022f74577"
+    }
+  }
+}
+Overlay workspace: D:\work\FPGA\pynq_cnn_delivery\.runtime\o_b955814e
+
+AUTOMATION_EXIT_CODE=0

@@ -1,0 +1,3 @@
+# Preserve exact bytes: pinned fixture/provenance manifests include source hashes.
+# Shell files are authored as LF and checked by verify_package.py.
+* -text

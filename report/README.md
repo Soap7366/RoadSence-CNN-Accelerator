@@ -1,0 +1,7 @@
+# 报告与证据导航
+
+当前入口是根README、file_inventory.md、validation_status.md和collaboration_record.md。
+
+source_handoff.md、stream_design.md、stream_test_report.md、core_design.md、core_performance.md与output_semantics.md是原材料的历史快照，保留原路径、日期、链接与当时的判断。它们中的旧目录命令不作为本包运行入口，链接可能指向未收录的完整原工程。当前复现命令以根README及manage.py为准。
+
+source_inventory.json记录复制来源及字节身份；package_manifest.json用于交付完整性。机器现场测试在sim/results，固定历史硬件证据在board/evidence，原始板级实现rpt在build/reports/overlay，本轮新板级产物在build/rebuilt_overlay。本轮公开工具说明引用见根README，不以外部文档替代本项目实际测试。

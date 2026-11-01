@@ -1,0 +1,75 @@
+{
+  "repository": "https://github.com/Soap7366/SystolicCNN",
+  "commit": "8c8dcfafc901f0c54276e6aaba86d817cb82538d",
+  "archive_sha256": "fa4d1f4ae6f3126b92091192d711bf38bef938a73e68334b10450080e43737d5",
+  "files": {
+    "rtl/cnn_accelerator.v": {
+      "bytes": 1427,
+      "sha256": "5367b3a9a0e6d879d0b1aa9cac55f71848083cd540759b38b3ca94dc76cc401e"
+    },
+    "rtl/cnn_controller.v": {
+      "bytes": 3121,
+      "sha256": "608427878d89576eddb89be8f5e913972c4aecdf755712efcc498a3c60076823"
+    },
+    "rtl/cnn_layer_accelerator.v": {
+      "bytes": 12634,
+      "sha256": "e0c8572e43777f0f2cd27389d01b6b652b93b80273f985c9d2d0455762a03cc9"
+    },
+    "rtl/cnn_network_controller.v": {
+      "bytes": 3113,
+      "sha256": "cf4bf139f13c2b6a3f078aeed3cedc23b42dad7472e004b03c2720ccf98932cf"
+    },
+    "rtl/data_mapper.v": {
+      "bytes": 2701,
+      "sha256": "6224f9a56fa5456f29cd6b3833cb215573daa793f20877c62b8a0857c23ed96c"
+    },
+    "rtl/mac_pe.v": {
+      "bytes": 948,
+      "sha256": "555aa84d467179eac4cd280ede652eb0a2c545e66f7b040b6b3c241016530350"
+    },
+    "rtl/memories.v": {
+      "bytes": 6197,
+      "sha256": "e97e42b87730fe74e7d5aa0495fc5f758291dcc48d5b3ee65ab5f0d589bf335b"
+    },
+    "rtl/online_gap.v": {
+      "bytes": 2702,
+      "sha256": "aff400ddd65e869ab63e3eda4ab0c96719f417effa076f3a762f4b3efff231a8"
+    },
+    "rtl/post_processing.v": {
+      "bytes": 6002,
+      "sha256": "38f84e841e812544912cde409a25b0d36e1a13af309ee57bc0a1d47aee39e561"
+    },
+    "rtl/prep.v": {
+      "bytes": 5795,
+      "sha256": "24a5f3617c8d9f079bcd52dfe0f0d5cd0adae235835b4170e6386e7ac1100559"
+    },
+    "rtl/systolic_array.v": {
+      "bytes": 1405,
+      "sha256": "3633414e495f8f24026f9b016018d998d2f204b40f92f45b972fa7cdc46e9d4d"
+    },
+    "rtl/tile_controller.v": {
+      "bytes": 2643,
+      "sha256": "56fbe25369b60317ddcdca4defbe46cdd49a1024734a45e335f3a9191fe3ad44"
+    },
+    "rtl/weight_loader.v": {
+      "bytes": 2062,
+      "sha256": "4dfdcd8aaeb6201302ee28cbc6c5edbace837effe786410117e60ea29c5b30ad"
+    },
+    "data/dual_task_baseline2_qat/weights.hex": {
+      "bytes": 24576,
+      "sha256": "d58ded52512463f0cfaae8d7c1cb2cf3ac5cf24199d757ef79b85b8b3dd8926b"
+    },
+    "data/dual_task_baseline2_qat/bias.hex": {
+      "bytes": 576,
+      "sha256": "ffdcafc42503becc3095c8c2a3e081ee0cf5494cd8c81ac800dec101e0f5e2ff"
+    },
+    "data/dual_task_baseline2_qat/quant.hex": {
+      "bytes": 576,
+      "sha256": "76184ebe430de22d3fd443a73ad14aa735617cfdbc2f4119b6217880be9bd90e"
+    },
+    "data/dual_task_baseline2_qat/manifest.json": {
+      "bytes": 207624,
+      "sha256": "25117bbad18723e30bed336cd9cb9b3449191136bd26785fddd13bf7f35375e4"
+    }
+  }
+}

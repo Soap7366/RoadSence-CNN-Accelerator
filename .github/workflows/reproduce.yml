@@ -1,0 +1,22 @@
+name: reproduce
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  offline:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+        python: ['3.9', '3.12']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: install_tk_linux
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y python3-tk libgl1 libglib2.0-0
+      - run: python manage.py setup
+      - run: python manage.py test
+      - name: export
+        run: python manage.py export --output ../portable_export

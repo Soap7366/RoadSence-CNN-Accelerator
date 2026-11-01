@@ -1,0 +1,10 @@
+Vivado=2023.2
+part=xc7z020clg400-1
+clock=50 MHz
+setup_slack_ns=4.600
+hold_slack_ns=0.023
+bit=D:/work/FPGA/pynq_cnn_delivery/.runtime/o_b955814e/artifacts/cnn.bit
+hwh_source=D:/work/FPGA/pynq_cnn_delivery/.runtime/o_b955814e/build/overlay/cnn_overlay.gen/sources_1/bd/cnn_system/hw_handoff/cnn_system.hwh
+Physical address and interface metadata must be read from cnn.hwh.
+XSA omits the bitstream; distribute cnn.bit separately with cnn.hwh.
+This build has not programmed or verified a board.

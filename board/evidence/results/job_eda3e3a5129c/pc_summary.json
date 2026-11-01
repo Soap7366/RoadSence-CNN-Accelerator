@@ -1,0 +1,34 @@
+{
+  "job": "job_eda3e3a5129c",
+  "status": "FAIL",
+  "images": [],
+  "runs": [],
+  "golden": 0,
+  "ack_words": 1,
+  "window": 2,
+  "includes_pc_preprocessing": false,
+  "version": "0.3.0",
+  "wire_format": "IMG1: 44-byte header + original JPEG",
+  "preprocess": "native",
+  "workers": 1,
+  "origin_ns": 137759459530500,
+  "process_started_ns": 137759501690400,
+  "startup": {
+    "standard_library_ns": 24721200,
+    "protocol_modules_ns": 1684700,
+    "paramiko_connection_modules_ns": 377775600,
+    "launcher_to_child_entry_ns": 42159900,
+    "entry_gap_ns": 10300,
+    "arguments_job_setup_ns": 2698500
+  },
+  "connection_timings": {
+    "credentials_read_ns": 314600,
+    "ssh_client_hostkeys_ns": 319600
+  },
+  "timeline": [],
+  "error": {
+    "type": "TimeoutError",
+    "message": "timed out"
+  },
+  "total_ns": 8457470300
+}

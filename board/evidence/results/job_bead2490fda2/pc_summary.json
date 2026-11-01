@@ -1,0 +1,35 @@
+{
+  "job": "job_bead2490fda2",
+  "status": "FAIL",
+  "images": [],
+  "runs": [],
+  "golden": 0,
+  "ack_words": 1,
+  "window": 2,
+  "includes_pc_preprocessing": false,
+  "version": "0.3.0",
+  "wire_format": "IMG1: 44-byte header + original JPEG",
+  "preprocess": "native",
+  "workers": 2,
+  "full_wire_report": false,
+  "origin_ns": 138120130699300,
+  "process_started_ns": 138120172144200,
+  "startup": {
+    "standard_library_ns": 23070000,
+    "protocol_modules_ns": 1696100,
+    "paramiko_connection_modules_ns": 385294700,
+    "launcher_to_child_entry_ns": 41444900,
+    "entry_gap_ns": 11100,
+    "arguments_job_setup_ns": 2643400
+  },
+  "connection_timings": {
+    "credentials_read_ns": 350800,
+    "ssh_client_hostkeys_ns": 274300
+  },
+  "timeline": [],
+  "error": {
+    "type": "TimeoutError",
+    "message": "timed out"
+  },
+  "total_ns": 8458826000
+}

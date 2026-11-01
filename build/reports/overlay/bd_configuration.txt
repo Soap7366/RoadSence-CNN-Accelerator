@@ -1,0 +1,5 @@
+Vivado=2023.2; clock_domain=FCLK0 50 MHz
+kernel=cnn_axi_accelerator_0; AXI_interface=/cnn_axi_accelerator_0/S_AXI; aperture=8K
+upstream_commit=8c8dcfafc901f0c54276e6aaba86d817cb82538d
+model_commit=619308c77fd9af7d03bc89c494a33dda5d07386d
+SEGMENT=/ps7/Data/SEG_cnn_axi_accelerator_0_reg0; OFFSET=0x40000000; RANGE=0x00002000

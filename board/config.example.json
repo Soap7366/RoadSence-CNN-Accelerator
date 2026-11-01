@@ -1,0 +1,8 @@
+{
+  "host": "192.168.2.99",
+  "username": "xilinx",
+  "port": 22,
+  "remote_base": "/home/xilinx/pynq_cnn_delivery",
+  "remote_root": "/home/xilinx/pynq_cnn_delivery",
+  "remote_python": "/usr/local/share/pynq-venv/bin/python3"
+}

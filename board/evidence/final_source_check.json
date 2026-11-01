@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "runtime_sources_match_tested_deployment": true,
+  "pc_only_report_changes": [
+    "tools/report_results.py"
+  ],
+  "added_pc_only_report": "tools/report_v030.py",
+  "configs": {
+    "axi_registers_v1.json": {
+      "json_identical": true,
+      "bytes_identical": false
+    },
+    "model_contract.json": {
+      "json_identical": true,
+      "bytes_identical": true
+    },
+    "quant_params.json": {
+      "json_identical": true,
+      "bytes_identical": true
+    }
+  },
+  "previous_board_backup_sha_verified": true,
+  "note": "axi_registers_v1.json differs from v0.1.0 only by JSON whitespace/line endings after cloning; parsed content identical. Model contract/quantization bytes identical. All measured runtime files match deployment."
+}

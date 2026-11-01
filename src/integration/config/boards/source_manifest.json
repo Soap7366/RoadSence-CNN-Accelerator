@@ -1,0 +1,27 @@
+{
+  "source_repository": "https://github.com/Xilinx/PYNQ",
+  "source_tag": "v3.0.1",
+  "source_url": "https://raw.githubusercontent.com/Xilinx/PYNQ/v3.0.1/boards/Pynq-Z2/petalinux_bsp/hardware_project/pynqz2.tcl",
+  "source_obtained": "Existing official-source snapshot from D:/ceshi/pynq_z2_verification_20261025; original untouched",
+  "preset_derivation": "Only PS7 set_property dictionary from the official Tcl; no generated BD code executed",
+  "license": "BSD-3-Clause; see pynq_license.txt",
+  "notes": [
+    "Board-specific DDR and MIO preset, not the SD image or Linux/FSBL",
+    "TUL historical download page returned HTTP404 during this preparation",
+    "No board files installed into the Vivado installation"
+  ],
+  "files": {
+    "pynqz2_v3.0.1.tcl": {
+      "bytes": 47550,
+      "sha256": "5f237f90bd27911383682b553f4595e24009839b111e4bb6a0973b09f03d11fe"
+    },
+    "pynqz2_ps_preset.tcl": {
+      "bytes": 37092,
+      "sha256": "5b5b4c0c3ce69b2de5e16daa06d9005bee0ea3b5d4631def8b24aed34b15228f"
+    },
+    "pynq_license.txt": {
+      "bytes": 1506,
+      "sha256": "6d822a20e645291ace79180f0ae94f604b9d5fb81165e302b2c7b8cd7bf83fc3"
+    }
+  }
+}

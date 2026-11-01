@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Nov  1 15:39:24 2026
+# Process ID: 11032
+# Current directory: D:/work/FPGA/pynq_cnn_delivery/.runtime/r_f0a2adba
+# Command line: xsim.exe -log D:\work\FPGA\pynq_cnn_delivery\.runtime\r_f0a2adba\build\xsim_control.log -mode tcl -source {xsim.dir/sim_control/xsim_script.tcl}
+# Log file: D:/work/FPGA/pynq_cnn_delivery/.runtime/r_f0a2adba/build/xsim_control.log
+# Journal file: D:/work/FPGA/pynq_cnn_delivery/.runtime/r_f0a2adba\xsim.jou
+# Running On: LAPTOP-ABFF0DL3, OS: Windows, CPU Frequency: 2995 MHz, CPU Physical cores: 16, Host memory: 16450 MB
+#-----------------------------------------------------------
+source xsim.dir/sim_control/xsim_script.tcl
+# xsim {sim_control} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS tb_control: graph order, GAP wait, 32 FC copies, busy start, sticky result, GAP/layer error abort/restart, reset
+$finish called at time : 1140 ns : File "D:/work/FPGA/pynq_cnn_delivery/.runtime/r_f0a2adba/sim/tb_control.sv" Line 47
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 15:39:26 2026...

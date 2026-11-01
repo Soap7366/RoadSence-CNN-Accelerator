@@ -1,0 +1,15 @@
+{
+  "job": "job_40c9ca1414cc",
+  "status": "FAIL",
+  "images": [],
+  "runs": [],
+  "golden": 30,
+  "ack_words": 1,
+  "window": 2,
+  "includes_pc_preprocessing": false,
+  "error": {
+    "type": "TimeoutError",
+    "message": "timed out"
+  },
+  "total_ns": 8010665200
+}

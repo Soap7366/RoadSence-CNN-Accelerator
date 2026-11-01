@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "exported_to": "C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project",
+  "same_platform": true,
+  "copied_virtual_environment": false,
+  "shared_wheel_cache_only": true,
+  "steps": [
+    {
+      "command": [
+        "C:\\Users\\april\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\work\\FPGA\\pynq_cnn_delivery\\manage.py",
+        "export",
+        "--output",
+        "C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project"
+      ],
+      "exit_code": 0,
+      "output": "Exported portable source package: C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\april\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\manage.py",
+        "setup",
+        "--python",
+        "D:/Anaconda3/python.exe",
+        "--offline",
+        "--wheelhouse",
+        "D:\\work\\FPGA\\pynq_cnn_delivery\\.runtime\\wheels"
+      ],
+      "exit_code": 0,
+      "output": "+ D:/Anaconda3/python.exe -I -c import sys; assert (3,9)<=sys.version_info[:2]<=(3,12), 'Use Python 3.9-3.12'; import tkinter; print(sys.version); print('Tcl', tkinter.Tcl().eval('info patchlevel'))\n3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]\nTcl 8.6.14\n+ D:/Anaconda3/python.exe -I -m venv C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\.runtime\\pc_env\n+ C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\.runtime\\pc_env\\Scripts\\python.exe -I -m pip --isolated --cache-dir C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\.runtime\\pip_cache install --no-index --find-links D:\\work\\FPGA\\pynq_cnn_delivery\\.runtime\\wheels -r C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\build\\requirements_pc.txt\nLooking in links: d:\\work\\FPGA\\pynq_cnn_delivery\\.runtime\\wheels\nProcessing d:\\work\\fpga\\pynq_cnn_delivery\\.runtime\\wheels\\numpy-1.26.4-cp312-cp312-win_amd64.whl (from -r C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\build\\requirements_pc.txt (line 1))\nRequirement already satisfied: pip==24.2 in c:\\users\\april\\appdata\\local\\temp\\pynq_repro_758pd6m9\\portable_project\\.runtime\\pc_env\\lib\\site-packages (from -r C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\build\\requirements_pc.txt (line 2)) (24.2)\nProcessing d:\\work\\fpga\\pynq_cnn_delivery\\.runtime\\wheels\\opencv_python-4.11.0.86-cp37-abi3-win_amd64.whl (from -r C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\build\\requirements_pc.txt (line 3))\nProcessing d:\\work\\fpga\\pynq_cnn_delivery\\.runtime\\wheels\\pillow-11.3.0-cp312-cp312-win_amd64.whl (from -r C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\build\\requirements_pc.txt (line 4))\nProcessing d:\\work\\fpga\\pynq_cnn_delivery\\.runtime\\wheels\\paramiko-3.5.1-py3-none-any.whl (from -r C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\build\\requirements_pc.txt (line 5))\nProcessing d:\\work\\fpga\\pynq_cnn_delivery\\.runtime\\wheels\\cryptography-44.0.3-cp39-abi3-win_amd64.whl (from -r C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\build\\requirements_pc.txt (line 6))\nProcessing d:\\work\\fpga\\pynq_cnn_delivery\\.runtime\\wheels\\bcrypt-4.3.0-cp39-abi3-win_amd64.whl (from -r C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\build\\requirements_pc.txt (line 7))\nProcessing d:\\work\\fpga\\pynq_cnn_delivery\\.runtime\\wheels\\cffi-1.17.1-cp312-cp312-win_amd64.whl (from -r C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\build\\requirements_pc.txt (line 8))\nProcessing d:\\work\\fpga\\pynq_cnn_delivery\\.runtime\\wheels\\pynacl-1.5.0-cp36-abi3-win_amd64.whl (from -r C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\build\\requirements_pc.txt (line 9))\nProcessing d:\\work\\fpga\\pynq_cnn_delivery\\.runtime\\wheels\\pycparser-2.22-py3-none-any.whl (from -r C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\build\\requirements_pc.txt (line 10))\nInstalling collected packages: pycparser, Pillow, numpy, bcrypt, opencv-python, cffi, PyNaCl, cryptography, paramiko\nSuccessfully installed Pillow-11.3.0 PyNaCl-1.5.0 bcrypt-4.3.0 cffi-1.17.1 cryptography-44.0.3 numpy-1.26.4 opencv-python-4.11.0.86 paramiko-3.5.1 pycparser-2.22\n+ C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\.runtime\\pc_env\\Scripts\\python.exe -I -m pip check\nNo broken requirements found.\n+ C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\.runtime\\pc_env\\Scripts\\python.exe -B build/doctor.py\n{\n  \"status\": \"PASS\",\n  \"platform\": \"Windows-11-10.0.26200-SP0\",\n  \"python\": \"3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]\",\n  \"dependencies\": {\n    \"numpy\": \"1.26.4\",\n    \"Pillow\": \"11.3.0\",\n    \"opencv-python\": \"4.11.0.86\",\n    \"paramiko\": \"3.5.1\",\n    \"cryptography\": \"44.0.3\"\n  },\n  \"module_paths\": {\n    \"cv2\": \"C:\\\\Users\\\\april\\\\AppData\\\\Local\\\\Temp\\\\pynq_repro_758pd6m9\\\\portable_project\\\\.runtime\\\\pc_env\\\\Lib\\\\site-packages\\\\cv2\\\\__init__.py\",\n    \"numpy\": \"C:\\\\Users\\\\april\\\\AppData\\\\Local\\\\Temp\\\\pynq_repro_758pd6m9\\\\portable_project\\\\.runtime\\\\pc_env\\\\Lib\\\\site-packages\\\\numpy\\\\__init__.py\",\n    \"PIL\": \"C:\\\\Users\\\\april\\\\AppData\\\\Local\\\\Temp\\\\pynq_repro_758pd6m9\\\\portable_project\\\\.runtime\\\\pc_env\\\\Lib\\\\site-packages\\\\PIL\\\\__init__.py\",\n    \"paramiko\": \"C:\\\\Users\\\\april\\\\AppData\\\\Local\\\\Temp\\\\pynq_repro_758pd6m9\\\\portable_project\\\\.runtime\\\\pc_env\\\\Lib\\\\site-packages\\\\paramiko\\\\__init__.py\"\n  },\n  \"tcl\": \"8.6.14\",\n  \"gui_window_created\": false,\n  \"external_project_dependencies\": false\n}\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\april\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\manage.py",
+        "test"
+      ],
+      "exit_code": 0,
+      "output": "+ C:\\Users\\april\\AppData\\Local\\Programs\\Python\\Python39\\python.exe -B sim/verify_package.py\n{\n  \"status\": \"PASS\",\n  \"checked_files\": 685,\n  \"errors\": [],\n  \"scope\": \"offline integrity and syntax; no hardware validation\"\n}\n+ C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\.runtime\\pc_env\\Scripts\\python.exe -B sim/run_offline.py\nskill: PASS\nautomation: PASS\nstream: PASS\ndesktop: PASS\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\april\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\manage.py",
+        "doctor",
+        "--gui"
+      ],
+      "exit_code": 0,
+      "output": "+ C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\.runtime\\pc_env\\Scripts\\python.exe -B build/doctor.py --gui\n{\n  \"status\": \"PASS\",\n  \"platform\": \"Windows-11-10.0.26200-SP0\",\n  \"python\": \"3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]\",\n  \"dependencies\": {\n    \"numpy\": \"1.26.4\",\n    \"Pillow\": \"11.3.0\",\n    \"opencv-python\": \"4.11.0.86\",\n    \"paramiko\": \"3.5.1\",\n    \"cryptography\": \"44.0.3\"\n  },\n  \"module_paths\": {\n    \"cv2\": \"C:\\\\Users\\\\april\\\\AppData\\\\Local\\\\Temp\\\\pynq_repro_758pd6m9\\\\portable_project\\\\.runtime\\\\pc_env\\\\Lib\\\\site-packages\\\\cv2\\\\__init__.py\",\n    \"numpy\": \"C:\\\\Users\\\\april\\\\AppData\\\\Local\\\\Temp\\\\pynq_repro_758pd6m9\\\\portable_project\\\\.runtime\\\\pc_env\\\\Lib\\\\site-packages\\\\numpy\\\\__init__.py\",\n    \"PIL\": \"C:\\\\Users\\\\april\\\\AppData\\\\Local\\\\Temp\\\\pynq_repro_758pd6m9\\\\portable_project\\\\.runtime\\\\pc_env\\\\Lib\\\\site-packages\\\\PIL\\\\__init__.py\",\n    \"paramiko\": \"C:\\\\Users\\\\april\\\\AppData\\\\Local\\\\Temp\\\\pynq_repro_758pd6m9\\\\portable_project\\\\.runtime\\\\pc_env\\\\Lib\\\\site-packages\\\\paramiko\\\\__init__.py\"\n  },\n  \"tcl\": \"8.6.14\",\n  \"gui_window_created\": true,\n  \"external_project_dependencies\": false\n}\n+ C:\\Users\\april\\AppData\\Local\\Temp\\pynq_repro_758pd6m9\\portable_project\\.runtime\\pc_env\\Scripts\\python.exe -B sim/gui_smoke.py\n{\n  \"status\": \"PASS\",\n  \"actual_desktop_created\": true,\n  \"title\": \"PATH \\u00b7 PYNQ-Z2 \\u78b0\\u649e\\u9884\\u8b66\\u6f14\\u793a\",\n  \"configured_host\": \"192.168.2.99\",\n  \"scope\": \"GUI construction only; no board connection\"\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Sun Nov  1 16:01:15 2026
+| Host         : LAPTOP-ABFF0DL3 running 64-bit major release  (build 9200)
+| Command      : report_drc -file D:/work/FPGA/pynq_cnn_delivery/.runtime/o_b955814e/reports/overlay/finish_drc.rpt
+| Design       : cnn_system_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: impl_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 30
++--------+----------+------------------------+------------+
+| Rule   | Severity | Description            | Violations |
++--------+----------+------------------------+------------+
+| DPOP-1 | Warning  | PREG Output pipelining | 10         |
+| DPOP-2 | Warning  | MREG Output pipelining | 20         |
++--------+----------+------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__0 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#3 Warning
+PREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__1 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#4 Warning
+PREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__2 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#5 Warning
+PREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__3 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#6 Warning
+PREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__4 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#7 Warning
+PREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__5 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#8 Warning
+PREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__6 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#9 Warning
+PREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#10 Warning
+PREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0__0 output cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#3 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__1 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#4 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__2 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#5 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__3 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#6 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__4 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#7 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__5 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#8 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__6 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/p_0_out__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#9 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[0] multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[0]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#10 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[0]__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[0]__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#11 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[1] multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[1]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#12 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[1]__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[1]__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#13 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[2] multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[2]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#14 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[2]__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[2]__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#15 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[3] multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[3]/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#16 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[3]__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[3]__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#17 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#18 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product0__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#19 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product_reg multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#20 Warning
+MREG Output pipelining  
+DSP cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product_reg__0 multiplier stage cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/tail.gap/product_reg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+

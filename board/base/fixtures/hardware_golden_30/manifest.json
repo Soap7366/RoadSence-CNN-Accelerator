@@ -1,0 +1,219 @@
+{
+  "schema": "pscnn.hardware-golden.v1",
+  "model_id": "dual_task_baseline2_int8_qat@619308c77fd9",
+  "quant_params_sha256": "346bafa31f56bd5a28bff0d8ee7d8cd850e5e2da7f56e536037e46d033dc4225",
+  "source_repository": "https://github.com/Soap7366/SystolicCNN",
+  "source_commit": "8c8dcfafc901f0c54276e6aaba86d817cb82538d",
+  "samples": [
+    {
+      "id": 0,
+      "input_file": "s0.bin",
+      "input_sha256": "ae44956122044513ca2d9e2b3d01dfd3b1baea0658de420b6c0f40eaafb70b03",
+      "collision_int32": -16265,
+      "steering_int32": 1202
+    },
+    {
+      "id": 1,
+      "input_file": "s1.bin",
+      "input_sha256": "8934df8ef3cf1829eed4b874a204642fcb0d54548e93aa4ed40251c5d8e32b4c",
+      "collision_int32": -18541,
+      "steering_int32": 166
+    },
+    {
+      "id": 2,
+      "input_file": "s2.bin",
+      "input_sha256": "23f070977810e858d9b136f6a21c1ce647e62cee9e7c11b04c3e1b261491fca9",
+      "collision_int32": -22660,
+      "steering_int32": 1445
+    },
+    {
+      "id": 3,
+      "input_file": "s3.bin",
+      "input_sha256": "ff839ad56c49895cd45a6ed28ec6aec170c200b6da02c8066a92bbbfd19cac97",
+      "collision_int32": -16894,
+      "steering_int32": 266
+    },
+    {
+      "id": 4,
+      "input_file": "s4.bin",
+      "input_sha256": "9f8cf86dc69f4b899964b38574f06558d7f08620f931701bfba2f57e0e3a6b04",
+      "collision_int32": -25288,
+      "steering_int32": -409
+    },
+    {
+      "id": 5,
+      "input_file": "s5.bin",
+      "input_sha256": "f95599308cdb373168ed769a78c7235a55fde634f976581d77d82c6d7bd215e0",
+      "collision_int32": -18233,
+      "steering_int32": 177
+    },
+    {
+      "id": 6,
+      "input_file": "s6.bin",
+      "input_sha256": "0e16f0e2db34ce33218c73e5e376f393aa16ef8ea8537bb5f7480608b2e4137e",
+      "collision_int32": -28795,
+      "steering_int32": -131
+    },
+    {
+      "id": 7,
+      "input_file": "s7.bin",
+      "input_sha256": "288790e3ad68a544fbab6b08dd2f5b66269b0efcc6acff7f67a8bd388dd6d010",
+      "collision_int32": -35546,
+      "steering_int32": -1512
+    },
+    {
+      "id": 8,
+      "input_file": "s8.bin",
+      "input_sha256": "affe9f1c6b5297bc337f4e60c89623d82ad1caaf3224def33346780061fd998d",
+      "collision_int32": -25608,
+      "steering_int32": -304
+    },
+    {
+      "id": 9,
+      "input_file": "s9.bin",
+      "input_sha256": "7799659434b1c344c545dc11acd30c637c9f46659eca93b78ee88c8b766f3ec5",
+      "collision_int32": -33720,
+      "steering_int32": 92
+    },
+    {
+      "id": 10,
+      "input_file": "s10.bin",
+      "input_sha256": "f6a2f09eec10373ff1a9e27927a5afb9453ca8002977dadeee7fc2718c23c2b2",
+      "collision_int32": 18522,
+      "steering_int32": 568
+    },
+    {
+      "id": 11,
+      "input_file": "s11.bin",
+      "input_sha256": "0704206f9813e9dacba618a3fa04819dd356b215bb429bbc4b637c808e9265f0",
+      "collision_int32": 67587,
+      "steering_int32": 1092
+    },
+    {
+      "id": 12,
+      "input_file": "s12.bin",
+      "input_sha256": "04b7045337241dbf0cd98ad5604677cb0e0c0213e484c1c80306120a82da2180",
+      "collision_int32": 79778,
+      "steering_int32": -151
+    },
+    {
+      "id": 13,
+      "input_file": "s13.bin",
+      "input_sha256": "0afbb09215c3777d74f068fe796aff22bb28d271672073bdbd6981c03c694a69",
+      "collision_int32": 88862,
+      "steering_int32": -914
+    },
+    {
+      "id": 14,
+      "input_file": "s14.bin",
+      "input_sha256": "a409a6ac007f8c36a839e79a4ac5308ab7227d81ff21eff4447064565ce94644",
+      "collision_int32": 91393,
+      "steering_int32": -1568
+    },
+    {
+      "id": 15,
+      "input_file": "s15.bin",
+      "input_sha256": "223f51f42f19491e74f304b4c150cc37fabfaeefbb4b88ccbc64efc06bd3e4c2",
+      "collision_int32": 83230,
+      "steering_int32": -3118
+    },
+    {
+      "id": 16,
+      "input_file": "s16.bin",
+      "input_sha256": "4f5a33d67c1902cf47bf293c03cf1e4752e035854c11744d678c95524efe5419",
+      "collision_int32": 86951,
+      "steering_int32": -1955
+    },
+    {
+      "id": 17,
+      "input_file": "s17.bin",
+      "input_sha256": "71a542345d77a25656aec201c563502064cd66db04288cd3f278b13d8b71aea8",
+      "collision_int32": 85462,
+      "steering_int32": -1679
+    },
+    {
+      "id": 18,
+      "input_file": "s18.bin",
+      "input_sha256": "a60541c624e6f4c19718e681ac091875274b8d026f05a0cf760d1587729f871f",
+      "collision_int32": 61347,
+      "steering_int32": -3426
+    },
+    {
+      "id": 19,
+      "input_file": "s19.bin",
+      "input_sha256": "e293ef0634d3cb6683302b4f249aa2e84e8da2287bd5eb0982dc9d31e9b0db72",
+      "collision_int32": 62572,
+      "steering_int32": -3252
+    },
+    {
+      "id": 20,
+      "input_file": "s20.bin",
+      "input_sha256": "8e8d7831d97b7ff9dc09a101a28e5cb0a02026b923c0dfbc27b05b72bcc663bc",
+      "collision_int32": 40109,
+      "steering_int32": 78
+    },
+    {
+      "id": 21,
+      "input_file": "s21.bin",
+      "input_sha256": "645f8877ce8aa8aca9f0ce1069eba02c38780aad9f6715753837e05aee1f0bc0",
+      "collision_int32": 34791,
+      "steering_int32": -1037
+    },
+    {
+      "id": 22,
+      "input_file": "s22.bin",
+      "input_sha256": "29d5e60e20c41850fbfd70a5019db9f1385c735ba1864a128e41066f174000a8",
+      "collision_int32": 22583,
+      "steering_int32": -1633
+    },
+    {
+      "id": 23,
+      "input_file": "s23.bin",
+      "input_sha256": "2eca8fc21594b698ef9e58ed2a41d68065be105d47577cea78c7e5a547d8e342",
+      "collision_int32": -1283,
+      "steering_int32": -3826
+    },
+    {
+      "id": 24,
+      "input_file": "s24.bin",
+      "input_sha256": "9dc31ff9ccddb34cd0d64b9f9da1be473e4cdfddf0bce87abaf184c963c7ef14",
+      "collision_int32": 33942,
+      "steering_int32": -1027
+    },
+    {
+      "id": 25,
+      "input_file": "s25.bin",
+      "input_sha256": "3b802e2bb92f0d1354f5e0a118921da6345684c82873f5d4fcbb47f4df47b8b6",
+      "collision_int32": 16335,
+      "steering_int32": 1688
+    },
+    {
+      "id": 26,
+      "input_file": "s26.bin",
+      "input_sha256": "6c5ec4be7e9e62f8cdc5396eb27ab36db30847f288bbd127bd6c6a55ff2f1d1e",
+      "collision_int32": 27509,
+      "steering_int32": 144
+    },
+    {
+      "id": 27,
+      "input_file": "s27.bin",
+      "input_sha256": "426ce7b1c85a93395f43ed5bdb0b3061cf0b8343f48aa0fc58e46690779559c8",
+      "collision_int32": 13535,
+      "steering_int32": -1965
+    },
+    {
+      "id": 28,
+      "input_file": "s28.bin",
+      "input_sha256": "d4fa8a3cf484f2e09e79f97d1d6501b53415fdbf49a3b9bba675d658bfab55fb",
+      "collision_int32": -10751,
+      "steering_int32": -1494
+    },
+    {
+      "id": 29,
+      "input_file": "s29.bin",
+      "input_sha256": "27a30933e2cb294bb695b8a3ba48c1feb856afaec963c3ebed2035633643a92c",
+      "collision_int32": -27350,
+      "steering_int32": -3416
+    }
+  ]
+}

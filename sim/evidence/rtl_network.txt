@@ -1,0 +1,56 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Nov  1 15:31:11 2026
+# Process ID: 5816
+# Current directory: D:/work/FPGA/pynq_cnn_delivery/src/core
+# Command line: xsim.exe -log D:\work\FPGA\pynq_cnn_delivery\src\core\build\xsim_network.log -mode tcl -source {xsim.dir/sim_network/xsim_script.tcl}
+# Log file: D:/work/FPGA/pynq_cnn_delivery/src/core/build/xsim_network.log
+# Journal file: D:/work/FPGA/pynq_cnn_delivery/src/core\xsim.jou
+# Running On: LAPTOP-ABFF0DL3, OS: Windows, CPU Frequency: 2995 MHz, CPU Physical cores: 16, Host memory: 16450 MB
+#-----------------------------------------------------------
+source xsim.dir/sim_network/xsim_script.tcl
+# xsim {sim_network} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS network abort phase=0
+PASS network abort phase=1
+PASS network abort phase=2
+PASS network sample=0 collision=-16265 steering=1202 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=1 collision=-18541 steering=166 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=2 collision=-22660 steering=1445 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=3 collision=-16894 steering=266 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=4 collision=-25288 steering=-409 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=5 collision=-18233 steering=177 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=6 collision=-28795 steering=-131 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=7 collision=-35546 steering=-1512 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=8 collision=-25608 steering=-304 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=9 collision=-33720 steering=92 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=10 collision=18522 steering=568 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=11 collision=67587 steering=1092 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=12 collision=79778 steering=-151 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=13 collision=88862 steering=-914 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=14 collision=91393 steering=-1568 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=15 collision=83230 steering=-3118 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=16 collision=86951 steering=-1955 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=17 collision=85462 steering=-1679 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=18 collision=61347 steering=-3426 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=19 collision=62572 steering=-3252 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=20 collision=40109 steering=78 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=21 collision=34791 steering=-1037 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=22 collision=22583 steering=-1633 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=23 collision=-1283 steering=-3826 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=24 collision=33942 steering=-1027 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=25 collision=16335 steering=1688 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=26 collision=27509 steering=144 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=27 collision=13535 steering=-1965 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=28 collision=-10751 steering=-1494 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS network sample=29 collision=-27350 steering=-3416 acc=57344 pool=14336 sums=32 gap=32 windows=331776 cycles=65116 conv1=11375 conv2=19538 conv3=33860 tail=333 setup=10
+PASS tb_network: samples=30 acc=1720320 pool=430080 windows=9953280; 60 RTL INT32 heads; automatic chain, online GAP, shared array, reset/busy/result hold
+$finish called at time : 46332080 ns : File "D:/work/FPGA/pynq_cnn_delivery/src/core/sim/tb_network.sv" Line 180
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:47 . Memory (MB): peak = 217.844 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 15880 KB (Peak: 15880 KB), Simulation CPU Usage: 163609 ms
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 15:34:02 2026...

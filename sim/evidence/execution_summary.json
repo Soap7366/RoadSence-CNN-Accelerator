@@ -1,0 +1,177 @@
+{
+  "status": "PASS",
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "scope": "offline and software mock; no PL, GUI or Vivado execution",
+  "suites": [
+    {
+      "suite": "skill",
+      "exit_code": 0,
+      "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.014s\n\nOK\n"
+    },
+    {
+      "suite": "automation",
+      "exit_code": 0,
+      "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.239s\n\nOK\n"
+    },
+    {
+      "suite": "stream",
+      "exit_code": 0,
+      "output": "ssss..........ssssssssssssss\n----------------------------------------------------------------------\nRan 28 tests in 0.112s\n\nOK (skipped=18)\n"
+    },
+    {
+      "suite": "desktop",
+      "exit_code": 0,
+      "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.046s\n\nOK\n"
+    }
+  ],
+  "relocation": {
+    "status": "PASS",
+    "same_platform": true,
+    "copied_virtual_environment": false,
+    "shared_wheel_cache_only": true,
+    "evidence": "relocation.json"
+  },
+  "environment": {
+    "status": "PASS",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+    "dependencies": {
+      "numpy": "1.26.4",
+      "Pillow": "11.3.0",
+      "opencv-python": "4.11.0.86",
+      "paramiko": "3.5.1",
+      "cryptography": "44.0.3"
+    },
+    "tcl": "8.6.14",
+    "gui_window_created": true,
+    "external_project_dependencies": false
+  },
+  "gui_smoke": {
+    "status": "PASS",
+    "actual_desktop_created": true,
+    "title": "PATH \u00b7 PYNQ-Z2 \u78b0\u649e\u9884\u8b66\u6f14\u793a",
+    "configured_host": "192.168.2.99",
+    "scope": "GUI construction only; no board connection"
+  },
+  "wheel_resolutions": {
+    "macosx_13_0_arm64": [
+      {
+        "name": "numpy",
+        "version": "1.26.4"
+      },
+      {
+        "name": "opencv-python",
+        "version": "4.11.0.86"
+      },
+      {
+        "name": "pillow",
+        "version": "11.3.0"
+      },
+      {
+        "name": "paramiko",
+        "version": "3.5.1"
+      },
+      {
+        "name": "cryptography",
+        "version": "44.0.3"
+      },
+      {
+        "name": "bcrypt",
+        "version": "4.3.0"
+      },
+      {
+        "name": "cffi",
+        "version": "1.17.1"
+      },
+      {
+        "name": "PyNaCl",
+        "version": "1.5.0"
+      },
+      {
+        "name": "pycparser",
+        "version": "2.22"
+      }
+    ],
+    "macosx_13_0_x86_64": [
+      {
+        "name": "numpy",
+        "version": "1.26.4"
+      },
+      {
+        "name": "opencv-python",
+        "version": "4.11.0.86"
+      },
+      {
+        "name": "pillow",
+        "version": "11.3.0"
+      },
+      {
+        "name": "paramiko",
+        "version": "3.5.1"
+      },
+      {
+        "name": "cryptography",
+        "version": "44.0.3"
+      },
+      {
+        "name": "bcrypt",
+        "version": "4.3.0"
+      },
+      {
+        "name": "cffi",
+        "version": "1.17.1"
+      },
+      {
+        "name": "PyNaCl",
+        "version": "1.5.0"
+      },
+      {
+        "name": "pycparser",
+        "version": "2.22"
+      }
+    ],
+    "manylinux2014_x86_64": [
+      {
+        "name": "numpy",
+        "version": "1.26.4"
+      },
+      {
+        "name": "opencv-python",
+        "version": "4.11.0.86"
+      },
+      {
+        "name": "pillow",
+        "version": "11.3.0"
+      },
+      {
+        "name": "paramiko",
+        "version": "3.5.1"
+      },
+      {
+        "name": "cryptography",
+        "version": "44.0.3"
+      },
+      {
+        "name": "bcrypt",
+        "version": "4.3.0"
+      },
+      {
+        "name": "cffi",
+        "version": "1.17.1"
+      },
+      {
+        "name": "PyNaCl",
+        "version": "1.5.0"
+      },
+      {
+        "name": "pycparser",
+        "version": "2.22"
+      }
+    ]
+  },
+  "fpga_build": {
+    "status": "PASS",
+    "evidence": "overlay_build.json",
+    "hardware_verified": false
+  }
+}

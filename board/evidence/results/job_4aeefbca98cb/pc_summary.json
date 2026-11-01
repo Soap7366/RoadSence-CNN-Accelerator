@@ -1,0 +1,3107 @@
+{
+  "job": "job_4aeefbca98cb",
+  "status": "PASS",
+  "images": [],
+  "runs": [
+    {
+      "run_id": 0,
+      "pc_start_ns": 13081329600,
+      "sent": [
+        {
+          "frame_id": 0,
+          "file": "frame_00001.jpg",
+          "bytes": 142506,
+          "source_bytes": 142506,
+          "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+          "sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+          "timing": {
+            "capacity_wait_ns": 5300,
+            "read_ns": 586100,
+            "source_sha_ns": 187000,
+            "header_pack_ns": 6200,
+            "wire_concat_ns": 102300,
+            "sendall_ns": 3670300
+          },
+          "pc_started_ns": 13083460000,
+          "send_started_ns": 13084341600,
+          "send_finished_ns": 13088011900
+        },
+        {
+          "frame_id": 1,
+          "file": "frame_00002.jpg",
+          "bytes": 142506,
+          "source_bytes": 142506,
+          "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+          "sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+          "timing": {
+            "capacity_wait_ns": 6800,
+            "read_ns": 394300,
+            "source_sha_ns": 162000,
+            "header_pack_ns": 4200,
+            "wire_concat_ns": 92700,
+            "sendall_ns": 7861600
+          },
+          "pc_started_ns": 13088035400,
+          "send_started_ns": 13088688600,
+          "send_finished_ns": 13096550200
+        },
+        {
+          "frame_id": 2,
+          "file": "frame_00003.jpg",
+          "bytes": 142362,
+          "source_bytes": 142362,
+          "source_sha256": "e3271c5cea78ec41a913601ca6623e13c9a67563b0e2d5c3f4df24b975649240",
+          "sha256": "e3271c5cea78ec41a913601ca6623e13c9a67563b0e2d5c3f4df24b975649240",
+          "timing": {
+            "capacity_wait_ns": 157088100,
+            "read_ns": 388400,
+            "source_sha_ns": 167600,
+            "header_pack_ns": 4400,
+            "wire_concat_ns": 14500,
+            "sendall_ns": 1614400
+          },
+          "pc_started_ns": 13253651100,
+          "send_started_ns": 13254226000,
+          "send_finished_ns": 13255840400
+        },
+        {
+          "frame_id": 3,
+          "file": "frame_00004.jpg",
+          "bytes": 141245,
+          "source_bytes": 141245,
+          "source_sha256": "c71ee567ac6f6178bf7612ccc59a42fc9a65cd559c6c7b156436084ebed20698",
+          "sha256": "c71ee567ac6f6178bf7612ccc59a42fc9a65cd559c6c7b156436084ebed20698",
+          "timing": {
+            "capacity_wait_ns": 102685800,
+            "read_ns": 427600,
+            "source_sha_ns": 164400,
+            "header_pack_ns": 4900,
+            "wire_concat_ns": 14900,
+            "sendall_ns": 1902300
+          },
+          "pc_started_ns": 13358538600,
+          "send_started_ns": 13359150400,
+          "send_finished_ns": 13361052700
+        },
+        {
+          "frame_id": 4,
+          "file": "frame_00005.jpg",
+          "bytes": 141227,
+          "source_bytes": 141227,
+          "source_sha256": "7d6304b1d800b9378c4da77037a5705e5e9c40aa7c043b998ef2f0d758fff36f",
+          "sha256": "7d6304b1d800b9378c4da77037a5705e5e9c40aa7c043b998ef2f0d758fff36f",
+          "timing": {
+            "capacity_wait_ns": 102798600,
+            "read_ns": 523100,
+            "source_sha_ns": 194300,
+            "header_pack_ns": 5400,
+            "wire_concat_ns": 16900,
+            "sendall_ns": 1948200
+          },
+          "pc_started_ns": 13463864900,
+          "send_started_ns": 13464604600,
+          "send_finished_ns": 13466552800
+        },
+        {
+          "frame_id": 5,
+          "file": "frame_00006.jpg",
+          "bytes": 142164,
+          "source_bytes": 142164,
+          "source_sha256": "cee86fbaca08b1e2ace00a895372d0bca9c157bab3d5b0a9dab0428281131415",
+          "sha256": "cee86fbaca08b1e2ace00a895372d0bca9c157bab3d5b0a9dab0428281131415",
+          "timing": {
+            "capacity_wait_ns": 102396900,
+            "read_ns": 528600,
+            "source_sha_ns": 216700,
+            "header_pack_ns": 6100,
+            "wire_concat_ns": 18600,
+            "sendall_ns": 1632700
+          },
+          "pc_started_ns": 13568965300,
+          "send_started_ns": 13569735300,
+          "send_finished_ns": 13571368000
+        },
+        {
+          "frame_id": 6,
+          "file": "frame_00007.jpg",
+          "bytes": 141775,
+          "source_bytes": 141775,
+          "source_sha256": "0f72f9726db987d461139b395f49e94469a6324b46aaec4369a7bc213f12edd9",
+          "sha256": "0f72f9726db987d461139b395f49e94469a6324b46aaec4369a7bc213f12edd9",
+          "timing": {
+            "capacity_wait_ns": 102481000,
+            "read_ns": 445600,
+            "source_sha_ns": 164100,
+            "header_pack_ns": 4900,
+            "wire_concat_ns": 15000,
+            "sendall_ns": 2274200
+          },
+          "pc_started_ns": 13673857100,
+          "send_started_ns": 13674486700,
+          "send_finished_ns": 13676760900
+        },
+        {
+          "frame_id": 7,
+          "file": "frame_00008.jpg",
+          "bytes": 139565,
+          "source_bytes": 139565,
+          "source_sha256": "fe89675711e15247348dc36dd190e11c08434c33e2f26165cd47549d67bafc86",
+          "sha256": "fe89675711e15247348dc36dd190e11c08434c33e2f26165cd47549d67bafc86",
+          "timing": {
+            "capacity_wait_ns": 102917400,
+            "read_ns": 467200,
+            "source_sha_ns": 165100,
+            "header_pack_ns": 5300,
+            "wire_concat_ns": 15200,
+            "sendall_ns": 7434600
+          },
+          "pc_started_ns": 13779692700,
+          "send_started_ns": 13780345500,
+          "send_finished_ns": 13787780100
+        },
+        {
+          "frame_id": 8,
+          "file": "frame_00009.jpg",
+          "bytes": 137591,
+          "source_bytes": 137591,
+          "source_sha256": "6fc334b83bf2cb1ae936980669b5f69c6a0e2491674ce31d53db44e9c66a445d",
+          "sha256": "6fc334b83bf2cb1ae936980669b5f69c6a0e2491674ce31d53db44e9c66a445d",
+          "timing": {
+            "capacity_wait_ns": 97217400,
+            "read_ns": 478700,
+            "source_sha_ns": 532700,
+            "header_pack_ns": 5500,
+            "wire_concat_ns": 20000,
+            "sendall_ns": 7196400
+          },
+          "pc_started_ns": 13885011500,
+          "send_started_ns": 13886048400,
+          "send_finished_ns": 13893244800
+        },
+        {
+          "frame_id": 9,
+          "file": "frame_00010.jpg",
+          "bytes": 136043,
+          "source_bytes": 136043,
+          "source_sha256": "b22c575e3a5071df2e1b87fd0ae5aec3482f6bda363aabe1592b20bfdba91c0d",
+          "sha256": "b22c575e3a5071df2e1b87fd0ae5aec3482f6bda363aabe1592b20bfdba91c0d",
+          "timing": {
+            "capacity_wait_ns": 96775300,
+            "read_ns": 398800,
+            "source_sha_ns": 159600,
+            "header_pack_ns": 6500,
+            "wire_concat_ns": 16200,
+            "sendall_ns": 7957900
+          },
+          "pc_started_ns": 13990039200,
+          "send_started_ns": 13990620300,
+          "send_finished_ns": 13998578200
+        }
+      ],
+      "results": [
+        {
+          "pc_received_ns": 13253505100,
+          "event": {
+            "event": "image_result",
+            "run_id": 0,
+            "frame_id": 0,
+            "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+            "input_sha256": "5e915ffbfecf7fc776e6e7d7dc8b987c0eabc6902d125f03330bc66afbac78b5",
+            "raw": {
+              "collision_int32": -24014,
+              "steering_int32": 517
+            },
+            "decoded": {
+              "collision_int32": -24014,
+              "steering_int32": 517,
+              "collision_logit": -2.669477355430335,
+              "risk_score": 0.06479863354474187,
+              "steering_value": 0.025211965646209294,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 341
+            }
+          },
+          "recv_call_ns": 170463500,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 581,
+          "line_bytes": 581,
+          "json_parse_ns": 46900,
+          "pc_validate_ns": 1900,
+          "pc_validated_ns": 13253612200
+        },
+        {
+          "pc_received_ns": 13358392400,
+          "event": {
+            "event": "image_result",
+            "run_id": 0,
+            "frame_id": 1,
+            "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+            "input_sha256": "5e915ffbfecf7fc776e6e7d7dc8b987c0eabc6902d125f03330bc66afbac78b5",
+            "raw": {
+              "collision_int32": -24014,
+              "steering_int32": 517
+            },
+            "decoded": {
+              "collision_int32": -24014,
+              "steering_int32": 517,
+              "collision_logit": -2.669477355430335,
+              "risk_score": 0.06479863354474187,
+              "steering_value": 0.025211965646209294,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 342
+            }
+          },
+          "recv_call_ns": 104804400,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 581,
+          "line_bytes": 581,
+          "json_parse_ns": 45100,
+          "pc_validate_ns": 2100,
+          "pc_validated_ns": 13358500000
+        },
+        {
+          "pc_received_ns": 13463677200,
+          "event": {
+            "event": "image_result",
+            "run_id": 0,
+            "frame_id": 2,
+            "source_sha256": "e3271c5cea78ec41a913601ca6623e13c9a67563b0e2d5c3f4df24b975649240",
+            "input_sha256": "f3c75a827d9cd15a08f99209d13b668fb3a3016f73e01912be970508a9484a7c",
+            "raw": {
+              "collision_int32": -24359,
+              "steering_int32": 1107
+            },
+            "decoded": {
+              "collision_int32": -24359,
+              "steering_int32": 1107,
+              "collision_logit": -2.7078287207848564,
+              "risk_score": 0.06251297861988953,
+              "steering_value": 0.05398384133530694,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 343
+            }
+          },
+          "recv_call_ns": 105199400,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 583,
+          "line_bytes": 583,
+          "json_parse_ns": 57000,
+          "pc_validate_ns": 2500,
+          "pc_validated_ns": 13463820700
+        },
+        {
+          "pc_received_ns": 13568771300,
+          "event": {
+            "event": "image_result",
+            "run_id": 0,
+            "frame_id": 3,
+            "source_sha256": "c71ee567ac6f6178bf7612ccc59a42fc9a65cd559c6c7b156436084ebed20698",
+            "input_sha256": "c065931f93013a01d4994c5a5e0a3d87888095861527ce8d84f3378f37844169",
+            "raw": {
+              "collision_int32": -19639,
+              "steering_int32": 1454
+            },
+            "decoded": {
+              "collision_int32": -19639,
+              "steering_int32": 1454,
+              "collision_logit": -2.183137577383874,
+              "risk_score": 0.10127499324316579,
+              "steering_value": 0.07090560551177623,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 344
+            }
+          },
+          "recv_call_ns": 104985200,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 582,
+          "line_bytes": 582,
+          "json_parse_ns": 41700,
+          "pc_validate_ns": 1900,
+          "pc_validated_ns": 13568854500
+        },
+        {
+          "pc_received_ns": 13673726300,
+          "event": {
+            "event": "image_result",
+            "run_id": 0,
+            "frame_id": 4,
+            "source_sha256": "7d6304b1d800b9378c4da77037a5705e5e9c40aa7c043b998ef2f0d758fff36f",
+            "input_sha256": "7a42639b1a3e47d852bb33b794399d63919b7c91aab6fd2d31f2c61ca7ca50cc",
+            "raw": {
+              "collision_int32": -27251,
+              "steering_int32": 1533
+            },
+            "decoded": {
+              "collision_int32": -27251,
+              "steering_int32": 1533,
+              "collision_logit": -3.029313209495797,
+              "risk_score": 0.046119030954039505,
+              "steering_value": 0.07475811090065541,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 345
+            }
+          },
+          "recv_call_ns": 104888300,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 583,
+          "line_bytes": 583,
+          "json_parse_ns": 43200,
+          "pc_validate_ns": 1700,
+          "pc_validated_ns": 13673821800
+        },
+        {
+          "pc_received_ns": 13779558000,
+          "event": {
+            "event": "image_result",
+            "run_id": 0,
+            "frame_id": 5,
+            "source_sha256": "cee86fbaca08b1e2ace00a895372d0bca9c157bab3d5b0a9dab0428281131415",
+            "input_sha256": "c5c3867ec1a8f6fe422f5d8ca1c95ec1e13f42a80e9d55fee800393761cf2c55",
+            "raw": {
+              "collision_int32": -22505,
+              "steering_int32": 276
+            },
+            "decoded": {
+              "collision_int32": -22505,
+              "steering_int32": 276,
+              "collision_logit": -2.5017318182709958,
+              "risk_score": 0.07573686226671258,
+              "steering_value": 0.013459385915577882,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 346
+            }
+          },
+          "recv_call_ns": 105758000,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 582,
+          "line_bytes": 582,
+          "json_parse_ns": 45100,
+          "pc_validate_ns": 2000,
+          "pc_validated_ns": 13779659700
+        },
+        {
+          "pc_received_ns": 13884870200,
+          "event": {
+            "event": "image_result",
+            "run_id": 0,
+            "frame_id": 6,
+            "source_sha256": "0f72f9726db987d461139b395f49e94469a6324b46aaec4369a7bc213f12edd9",
+            "input_sha256": "1c14781af8e497f32c50beaae57ac23174a00174374f6701373045b7e7d96d2c",
+            "raw": {
+              "collision_int32": -16979,
+              "steering_int32": -130
+            },
+            "decoded": {
+              "collision_int32": -16979,
+              "steering_int32": -130,
+              "collision_logit": -1.8874429923316258,
+              "risk_score": 0.13153629281740203,
+              "steering_value": -0.006339565829801176,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 347
+            }
+          },
+          "recv_call_ns": 105231100,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 585,
+          "line_bytes": 585,
+          "json_parse_ns": 46800,
+          "pc_validate_ns": 1700,
+          "pc_validated_ns": 13884976700
+        },
+        {
+          "pc_received_ns": 13989885400,
+          "event": {
+            "event": "image_result",
+            "run_id": 0,
+            "frame_id": 7,
+            "source_sha256": "fe89675711e15247348dc36dd190e11c08434c33e2f26165cd47549d67bafc86",
+            "input_sha256": "2628734de4cbb8bcde9fe332a585af18694d16c68dd4adef387e5704f5933405",
+            "raw": {
+              "collision_int32": -22578,
+              "steering_int32": 580
+            },
+            "decoded": {
+              "collision_int32": -22578,
+              "steering_int32": 580,
+              "collision_logit": -2.509846744853257,
+              "risk_score": 0.07517076310458985,
+              "steering_value": 0.02828421677911294,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 348
+            }
+          },
+          "recv_call_ns": 104931500,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 580,
+          "line_bytes": 580,
+          "json_parse_ns": 56000,
+          "pc_validate_ns": 1900,
+          "pc_validated_ns": 13990010400
+        },
+        {
+          "pc_received_ns": 14094469300,
+          "event": {
+            "event": "image_result",
+            "run_id": 0,
+            "frame_id": 8,
+            "source_sha256": "6fc334b83bf2cb1ae936980669b5f69c6a0e2491674ce31d53db44e9c66a445d",
+            "input_sha256": "fafc8c2e192ae6f9fb13d249bc049073c83dd31c8fefda4adb0b45df880b112d",
+            "raw": {
+              "collision_int32": -19101,
+              "steering_int32": 733
+            },
+            "decoded": {
+              "collision_int32": -19101,
+              "steering_int32": 733,
+              "collision_logit": -2.1233316801063893,
+              "risk_score": 0.10684970206052588,
+              "steering_value": 0.03574539810187894,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 349
+            }
+          },
+          "recv_call_ns": 104483800,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 581,
+          "line_bytes": 581,
+          "json_parse_ns": 49500,
+          "pc_validate_ns": 2700,
+          "pc_validated_ns": 14094593000
+        },
+        {
+          "pc_received_ns": 14196443800,
+          "event": {
+            "event": "image_result",
+            "run_id": 0,
+            "frame_id": 9,
+            "source_sha256": "b22c575e3a5071df2e1b87fd0ae5aec3482f6bda363aabe1592b20bfdba91c0d",
+            "input_sha256": "010752fb4b6f55c6913cd3c0630e9ed7ffad6dbe60e12a074f5825ac48ae65f4",
+            "raw": {
+              "collision_int32": -27633,
+              "steering_int32": 655
+            },
+            "decoded": {
+              "collision_int32": -27633,
+              "steering_int32": 655,
+              "collision_logit": -3.071777619830368,
+              "risk_score": 0.04428652843881009,
+              "steering_value": 0.03194165860399823,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 350
+            }
+          },
+          "recv_call_ns": 101888700,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 580,
+          "line_bytes": 580,
+          "json_parse_ns": 46200,
+          "pc_validate_ns": 1800,
+          "pc_validated_ns": 14196545400
+        }
+      ],
+      "begin_ack_ns": 13083065300,
+      "pc_end_ns": 14196978800,
+      "elapsed_ns": 1115649200
+    },
+    {
+      "run_id": 1,
+      "pc_start_ns": 14197048000,
+      "sent": [
+        {
+          "frame_id": 0,
+          "file": "frame_00001.jpg",
+          "bytes": 142506,
+          "source_bytes": 142506,
+          "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+          "sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+          "timing": {
+            "capacity_wait_ns": 3500,
+            "read_ns": 474100,
+            "source_sha_ns": 208600,
+            "header_pack_ns": 3500,
+            "wire_concat_ns": 15300,
+            "sendall_ns": 6965600
+          },
+          "pc_started_ns": 14199285000,
+          "send_started_ns": 14199986500,
+          "send_finished_ns": 14206952100
+        },
+        {
+          "frame_id": 1,
+          "file": "frame_00002.jpg",
+          "bytes": 142506,
+          "source_bytes": 142506,
+          "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+          "sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+          "timing": {
+            "capacity_wait_ns": 5400,
+            "read_ns": 342300,
+            "source_sha_ns": 160500,
+            "header_pack_ns": 3200,
+            "wire_concat_ns": 16200,
+            "sendall_ns": 11496000
+          },
+          "pc_started_ns": 14206968300,
+          "send_started_ns": 14207490500,
+          "send_finished_ns": 14218986500
+        },
+        {
+          "frame_id": 2,
+          "file": "frame_00003.jpg",
+          "bytes": 142362,
+          "source_bytes": 142362,
+          "source_sha256": "e3271c5cea78ec41a913601ca6623e13c9a67563b0e2d5c3f4df24b975649240",
+          "sha256": "e3271c5cea78ec41a913601ca6623e13c9a67563b0e2d5c3f4df24b975649240",
+          "timing": {
+            "capacity_wait_ns": 116332400,
+            "read_ns": 688600,
+            "source_sha_ns": 163800,
+            "header_pack_ns": 5400,
+            "wire_concat_ns": 15600,
+            "sendall_ns": 7278700
+          },
+          "pc_started_ns": 14335330100,
+          "send_started_ns": 14336203500,
+          "send_finished_ns": 14343482200
+        },
+        {
+          "frame_id": 3,
+          "file": "frame_00004.jpg",
+          "bytes": 141245,
+          "source_bytes": 141245,
+          "source_sha256": "c71ee567ac6f6178bf7612ccc59a42fc9a65cd559c6c7b156436084ebed20698",
+          "sha256": "c71ee567ac6f6178bf7612ccc59a42fc9a65cd559c6c7b156436084ebed20698",
+          "timing": {
+            "capacity_wait_ns": 96881200,
+            "read_ns": 480000,
+            "source_sha_ns": 336500,
+            "header_pack_ns": 6000,
+            "wire_concat_ns": 19700,
+            "sendall_ns": 7580200
+          },
+          "pc_started_ns": 14440390000,
+          "send_started_ns": 14441232200,
+          "send_finished_ns": 14448812400
+        },
+        {
+          "frame_id": 4,
+          "file": "frame_00005.jpg",
+          "bytes": 141227,
+          "source_bytes": 141227,
+          "source_sha256": "7d6304b1d800b9378c4da77037a5705e5e9c40aa7c043b998ef2f0d758fff36f",
+          "sha256": "7d6304b1d800b9378c4da77037a5705e5e9c40aa7c043b998ef2f0d758fff36f",
+          "timing": {
+            "capacity_wait_ns": 97126400,
+            "read_ns": 449000,
+            "source_sha_ns": 174900,
+            "header_pack_ns": 4700,
+            "wire_concat_ns": 28600,
+            "sendall_ns": 7843300
+          },
+          "pc_started_ns": 14545951300,
+          "send_started_ns": 14546608500,
+          "send_finished_ns": 14554451800
+        },
+        {
+          "frame_id": 5,
+          "file": "frame_00006.jpg",
+          "bytes": 142164,
+          "source_bytes": 142164,
+          "source_sha256": "cee86fbaca08b1e2ace00a895372d0bca9c157bab3d5b0a9dab0428281131415",
+          "sha256": "cee86fbaca08b1e2ace00a895372d0bca9c157bab3d5b0a9dab0428281131415",
+          "timing": {
+            "capacity_wait_ns": 96147900,
+            "read_ns": 439900,
+            "source_sha_ns": 163500,
+            "header_pack_ns": 5300,
+            "wire_concat_ns": 15200,
+            "sendall_ns": 7342400
+          },
+          "pc_started_ns": 14650617000,
+          "send_started_ns": 14651240900,
+          "send_finished_ns": 14658583300
+        },
+        {
+          "frame_id": 6,
+          "file": "frame_00007.jpg",
+          "bytes": 141775,
+          "source_bytes": 141775,
+          "source_sha256": "0f72f9726db987d461139b395f49e94469a6324b46aaec4369a7bc213f12edd9",
+          "sha256": "0f72f9726db987d461139b395f49e94469a6324b46aaec4369a7bc213f12edd9",
+          "timing": {
+            "capacity_wait_ns": 97822500,
+            "read_ns": 593300,
+            "source_sha_ns": 234800,
+            "header_pack_ns": 6600,
+            "wire_concat_ns": 27200,
+            "sendall_ns": 8065400
+          },
+          "pc_started_ns": 14756419200,
+          "send_started_ns": 14757281100,
+          "send_finished_ns": 14765346500
+        },
+        {
+          "frame_id": 7,
+          "file": "frame_00008.jpg",
+          "bytes": 139565,
+          "source_bytes": 139565,
+          "source_sha256": "fe89675711e15247348dc36dd190e11c08434c33e2f26165cd47549d67bafc86",
+          "sha256": "fe89675711e15247348dc36dd190e11c08434c33e2f26165cd47549d67bafc86",
+          "timing": {
+            "capacity_wait_ns": 95783700,
+            "read_ns": 421900,
+            "source_sha_ns": 158900,
+            "header_pack_ns": 4800,
+            "wire_concat_ns": 14000,
+            "sendall_ns": 7645600
+          },
+          "pc_started_ns": 14861151100,
+          "send_started_ns": 14861750700,
+          "send_finished_ns": 14869396300
+        },
+        {
+          "frame_id": 8,
+          "file": "frame_00009.jpg",
+          "bytes": 137591,
+          "source_bytes": 137591,
+          "source_sha256": "6fc334b83bf2cb1ae936980669b5f69c6a0e2491674ce31d53db44e9c66a445d",
+          "sha256": "6fc334b83bf2cb1ae936980669b5f69c6a0e2491674ce31d53db44e9c66a445d",
+          "timing": {
+            "capacity_wait_ns": 97174700,
+            "read_ns": 437400,
+            "source_sha_ns": 156100,
+            "header_pack_ns": 4300,
+            "wire_concat_ns": 14500,
+            "sendall_ns": 7850800
+          },
+          "pc_started_ns": 14966583600,
+          "send_started_ns": 14967195900,
+          "send_finished_ns": 14975046700
+        },
+        {
+          "frame_id": 9,
+          "file": "frame_00010.jpg",
+          "bytes": 136043,
+          "source_bytes": 136043,
+          "source_sha256": "b22c575e3a5071df2e1b87fd0ae5aec3482f6bda363aabe1592b20bfdba91c0d",
+          "sha256": "b22c575e3a5071df2e1b87fd0ae5aec3482f6bda363aabe1592b20bfdba91c0d",
+          "timing": {
+            "capacity_wait_ns": 95958200,
+            "read_ns": 468600,
+            "source_sha_ns": 157500,
+            "header_pack_ns": 4300,
+            "wire_concat_ns": 13700,
+            "sendall_ns": 7407400
+          },
+          "pc_started_ns": 15071018000,
+          "send_started_ns": 15071662100,
+          "send_finished_ns": 15079069500
+        }
+      ],
+      "results": [
+        {
+          "pc_received_ns": 14335212000,
+          "event": {
+            "event": "image_result",
+            "run_id": 1,
+            "frame_id": 0,
+            "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+            "input_sha256": "5e915ffbfecf7fc776e6e7d7dc8b987c0eabc6902d125f03330bc66afbac78b5",
+            "raw": {
+              "collision_int32": -24014,
+              "steering_int32": 517
+            },
+            "decoded": {
+              "collision_int32": -24014,
+              "steering_int32": 517,
+              "collision_logit": -2.669477355430335,
+              "risk_score": 0.06479863354474187,
+              "steering_value": 0.025211965646209294,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 351
+            }
+          },
+          "recv_call_ns": 136498700,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 581,
+          "line_bytes": 581,
+          "json_parse_ns": 42300,
+          "pc_validate_ns": 1600,
+          "pc_validated_ns": 14335302600
+        },
+        {
+          "pc_received_ns": 14440269800,
+          "event": {
+            "event": "image_result",
+            "run_id": 1,
+            "frame_id": 1,
+            "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+            "input_sha256": "5e915ffbfecf7fc776e6e7d7dc8b987c0eabc6902d125f03330bc66afbac78b5",
+            "raw": {
+              "collision_int32": -24014,
+              "steering_int32": 517
+            },
+            "decoded": {
+              "collision_int32": -24014,
+              "steering_int32": 517,
+              "collision_logit": -2.669477355430335,
+              "risk_score": 0.06479863354474187,
+              "steering_value": 0.025211965646209294,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 352
+            }
+          },
+          "recv_call_ns": 104987000,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 581,
+          "line_bytes": 581,
+          "json_parse_ns": 45400,
+          "pc_validate_ns": 2600,
+          "pc_validated_ns": 14440364100
+        },
+        {
+          "pc_received_ns": 14545812900,
+          "event": {
+            "event": "image_result",
+            "run_id": 1,
+            "frame_id": 2,
+            "source_sha256": "e3271c5cea78ec41a913601ca6623e13c9a67563b0e2d5c3f4df24b975649240",
+            "input_sha256": "f3c75a827d9cd15a08f99209d13b668fb3a3016f73e01912be970508a9484a7c",
+            "raw": {
+              "collision_int32": -24359,
+              "steering_int32": 1107
+            },
+            "decoded": {
+              "collision_int32": -24359,
+              "steering_int32": 1107,
+              "collision_logit": -2.7078287207848564,
+              "risk_score": 0.06251297861988953,
+              "steering_value": 0.05398384133530694,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 353
+            }
+          },
+          "recv_call_ns": 105468100,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 583,
+          "line_bytes": 583,
+          "json_parse_ns": 46200,
+          "pc_validate_ns": 1800,
+          "pc_validated_ns": 14545917200
+        },
+        {
+          "pc_received_ns": 14650475300,
+          "event": {
+            "event": "image_result",
+            "run_id": 1,
+            "frame_id": 3,
+            "source_sha256": "c71ee567ac6f6178bf7612ccc59a42fc9a65cd559c6c7b156436084ebed20698",
+            "input_sha256": "c065931f93013a01d4994c5a5e0a3d87888095861527ce8d84f3378f37844169",
+            "raw": {
+              "collision_int32": -19639,
+              "steering_int32": 1454
+            },
+            "decoded": {
+              "collision_int32": -19639,
+              "steering_int32": 1454,
+              "collision_logit": -2.183137577383874,
+              "risk_score": 0.10127499324316579,
+              "steering_value": 0.07090560551177623,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 354
+            }
+          },
+          "recv_call_ns": 104579200,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 582,
+          "line_bytes": 582,
+          "json_parse_ns": 47300,
+          "pc_validate_ns": 1700,
+          "pc_validated_ns": 14650581300
+        },
+        {
+          "pc_received_ns": 14756104800,
+          "event": {
+            "event": "image_result",
+            "run_id": 1,
+            "frame_id": 4,
+            "source_sha256": "7d6304b1d800b9378c4da77037a5705e5e9c40aa7c043b998ef2f0d758fff36f",
+            "input_sha256": "7a42639b1a3e47d852bb33b794399d63919b7c91aab6fd2d31f2c61ca7ca50cc",
+            "raw": {
+              "collision_int32": -27251,
+              "steering_int32": 1533
+            },
+            "decoded": {
+              "collision_int32": -27251,
+              "steering_int32": 1533,
+              "collision_logit": -3.029313209495797,
+              "risk_score": 0.046119030954039505,
+              "steering_value": 0.07475811090065541,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 355
+            }
+          },
+          "recv_call_ns": 105549700,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 583,
+          "line_bytes": 583,
+          "json_parse_ns": 226400,
+          "pc_validate_ns": 1900,
+          "pc_validated_ns": 14756393900
+        },
+        {
+          "pc_received_ns": 14861014100,
+          "event": {
+            "event": "image_result",
+            "run_id": 1,
+            "frame_id": 5,
+            "source_sha256": "cee86fbaca08b1e2ace00a895372d0bca9c157bab3d5b0a9dab0428281131415",
+            "input_sha256": "c5c3867ec1a8f6fe422f5d8ca1c95ec1e13f42a80e9d55fee800393761cf2c55",
+            "raw": {
+              "collision_int32": -22505,
+              "steering_int32": 276
+            },
+            "decoded": {
+              "collision_int32": -22505,
+              "steering_int32": 276,
+              "collision_logit": -2.5017318182709958,
+              "risk_score": 0.07573686226671258,
+              "steering_value": 0.013459385915577882,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 356
+            }
+          },
+          "recv_call_ns": 104640500,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 582,
+          "line_bytes": 582,
+          "json_parse_ns": 51300,
+          "pc_validate_ns": 2000,
+          "pc_validated_ns": 14861116100
+        },
+        {
+          "pc_received_ns": 14966453900,
+          "event": {
+            "event": "image_result",
+            "run_id": 1,
+            "frame_id": 6,
+            "source_sha256": "0f72f9726db987d461139b395f49e94469a6324b46aaec4369a7bc213f12edd9",
+            "input_sha256": "1c14781af8e497f32c50beaae57ac23174a00174374f6701373045b7e7d96d2c",
+            "raw": {
+              "collision_int32": -16979,
+              "steering_int32": -130
+            },
+            "decoded": {
+              "collision_int32": -16979,
+              "steering_int32": -130,
+              "collision_logit": -1.8874429923316258,
+              "risk_score": 0.13153629281740203,
+              "steering_value": -0.006339565829801176,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 357
+            }
+          },
+          "recv_call_ns": 105360600,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 585,
+          "line_bytes": 585,
+          "json_parse_ns": 55400,
+          "pc_validate_ns": 2100,
+          "pc_validated_ns": 14966557400
+        },
+        {
+          "pc_received_ns": 15070884900,
+          "event": {
+            "event": "image_result",
+            "run_id": 1,
+            "frame_id": 7,
+            "source_sha256": "fe89675711e15247348dc36dd190e11c08434c33e2f26165cd47549d67bafc86",
+            "input_sha256": "2628734de4cbb8bcde9fe332a585af18694d16c68dd4adef387e5704f5933405",
+            "raw": {
+              "collision_int32": -22578,
+              "steering_int32": 580
+            },
+            "decoded": {
+              "collision_int32": -22578,
+              "steering_int32": 580,
+              "collision_logit": -2.509846744853257,
+              "risk_score": 0.07517076310458985,
+              "steering_value": 0.02828421677911294,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 358
+            }
+          },
+          "recv_call_ns": 104343900,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 580,
+          "line_bytes": 580,
+          "json_parse_ns": 46100,
+          "pc_validate_ns": 1600,
+          "pc_validated_ns": 15070986700
+        },
+        {
+          "pc_received_ns": 15176202800,
+          "event": {
+            "event": "image_result",
+            "run_id": 1,
+            "frame_id": 8,
+            "source_sha256": "6fc334b83bf2cb1ae936980669b5f69c6a0e2491674ce31d53db44e9c66a445d",
+            "input_sha256": "fafc8c2e192ae6f9fb13d249bc049073c83dd31c8fefda4adb0b45df880b112d",
+            "raw": {
+              "collision_int32": -19101,
+              "steering_int32": 733
+            },
+            "decoded": {
+              "collision_int32": -19101,
+              "steering_int32": 733,
+              "collision_logit": -2.1233316801063893,
+              "risk_score": 0.10684970206052588,
+              "steering_value": 0.03574539810187894,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 359
+            }
+          },
+          "recv_call_ns": 105234400,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 581,
+          "line_bytes": 581,
+          "json_parse_ns": 46800,
+          "pc_validate_ns": 2600,
+          "pc_validated_ns": 15176338100
+        },
+        {
+          "pc_received_ns": 15278537600,
+          "event": {
+            "event": "image_result",
+            "run_id": 1,
+            "frame_id": 9,
+            "source_sha256": "b22c575e3a5071df2e1b87fd0ae5aec3482f6bda363aabe1592b20bfdba91c0d",
+            "input_sha256": "010752fb4b6f55c6913cd3c0630e9ed7ffad6dbe60e12a074f5825ac48ae65f4",
+            "raw": {
+              "collision_int32": -27633,
+              "steering_int32": 655
+            },
+            "decoded": {
+              "collision_int32": -27633,
+              "steering_int32": 655,
+              "collision_logit": -3.071777619830368,
+              "risk_score": 0.04428652843881009,
+              "steering_value": 0.03194165860399823,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 360
+            }
+          },
+          "recv_call_ns": 102229800,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 627,
+          "line_bytes": 580,
+          "json_parse_ns": 70900,
+          "pc_validate_ns": 2900,
+          "pc_validated_ns": 15278728200
+        }
+      ],
+      "begin_ack_ns": 14198760600,
+      "pc_end_ns": 15278777800,
+      "elapsed_ns": 1081729800
+    },
+    {
+      "run_id": 2,
+      "pc_start_ns": 15278849300,
+      "sent": [
+        {
+          "frame_id": 0,
+          "file": "frame_00001.jpg",
+          "bytes": 142506,
+          "source_bytes": 142506,
+          "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+          "sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+          "timing": {
+            "capacity_wait_ns": 3500,
+            "read_ns": 477000,
+            "source_sha_ns": 216400,
+            "header_pack_ns": 5600,
+            "wire_concat_ns": 16600,
+            "sendall_ns": 7158200
+          },
+          "pc_started_ns": 15281150800,
+          "send_started_ns": 15281866400,
+          "send_finished_ns": 15289024600
+        },
+        {
+          "frame_id": 1,
+          "file": "frame_00002.jpg",
+          "bytes": 142506,
+          "source_bytes": 142506,
+          "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+          "sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+          "timing": {
+            "capacity_wait_ns": 5600,
+            "read_ns": 317200,
+            "source_sha_ns": 164200,
+            "header_pack_ns": 4100,
+            "wire_concat_ns": 9400,
+            "sendall_ns": 11622200
+          },
+          "pc_started_ns": 15289041700,
+          "send_started_ns": 15289536600,
+          "send_finished_ns": 15301158800
+        },
+        {
+          "frame_id": 2,
+          "file": "frame_00003.jpg",
+          "bytes": 142362,
+          "source_bytes": 142362,
+          "source_sha256": "e3271c5cea78ec41a913601ca6623e13c9a67563b0e2d5c3f4df24b975649240",
+          "sha256": "e3271c5cea78ec41a913601ca6623e13c9a67563b0e2d5c3f4df24b975649240",
+          "timing": {
+            "capacity_wait_ns": 115658900,
+            "read_ns": 411600,
+            "source_sha_ns": 162400,
+            "header_pack_ns": 4300,
+            "wire_concat_ns": 14900,
+            "sendall_ns": 7419900
+          },
+          "pc_started_ns": 15416830300,
+          "send_started_ns": 15417423500,
+          "send_finished_ns": 15424843400
+        },
+        {
+          "frame_id": 3,
+          "file": "frame_00004.jpg",
+          "bytes": 141245,
+          "source_bytes": 141245,
+          "source_sha256": "c71ee567ac6f6178bf7612ccc59a42fc9a65cd559c6c7b156436084ebed20698",
+          "sha256": "c71ee567ac6f6178bf7612ccc59a42fc9a65cd559c6c7b156436084ebed20698",
+          "timing": {
+            "capacity_wait_ns": 97782000,
+            "read_ns": 453700,
+            "source_sha_ns": 163000,
+            "header_pack_ns": 5200,
+            "wire_concat_ns": 15300,
+            "sendall_ns": 7912100
+          },
+          "pc_started_ns": 15522637400,
+          "send_started_ns": 15523274600,
+          "send_finished_ns": 15531186700
+        },
+        {
+          "frame_id": 4,
+          "file": "frame_00005.jpg",
+          "bytes": 141227,
+          "source_bytes": 141227,
+          "source_sha256": "7d6304b1d800b9378c4da77037a5705e5e9c40aa7c043b998ef2f0d758fff36f",
+          "sha256": "7d6304b1d800b9378c4da77037a5705e5e9c40aa7c043b998ef2f0d758fff36f",
+          "timing": {
+            "capacity_wait_ns": 96307600,
+            "read_ns": 693400,
+            "source_sha_ns": 216200,
+            "header_pack_ns": 5300,
+            "wire_concat_ns": 17200,
+            "sendall_ns": 8037100
+          },
+          "pc_started_ns": 15627523700,
+          "send_started_ns": 15628455800,
+          "send_finished_ns": 15636492900
+        },
+        {
+          "frame_id": 5,
+          "file": "frame_00006.jpg",
+          "bytes": 142164,
+          "source_bytes": 142164,
+          "source_sha256": "cee86fbaca08b1e2ace00a895372d0bca9c157bab3d5b0a9dab0428281131415",
+          "sha256": "cee86fbaca08b1e2ace00a895372d0bca9c157bab3d5b0a9dab0428281131415",
+          "timing": {
+            "capacity_wait_ns": 96243000,
+            "read_ns": 437000,
+            "source_sha_ns": 162800,
+            "header_pack_ns": 4400,
+            "wire_concat_ns": 15900,
+            "sendall_ns": 7393300
+          },
+          "pc_started_ns": 15732751600,
+          "send_started_ns": 15733371700,
+          "send_finished_ns": 15740765000
+        },
+        {
+          "frame_id": 6,
+          "file": "frame_00007.jpg",
+          "bytes": 141775,
+          "source_bytes": 141775,
+          "source_sha256": "0f72f9726db987d461139b395f49e94469a6324b46aaec4369a7bc213f12edd9",
+          "sha256": "0f72f9726db987d461139b395f49e94469a6324b46aaec4369a7bc213f12edd9",
+          "timing": {
+            "capacity_wait_ns": 96972400,
+            "read_ns": 447800,
+            "source_sha_ns": 210500,
+            "header_pack_ns": 5200,
+            "wire_concat_ns": 16100,
+            "sendall_ns": 7312000
+          },
+          "pc_started_ns": 15837752600,
+          "send_started_ns": 15838432200,
+          "send_finished_ns": 15845744200
+        },
+        {
+          "frame_id": 7,
+          "file": "frame_00008.jpg",
+          "bytes": 139565,
+          "source_bytes": 139565,
+          "source_sha256": "fe89675711e15247348dc36dd190e11c08434c33e2f26165cd47549d67bafc86",
+          "sha256": "fe89675711e15247348dc36dd190e11c08434c33e2f26165cd47549d67bafc86",
+          "timing": {
+            "capacity_wait_ns": 97457900,
+            "read_ns": 470100,
+            "source_sha_ns": 178100,
+            "header_pack_ns": 5300,
+            "wire_concat_ns": 38500,
+            "sendall_ns": 7244200
+          },
+          "pc_started_ns": 15943215100,
+          "send_started_ns": 15943907100,
+          "send_finished_ns": 15951151300
+        },
+        {
+          "frame_id": 8,
+          "file": "frame_00009.jpg",
+          "bytes": 137591,
+          "source_bytes": 137591,
+          "source_sha256": "6fc334b83bf2cb1ae936980669b5f69c6a0e2491674ce31d53db44e9c66a445d",
+          "sha256": "6fc334b83bf2cb1ae936980669b5f69c6a0e2491674ce31d53db44e9c66a445d",
+          "timing": {
+            "capacity_wait_ns": 97178400,
+            "read_ns": 444700,
+            "source_sha_ns": 159800,
+            "header_pack_ns": 4600,
+            "wire_concat_ns": 14300,
+            "sendall_ns": 7327100
+          },
+          "pc_started_ns": 16048354700,
+          "send_started_ns": 16048978100,
+          "send_finished_ns": 16056305200
+        },
+        {
+          "frame_id": 9,
+          "file": "frame_00010.jpg",
+          "bytes": 136043,
+          "source_bytes": 136043,
+          "source_sha256": "b22c575e3a5071df2e1b87fd0ae5aec3482f6bda363aabe1592b20bfdba91c0d",
+          "sha256": "b22c575e3a5071df2e1b87fd0ae5aec3482f6bda363aabe1592b20bfdba91c0d",
+          "timing": {
+            "capacity_wait_ns": 97131300,
+            "read_ns": 409100,
+            "source_sha_ns": 160600,
+            "header_pack_ns": 5200,
+            "wire_concat_ns": 14300,
+            "sendall_ns": 7388900
+          },
+          "pc_started_ns": 16153452000,
+          "send_started_ns": 16154041200,
+          "send_finished_ns": 16161430100
+        }
+      ],
+      "results": [
+        {
+          "pc_received_ns": 15416704700,
+          "event": {
+            "event": "image_result",
+            "run_id": 2,
+            "frame_id": 0,
+            "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+            "input_sha256": "5e915ffbfecf7fc776e6e7d7dc8b987c0eabc6902d125f03330bc66afbac78b5",
+            "raw": {
+              "collision_int32": -24014,
+              "steering_int32": 517
+            },
+            "decoded": {
+              "collision_int32": -24014,
+              "steering_int32": 517,
+              "collision_logit": -2.669477355430335,
+              "risk_score": 0.06479863354474187,
+              "steering_value": 0.025211965646209294,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 361
+            }
+          },
+          "recv_call_ns": 135981500,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 581,
+          "line_bytes": 581,
+          "json_parse_ns": 51900,
+          "pc_validate_ns": 1900,
+          "pc_validated_ns": 15416804600
+        },
+        {
+          "pc_received_ns": 15522521900,
+          "event": {
+            "event": "image_result",
+            "run_id": 2,
+            "frame_id": 1,
+            "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+            "input_sha256": "5e915ffbfecf7fc776e6e7d7dc8b987c0eabc6902d125f03330bc66afbac78b5",
+            "raw": {
+              "collision_int32": -24014,
+              "steering_int32": 517
+            },
+            "decoded": {
+              "collision_int32": -24014,
+              "steering_int32": 517,
+              "collision_logit": -2.669477355430335,
+              "risk_score": 0.06479863354474187,
+              "steering_value": 0.025211965646209294,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 362
+            }
+          },
+          "recv_call_ns": 105737000,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 581,
+          "line_bytes": 581,
+          "json_parse_ns": 41400,
+          "pc_validate_ns": 1700,
+          "pc_validated_ns": 15522610900
+        },
+        {
+          "pc_received_ns": 15627367900,
+          "event": {
+            "event": "image_result",
+            "run_id": 2,
+            "frame_id": 2,
+            "source_sha256": "e3271c5cea78ec41a913601ca6623e13c9a67563b0e2d5c3f4df24b975649240",
+            "input_sha256": "f3c75a827d9cd15a08f99209d13b668fb3a3016f73e01912be970508a9484a7c",
+            "raw": {
+              "collision_int32": -24359,
+              "steering_int32": 1107
+            },
+            "decoded": {
+              "collision_int32": -24359,
+              "steering_int32": 1107,
+              "collision_logit": -2.7078287207848564,
+              "risk_score": 0.06251297861988953,
+              "steering_value": 0.05398384133530694,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 363
+            }
+          },
+          "recv_call_ns": 104772100,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 583,
+          "line_bytes": 583,
+          "json_parse_ns": 46800,
+          "pc_validate_ns": 1700,
+          "pc_validated_ns": 15627469300
+        },
+        {
+          "pc_received_ns": 15732609300,
+          "event": {
+            "event": "image_result",
+            "run_id": 2,
+            "frame_id": 3,
+            "source_sha256": "c71ee567ac6f6178bf7612ccc59a42fc9a65cd559c6c7b156436084ebed20698",
+            "input_sha256": "c065931f93013a01d4994c5a5e0a3d87888095861527ce8d84f3378f37844169",
+            "raw": {
+              "collision_int32": -19639,
+              "steering_int32": 1454
+            },
+            "decoded": {
+              "collision_int32": -19639,
+              "steering_int32": 1454,
+              "collision_logit": -2.183137577383874,
+              "risk_score": 0.10127499324316579,
+              "steering_value": 0.07090560551177623,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 364
+            }
+          },
+          "recv_call_ns": 105158900,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 582,
+          "line_bytes": 582,
+          "json_parse_ns": 48200,
+          "pc_validate_ns": 1800,
+          "pc_validated_ns": 15732715200
+        },
+        {
+          "pc_received_ns": 15837606800,
+          "event": {
+            "event": "image_result",
+            "run_id": 2,
+            "frame_id": 4,
+            "source_sha256": "7d6304b1d800b9378c4da77037a5705e5e9c40aa7c043b998ef2f0d758fff36f",
+            "input_sha256": "7a42639b1a3e47d852bb33b794399d63919b7c91aab6fd2d31f2c61ca7ca50cc",
+            "raw": {
+              "collision_int32": -27251,
+              "steering_int32": 1533
+            },
+            "decoded": {
+              "collision_int32": -27251,
+              "steering_int32": 1533,
+              "collision_logit": -3.029313209495797,
+              "risk_score": 0.046119030954039505,
+              "steering_value": 0.07475811090065541,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 365
+            }
+          },
+          "recv_call_ns": 104909900,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 583,
+          "line_bytes": 583,
+          "json_parse_ns": 51700,
+          "pc_validate_ns": 1700,
+          "pc_validated_ns": 15837719100
+        },
+        {
+          "pc_received_ns": 15943069800,
+          "event": {
+            "event": "image_result",
+            "run_id": 2,
+            "frame_id": 5,
+            "source_sha256": "cee86fbaca08b1e2ace00a895372d0bca9c157bab3d5b0a9dab0428281131415",
+            "input_sha256": "c5c3867ec1a8f6fe422f5d8ca1c95ec1e13f42a80e9d55fee800393761cf2c55",
+            "raw": {
+              "collision_int32": -22505,
+              "steering_int32": 276
+            },
+            "decoded": {
+              "collision_int32": -22505,
+              "steering_int32": 276,
+              "collision_logit": -2.5017318182709958,
+              "risk_score": 0.07573686226671258,
+              "steering_value": 0.013459385915577882,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 366
+            }
+          },
+          "recv_call_ns": 105374900,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 582,
+          "line_bytes": 582,
+          "json_parse_ns": 53600,
+          "pc_validate_ns": 1700,
+          "pc_validated_ns": 15943182000
+        },
+        {
+          "pc_received_ns": 16048196100,
+          "event": {
+            "event": "image_result",
+            "run_id": 2,
+            "frame_id": 6,
+            "source_sha256": "0f72f9726db987d461139b395f49e94469a6324b46aaec4369a7bc213f12edd9",
+            "input_sha256": "1c14781af8e497f32c50beaae57ac23174a00174374f6701373045b7e7d96d2c",
+            "raw": {
+              "collision_int32": -16979,
+              "steering_int32": -130
+            },
+            "decoded": {
+              "collision_int32": -16979,
+              "steering_int32": -130,
+              "collision_logit": -1.8874429923316258,
+              "risk_score": 0.13153629281740203,
+              "steering_value": -0.006339565829801176,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 367
+            }
+          },
+          "recv_call_ns": 105036500,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 585,
+          "line_bytes": 585,
+          "json_parse_ns": 48400,
+          "pc_validate_ns": 2300,
+          "pc_validated_ns": 16048312800
+        },
+        {
+          "pc_received_ns": 16153307400,
+          "event": {
+            "event": "image_result",
+            "run_id": 2,
+            "frame_id": 7,
+            "source_sha256": "fe89675711e15247348dc36dd190e11c08434c33e2f26165cd47549d67bafc86",
+            "input_sha256": "2628734de4cbb8bcde9fe332a585af18694d16c68dd4adef387e5704f5933405",
+            "raw": {
+              "collision_int32": -22578,
+              "steering_int32": 580
+            },
+            "decoded": {
+              "collision_int32": -22578,
+              "steering_int32": 580,
+              "collision_logit": -2.509846744853257,
+              "risk_score": 0.07517076310458985,
+              "steering_value": 0.02828421677911294,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 368
+            }
+          },
+          "recv_call_ns": 105022200,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 580,
+          "line_bytes": 580,
+          "json_parse_ns": 50900,
+          "pc_validate_ns": 1900,
+          "pc_validated_ns": 16153417300
+        },
+        {
+          "pc_received_ns": 16257813300,
+          "event": {
+            "event": "image_result",
+            "run_id": 2,
+            "frame_id": 8,
+            "source_sha256": "6fc334b83bf2cb1ae936980669b5f69c6a0e2491674ce31d53db44e9c66a445d",
+            "input_sha256": "fafc8c2e192ae6f9fb13d249bc049073c83dd31c8fefda4adb0b45df880b112d",
+            "raw": {
+              "collision_int32": -19101,
+              "steering_int32": 733
+            },
+            "decoded": {
+              "collision_int32": -19101,
+              "steering_int32": 733,
+              "collision_logit": -2.1233316801063893,
+              "risk_score": 0.10684970206052588,
+              "steering_value": 0.03574539810187894,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 369
+            }
+          },
+          "recv_call_ns": 104421200,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 581,
+          "line_bytes": 581,
+          "json_parse_ns": 41700,
+          "pc_validate_ns": 1800,
+          "pc_validated_ns": 16257916200
+        },
+        {
+          "pc_received_ns": 16360051600,
+          "event": {
+            "event": "image_result",
+            "run_id": 2,
+            "frame_id": 9,
+            "source_sha256": "b22c575e3a5071df2e1b87fd0ae5aec3482f6bda363aabe1592b20bfdba91c0d",
+            "input_sha256": "010752fb4b6f55c6913cd3c0630e9ed7ffad6dbe60e12a074f5825ac48ae65f4",
+            "raw": {
+              "collision_int32": -27633,
+              "steering_int32": 655
+            },
+            "decoded": {
+              "collision_int32": -27633,
+              "steering_int32": 655,
+              "collision_logit": -3.071777619830368,
+              "risk_score": 0.04428652843881009,
+              "steering_value": 0.03194165860399823,
+              "steering_units": "rad_label_space"
+            },
+            "native": {
+              "readback_verified": true,
+              "count_checks": 1024,
+              "bytes_read": 4096,
+              "bytes_written": 4096,
+              "result_seq": 370
+            }
+          },
+          "recv_call_ns": 102151600,
+          "recv_includes_blocking_wait": true,
+          "recv_block_bytes": 627,
+          "line_bytes": 580,
+          "json_parse_ns": 46300,
+          "pc_validate_ns": 1800,
+          "pc_validated_ns": 16360174000
+        }
+      ],
+      "begin_ack_ns": 15280739700,
+      "pc_end_ns": 16360204500,
+      "elapsed_ns": 1081355200
+    }
+  ],
+  "golden": 0,
+  "ack_words": 1,
+  "window": 2,
+  "includes_pc_preprocessing": false,
+  "version": "0.3.0",
+  "wire_format": "IMG1: 44-byte header + original JPEG",
+  "preprocess": "reference",
+  "workers": 1,
+  "full_wire_report": false,
+  "origin_ns": 138177478184700,
+  "process_started_ns": 138177520707900,
+  "startup": {
+    "standard_library_ns": 24842300,
+    "protocol_modules_ns": 1625200,
+    "paramiko_connection_modules_ns": 372990900,
+    "launcher_to_child_entry_ns": 42523200,
+    "entry_gap_ns": 11200,
+    "arguments_job_setup_ns": 2685700
+  },
+  "connection_timings": {
+    "credentials_read_ns": 356300,
+    "ssh_client_hostkeys_ns": 318700,
+    "tcp_connect_ns": 7032469200,
+    "ssh_handshake_ns": 197428300,
+    "ssh_password_auth_ns": 1660425300,
+    "ssh_connect_call_ns": 1858489300
+  },
+  "timeline": [
+    {
+      "name": "connection_with_credentials",
+      "start_ns": 444683100,
+      "end_ns": 9336390200,
+      "duration_ns": 8891707100
+    },
+    {
+      "name": "command_to_ready",
+      "start_ns": 9336410300,
+      "end_ns": 13081324400,
+      "duration_ns": 3744908800
+    },
+    {
+      "name": "service_finish_and_wait_exit",
+      "start_ns": 16360261800,
+      "end_ns": 16721989900,
+      "duration_ns": 361728700
+    },
+    {
+      "name": "download_board_report",
+      "start_ns": 16721999600,
+      "end_ns": 16792428600,
+      "duration_ns": 70429000
+    },
+    {
+      "name": "ssh_close",
+      "start_ns": 16792434700,
+      "end_ns": 16792631200,
+      "duration_ns": 196500
+    }
+  ],
+  "connection_ns": 8891341400,
+  "remote_output": "/home/xilinx/systolic-cnn-stream-v0.3.0/reports/job_4aeefbca98cb",
+  "exec_channel_ns": 298554500,
+  "command_to_ready_ns": 3744908800,
+  "ready": {
+    "pc_received_ns": 13081190700,
+    "event": {
+      "event": "ready",
+      "version": "0.3.0",
+      "ready_ns": 8677656032614,
+      "startup_ns": 1868623370,
+      "golden_passed": 0,
+      "full_readback": true,
+      "ack_words": 1,
+      "queue_limit": 2,
+      "preprocess": "reference",
+      "workers": 1
+    },
+    "recv_call_ns": 3445698000,
+    "recv_includes_blocking_wait": true,
+    "recv_block_bytes": 191,
+    "line_bytes": 191,
+    "json_parse_ns": 43000
+  },
+  "network_before": {
+    "monotonic_ns": 8677631453882,
+    "rx_bytes": 43834562,
+    "rx_packets": 34415,
+    "rx_errors": 910,
+    "rx_crc_errors": 909,
+    "rx_frame_errors": 0,
+    "rx_length_errors": 1,
+    "rx_dropped": 0,
+    "tx_bytes": 8770440,
+    "tx_packets": 12690,
+    "tx_errors": 0,
+    "tx_dropped": 0,
+    "speed": "1000",
+    "duplex": "full",
+    "carrier": "1",
+    "tcp": {
+      "RtoAlgorithm": 1,
+      "RtoMin": 200,
+      "RtoMax": 120000,
+      "MaxConn": -1,
+      "ActiveOpens": 50,
+      "PassiveOpens": 22,
+      "AttemptFails": 49,
+      "EstabResets": 0,
+      "CurrEstab": 1,
+      "InSegs": 10149,
+      "OutSegs": 12567,
+      "RetransSegs": 50,
+      "InErrs": 0,
+      "OutRsts": 49,
+      "InCsumErrors": 0
+    }
+  },
+  "network_after": {
+    "monotonic_ns": 8680938617729,
+    "rx_bytes": 48190960,
+    "rx_packets": 37437,
+    "rx_errors": 910,
+    "rx_crc_errors": 909,
+    "rx_frame_errors": 0,
+    "rx_length_errors": 1,
+    "rx_dropped": 0,
+    "tx_bytes": 8803318,
+    "tx_packets": 12891,
+    "tx_errors": 0,
+    "tx_dropped": 0,
+    "speed": "1000",
+    "duplex": "full",
+    "carrier": "1",
+    "tcp": {
+      "RtoAlgorithm": 1,
+      "RtoMin": 200,
+      "RtoMax": 120000,
+      "MaxConn": -1,
+      "ActiveOpens": 50,
+      "PassiveOpens": 22,
+      "AttemptFails": 49,
+      "EstabResets": 0,
+      "CurrEstab": 1,
+      "InSegs": 10489,
+      "OutSegs": 12768,
+      "RetransSegs": 50,
+      "InErrs": 0,
+      "OutRsts": 49,
+      "InCsumErrors": 0
+    }
+  },
+  "remote_exit_code": 0,
+  "stderr": "",
+  "receipts": [
+    {
+      "pc_received_ns": 13081190700,
+      "event": {
+        "event": "ready",
+        "version": "0.3.0",
+        "ready_ns": 8677656032614,
+        "startup_ns": 1868623370,
+        "golden_passed": 0,
+        "full_readback": true,
+        "ack_words": 1,
+        "queue_limit": 2,
+        "preprocess": "reference",
+        "workers": 1
+      },
+      "recv_call_ns": 3445698000,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 191,
+      "line_bytes": 191,
+      "json_parse_ns": 43000
+    },
+    {
+      "pc_received_ns": 13082971000,
+      "event": {
+        "event": "run_start",
+        "run_id": 0,
+        "count": 10
+      },
+      "recv_call_ns": 1689500,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 44,
+      "line_bytes": 44,
+      "json_parse_ns": 26800
+    },
+    {
+      "pc_received_ns": 13253505100,
+      "event": {
+        "event": "image_result",
+        "run_id": 0,
+        "frame_id": 0,
+        "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+        "input_sha256": "5e915ffbfecf7fc776e6e7d7dc8b987c0eabc6902d125f03330bc66afbac78b5",
+        "raw": {
+          "collision_int32": -24014,
+          "steering_int32": 517
+        },
+        "decoded": {
+          "collision_int32": -24014,
+          "steering_int32": 517,
+          "collision_logit": -2.669477355430335,
+          "risk_score": 0.06479863354474187,
+          "steering_value": 0.025211965646209294,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 341
+        }
+      },
+      "recv_call_ns": 170463500,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 581,
+      "line_bytes": 581,
+      "json_parse_ns": 46900,
+      "pc_validate_ns": 1900,
+      "pc_validated_ns": 13253612200
+    },
+    {
+      "pc_received_ns": 13358392400,
+      "event": {
+        "event": "image_result",
+        "run_id": 0,
+        "frame_id": 1,
+        "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+        "input_sha256": "5e915ffbfecf7fc776e6e7d7dc8b987c0eabc6902d125f03330bc66afbac78b5",
+        "raw": {
+          "collision_int32": -24014,
+          "steering_int32": 517
+        },
+        "decoded": {
+          "collision_int32": -24014,
+          "steering_int32": 517,
+          "collision_logit": -2.669477355430335,
+          "risk_score": 0.06479863354474187,
+          "steering_value": 0.025211965646209294,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 342
+        }
+      },
+      "recv_call_ns": 104804400,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 581,
+      "line_bytes": 581,
+      "json_parse_ns": 45100,
+      "pc_validate_ns": 2100,
+      "pc_validated_ns": 13358500000
+    },
+    {
+      "pc_received_ns": 13463677200,
+      "event": {
+        "event": "image_result",
+        "run_id": 0,
+        "frame_id": 2,
+        "source_sha256": "e3271c5cea78ec41a913601ca6623e13c9a67563b0e2d5c3f4df24b975649240",
+        "input_sha256": "f3c75a827d9cd15a08f99209d13b668fb3a3016f73e01912be970508a9484a7c",
+        "raw": {
+          "collision_int32": -24359,
+          "steering_int32": 1107
+        },
+        "decoded": {
+          "collision_int32": -24359,
+          "steering_int32": 1107,
+          "collision_logit": -2.7078287207848564,
+          "risk_score": 0.06251297861988953,
+          "steering_value": 0.05398384133530694,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 343
+        }
+      },
+      "recv_call_ns": 105199400,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 583,
+      "line_bytes": 583,
+      "json_parse_ns": 57000,
+      "pc_validate_ns": 2500,
+      "pc_validated_ns": 13463820700
+    },
+    {
+      "pc_received_ns": 13568771300,
+      "event": {
+        "event": "image_result",
+        "run_id": 0,
+        "frame_id": 3,
+        "source_sha256": "c71ee567ac6f6178bf7612ccc59a42fc9a65cd559c6c7b156436084ebed20698",
+        "input_sha256": "c065931f93013a01d4994c5a5e0a3d87888095861527ce8d84f3378f37844169",
+        "raw": {
+          "collision_int32": -19639,
+          "steering_int32": 1454
+        },
+        "decoded": {
+          "collision_int32": -19639,
+          "steering_int32": 1454,
+          "collision_logit": -2.183137577383874,
+          "risk_score": 0.10127499324316579,
+          "steering_value": 0.07090560551177623,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 344
+        }
+      },
+      "recv_call_ns": 104985200,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 582,
+      "line_bytes": 582,
+      "json_parse_ns": 41700,
+      "pc_validate_ns": 1900,
+      "pc_validated_ns": 13568854500
+    },
+    {
+      "pc_received_ns": 13673726300,
+      "event": {
+        "event": "image_result",
+        "run_id": 0,
+        "frame_id": 4,
+        "source_sha256": "7d6304b1d800b9378c4da77037a5705e5e9c40aa7c043b998ef2f0d758fff36f",
+        "input_sha256": "7a42639b1a3e47d852bb33b794399d63919b7c91aab6fd2d31f2c61ca7ca50cc",
+        "raw": {
+          "collision_int32": -27251,
+          "steering_int32": 1533
+        },
+        "decoded": {
+          "collision_int32": -27251,
+          "steering_int32": 1533,
+          "collision_logit": -3.029313209495797,
+          "risk_score": 0.046119030954039505,
+          "steering_value": 0.07475811090065541,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 345
+        }
+      },
+      "recv_call_ns": 104888300,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 583,
+      "line_bytes": 583,
+      "json_parse_ns": 43200,
+      "pc_validate_ns": 1700,
+      "pc_validated_ns": 13673821800
+    },
+    {
+      "pc_received_ns": 13779558000,
+      "event": {
+        "event": "image_result",
+        "run_id": 0,
+        "frame_id": 5,
+        "source_sha256": "cee86fbaca08b1e2ace00a895372d0bca9c157bab3d5b0a9dab0428281131415",
+        "input_sha256": "c5c3867ec1a8f6fe422f5d8ca1c95ec1e13f42a80e9d55fee800393761cf2c55",
+        "raw": {
+          "collision_int32": -22505,
+          "steering_int32": 276
+        },
+        "decoded": {
+          "collision_int32": -22505,
+          "steering_int32": 276,
+          "collision_logit": -2.5017318182709958,
+          "risk_score": 0.07573686226671258,
+          "steering_value": 0.013459385915577882,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 346
+        }
+      },
+      "recv_call_ns": 105758000,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 582,
+      "line_bytes": 582,
+      "json_parse_ns": 45100,
+      "pc_validate_ns": 2000,
+      "pc_validated_ns": 13779659700
+    },
+    {
+      "pc_received_ns": 13884870200,
+      "event": {
+        "event": "image_result",
+        "run_id": 0,
+        "frame_id": 6,
+        "source_sha256": "0f72f9726db987d461139b395f49e94469a6324b46aaec4369a7bc213f12edd9",
+        "input_sha256": "1c14781af8e497f32c50beaae57ac23174a00174374f6701373045b7e7d96d2c",
+        "raw": {
+          "collision_int32": -16979,
+          "steering_int32": -130
+        },
+        "decoded": {
+          "collision_int32": -16979,
+          "steering_int32": -130,
+          "collision_logit": -1.8874429923316258,
+          "risk_score": 0.13153629281740203,
+          "steering_value": -0.006339565829801176,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 347
+        }
+      },
+      "recv_call_ns": 105231100,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 585,
+      "line_bytes": 585,
+      "json_parse_ns": 46800,
+      "pc_validate_ns": 1700,
+      "pc_validated_ns": 13884976700
+    },
+    {
+      "pc_received_ns": 13989885400,
+      "event": {
+        "event": "image_result",
+        "run_id": 0,
+        "frame_id": 7,
+        "source_sha256": "fe89675711e15247348dc36dd190e11c08434c33e2f26165cd47549d67bafc86",
+        "input_sha256": "2628734de4cbb8bcde9fe332a585af18694d16c68dd4adef387e5704f5933405",
+        "raw": {
+          "collision_int32": -22578,
+          "steering_int32": 580
+        },
+        "decoded": {
+          "collision_int32": -22578,
+          "steering_int32": 580,
+          "collision_logit": -2.509846744853257,
+          "risk_score": 0.07517076310458985,
+          "steering_value": 0.02828421677911294,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 348
+        }
+      },
+      "recv_call_ns": 104931500,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 580,
+      "line_bytes": 580,
+      "json_parse_ns": 56000,
+      "pc_validate_ns": 1900,
+      "pc_validated_ns": 13990010400
+    },
+    {
+      "pc_received_ns": 14094469300,
+      "event": {
+        "event": "image_result",
+        "run_id": 0,
+        "frame_id": 8,
+        "source_sha256": "6fc334b83bf2cb1ae936980669b5f69c6a0e2491674ce31d53db44e9c66a445d",
+        "input_sha256": "fafc8c2e192ae6f9fb13d249bc049073c83dd31c8fefda4adb0b45df880b112d",
+        "raw": {
+          "collision_int32": -19101,
+          "steering_int32": 733
+        },
+        "decoded": {
+          "collision_int32": -19101,
+          "steering_int32": 733,
+          "collision_logit": -2.1233316801063893,
+          "risk_score": 0.10684970206052588,
+          "steering_value": 0.03574539810187894,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 349
+        }
+      },
+      "recv_call_ns": 104483800,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 581,
+      "line_bytes": 581,
+      "json_parse_ns": 49500,
+      "pc_validate_ns": 2700,
+      "pc_validated_ns": 14094593000
+    },
+    {
+      "pc_received_ns": 14196443800,
+      "event": {
+        "event": "image_result",
+        "run_id": 0,
+        "frame_id": 9,
+        "source_sha256": "b22c575e3a5071df2e1b87fd0ae5aec3482f6bda363aabe1592b20bfdba91c0d",
+        "input_sha256": "010752fb4b6f55c6913cd3c0630e9ed7ffad6dbe60e12a074f5825ac48ae65f4",
+        "raw": {
+          "collision_int32": -27633,
+          "steering_int32": 655
+        },
+        "decoded": {
+          "collision_int32": -27633,
+          "steering_int32": 655,
+          "collision_logit": -3.071777619830368,
+          "risk_score": 0.04428652843881009,
+          "steering_value": 0.03194165860399823,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 350
+        }
+      },
+      "recv_call_ns": 101888700,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 580,
+      "line_bytes": 580,
+      "json_parse_ns": 46200,
+      "pc_validate_ns": 1800,
+      "pc_validated_ns": 14196545400
+    },
+    {
+      "pc_received_ns": 14196864100,
+      "event": {
+        "event": "run_complete",
+        "run_id": 0,
+        "count": 10
+      },
+      "recv_call_ns": 342200,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 47,
+      "line_bytes": 47,
+      "json_parse_ns": 20200
+    },
+    {
+      "pc_received_ns": 14198666000,
+      "event": {
+        "event": "run_start",
+        "run_id": 1,
+        "count": 10
+      },
+      "recv_call_ns": 1756300,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 44,
+      "line_bytes": 44,
+      "json_parse_ns": 19600
+    },
+    {
+      "pc_received_ns": 14335212000,
+      "event": {
+        "event": "image_result",
+        "run_id": 1,
+        "frame_id": 0,
+        "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+        "input_sha256": "5e915ffbfecf7fc776e6e7d7dc8b987c0eabc6902d125f03330bc66afbac78b5",
+        "raw": {
+          "collision_int32": -24014,
+          "steering_int32": 517
+        },
+        "decoded": {
+          "collision_int32": -24014,
+          "steering_int32": 517,
+          "collision_logit": -2.669477355430335,
+          "risk_score": 0.06479863354474187,
+          "steering_value": 0.025211965646209294,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 351
+        }
+      },
+      "recv_call_ns": 136498700,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 581,
+      "line_bytes": 581,
+      "json_parse_ns": 42300,
+      "pc_validate_ns": 1600,
+      "pc_validated_ns": 14335302600
+    },
+    {
+      "pc_received_ns": 14440269800,
+      "event": {
+        "event": "image_result",
+        "run_id": 1,
+        "frame_id": 1,
+        "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+        "input_sha256": "5e915ffbfecf7fc776e6e7d7dc8b987c0eabc6902d125f03330bc66afbac78b5",
+        "raw": {
+          "collision_int32": -24014,
+          "steering_int32": 517
+        },
+        "decoded": {
+          "collision_int32": -24014,
+          "steering_int32": 517,
+          "collision_logit": -2.669477355430335,
+          "risk_score": 0.06479863354474187,
+          "steering_value": 0.025211965646209294,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 352
+        }
+      },
+      "recv_call_ns": 104987000,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 581,
+      "line_bytes": 581,
+      "json_parse_ns": 45400,
+      "pc_validate_ns": 2600,
+      "pc_validated_ns": 14440364100
+    },
+    {
+      "pc_received_ns": 14545812900,
+      "event": {
+        "event": "image_result",
+        "run_id": 1,
+        "frame_id": 2,
+        "source_sha256": "e3271c5cea78ec41a913601ca6623e13c9a67563b0e2d5c3f4df24b975649240",
+        "input_sha256": "f3c75a827d9cd15a08f99209d13b668fb3a3016f73e01912be970508a9484a7c",
+        "raw": {
+          "collision_int32": -24359,
+          "steering_int32": 1107
+        },
+        "decoded": {
+          "collision_int32": -24359,
+          "steering_int32": 1107,
+          "collision_logit": -2.7078287207848564,
+          "risk_score": 0.06251297861988953,
+          "steering_value": 0.05398384133530694,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 353
+        }
+      },
+      "recv_call_ns": 105468100,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 583,
+      "line_bytes": 583,
+      "json_parse_ns": 46200,
+      "pc_validate_ns": 1800,
+      "pc_validated_ns": 14545917200
+    },
+    {
+      "pc_received_ns": 14650475300,
+      "event": {
+        "event": "image_result",
+        "run_id": 1,
+        "frame_id": 3,
+        "source_sha256": "c71ee567ac6f6178bf7612ccc59a42fc9a65cd559c6c7b156436084ebed20698",
+        "input_sha256": "c065931f93013a01d4994c5a5e0a3d87888095861527ce8d84f3378f37844169",
+        "raw": {
+          "collision_int32": -19639,
+          "steering_int32": 1454
+        },
+        "decoded": {
+          "collision_int32": -19639,
+          "steering_int32": 1454,
+          "collision_logit": -2.183137577383874,
+          "risk_score": 0.10127499324316579,
+          "steering_value": 0.07090560551177623,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 354
+        }
+      },
+      "recv_call_ns": 104579200,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 582,
+      "line_bytes": 582,
+      "json_parse_ns": 47300,
+      "pc_validate_ns": 1700,
+      "pc_validated_ns": 14650581300
+    },
+    {
+      "pc_received_ns": 14756104800,
+      "event": {
+        "event": "image_result",
+        "run_id": 1,
+        "frame_id": 4,
+        "source_sha256": "7d6304b1d800b9378c4da77037a5705e5e9c40aa7c043b998ef2f0d758fff36f",
+        "input_sha256": "7a42639b1a3e47d852bb33b794399d63919b7c91aab6fd2d31f2c61ca7ca50cc",
+        "raw": {
+          "collision_int32": -27251,
+          "steering_int32": 1533
+        },
+        "decoded": {
+          "collision_int32": -27251,
+          "steering_int32": 1533,
+          "collision_logit": -3.029313209495797,
+          "risk_score": 0.046119030954039505,
+          "steering_value": 0.07475811090065541,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 355
+        }
+      },
+      "recv_call_ns": 105549700,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 583,
+      "line_bytes": 583,
+      "json_parse_ns": 226400,
+      "pc_validate_ns": 1900,
+      "pc_validated_ns": 14756393900
+    },
+    {
+      "pc_received_ns": 14861014100,
+      "event": {
+        "event": "image_result",
+        "run_id": 1,
+        "frame_id": 5,
+        "source_sha256": "cee86fbaca08b1e2ace00a895372d0bca9c157bab3d5b0a9dab0428281131415",
+        "input_sha256": "c5c3867ec1a8f6fe422f5d8ca1c95ec1e13f42a80e9d55fee800393761cf2c55",
+        "raw": {
+          "collision_int32": -22505,
+          "steering_int32": 276
+        },
+        "decoded": {
+          "collision_int32": -22505,
+          "steering_int32": 276,
+          "collision_logit": -2.5017318182709958,
+          "risk_score": 0.07573686226671258,
+          "steering_value": 0.013459385915577882,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 356
+        }
+      },
+      "recv_call_ns": 104640500,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 582,
+      "line_bytes": 582,
+      "json_parse_ns": 51300,
+      "pc_validate_ns": 2000,
+      "pc_validated_ns": 14861116100
+    },
+    {
+      "pc_received_ns": 14966453900,
+      "event": {
+        "event": "image_result",
+        "run_id": 1,
+        "frame_id": 6,
+        "source_sha256": "0f72f9726db987d461139b395f49e94469a6324b46aaec4369a7bc213f12edd9",
+        "input_sha256": "1c14781af8e497f32c50beaae57ac23174a00174374f6701373045b7e7d96d2c",
+        "raw": {
+          "collision_int32": -16979,
+          "steering_int32": -130
+        },
+        "decoded": {
+          "collision_int32": -16979,
+          "steering_int32": -130,
+          "collision_logit": -1.8874429923316258,
+          "risk_score": 0.13153629281740203,
+          "steering_value": -0.006339565829801176,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 357
+        }
+      },
+      "recv_call_ns": 105360600,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 585,
+      "line_bytes": 585,
+      "json_parse_ns": 55400,
+      "pc_validate_ns": 2100,
+      "pc_validated_ns": 14966557400
+    },
+    {
+      "pc_received_ns": 15070884900,
+      "event": {
+        "event": "image_result",
+        "run_id": 1,
+        "frame_id": 7,
+        "source_sha256": "fe89675711e15247348dc36dd190e11c08434c33e2f26165cd47549d67bafc86",
+        "input_sha256": "2628734de4cbb8bcde9fe332a585af18694d16c68dd4adef387e5704f5933405",
+        "raw": {
+          "collision_int32": -22578,
+          "steering_int32": 580
+        },
+        "decoded": {
+          "collision_int32": -22578,
+          "steering_int32": 580,
+          "collision_logit": -2.509846744853257,
+          "risk_score": 0.07517076310458985,
+          "steering_value": 0.02828421677911294,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 358
+        }
+      },
+      "recv_call_ns": 104343900,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 580,
+      "line_bytes": 580,
+      "json_parse_ns": 46100,
+      "pc_validate_ns": 1600,
+      "pc_validated_ns": 15070986700
+    },
+    {
+      "pc_received_ns": 15176202800,
+      "event": {
+        "event": "image_result",
+        "run_id": 1,
+        "frame_id": 8,
+        "source_sha256": "6fc334b83bf2cb1ae936980669b5f69c6a0e2491674ce31d53db44e9c66a445d",
+        "input_sha256": "fafc8c2e192ae6f9fb13d249bc049073c83dd31c8fefda4adb0b45df880b112d",
+        "raw": {
+          "collision_int32": -19101,
+          "steering_int32": 733
+        },
+        "decoded": {
+          "collision_int32": -19101,
+          "steering_int32": 733,
+          "collision_logit": -2.1233316801063893,
+          "risk_score": 0.10684970206052588,
+          "steering_value": 0.03574539810187894,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 359
+        }
+      },
+      "recv_call_ns": 105234400,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 581,
+      "line_bytes": 581,
+      "json_parse_ns": 46800,
+      "pc_validate_ns": 2600,
+      "pc_validated_ns": 15176338100
+    },
+    {
+      "pc_received_ns": 15278537600,
+      "event": {
+        "event": "image_result",
+        "run_id": 1,
+        "frame_id": 9,
+        "source_sha256": "b22c575e3a5071df2e1b87fd0ae5aec3482f6bda363aabe1592b20bfdba91c0d",
+        "input_sha256": "010752fb4b6f55c6913cd3c0630e9ed7ffad6dbe60e12a074f5825ac48ae65f4",
+        "raw": {
+          "collision_int32": -27633,
+          "steering_int32": 655
+        },
+        "decoded": {
+          "collision_int32": -27633,
+          "steering_int32": 655,
+          "collision_logit": -3.071777619830368,
+          "risk_score": 0.04428652843881009,
+          "steering_value": 0.03194165860399823,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 360
+        }
+      },
+      "recv_call_ns": 102229800,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 627,
+      "line_bytes": 580,
+      "json_parse_ns": 70900,
+      "pc_validate_ns": 2900,
+      "pc_validated_ns": 15278728200
+    },
+    {
+      "pc_received_ns": 15278645100,
+      "event": {
+        "event": "run_complete",
+        "run_id": 1,
+        "count": 10
+      },
+      "recv_call_ns": 102229800,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 627,
+      "line_bytes": 47,
+      "json_parse_ns": 15600
+    },
+    {
+      "pc_received_ns": 15280565100,
+      "event": {
+        "event": "run_start",
+        "run_id": 2,
+        "count": 10
+      },
+      "recv_call_ns": 1884800,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 44,
+      "line_bytes": 44,
+      "json_parse_ns": 124400
+    },
+    {
+      "pc_received_ns": 15416704700,
+      "event": {
+        "event": "image_result",
+        "run_id": 2,
+        "frame_id": 0,
+        "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+        "input_sha256": "5e915ffbfecf7fc776e6e7d7dc8b987c0eabc6902d125f03330bc66afbac78b5",
+        "raw": {
+          "collision_int32": -24014,
+          "steering_int32": 517
+        },
+        "decoded": {
+          "collision_int32": -24014,
+          "steering_int32": 517,
+          "collision_logit": -2.669477355430335,
+          "risk_score": 0.06479863354474187,
+          "steering_value": 0.025211965646209294,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 361
+        }
+      },
+      "recv_call_ns": 135981500,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 581,
+      "line_bytes": 581,
+      "json_parse_ns": 51900,
+      "pc_validate_ns": 1900,
+      "pc_validated_ns": 15416804600
+    },
+    {
+      "pc_received_ns": 15522521900,
+      "event": {
+        "event": "image_result",
+        "run_id": 2,
+        "frame_id": 1,
+        "source_sha256": "9d9d9aa346763f987b6f85e808f83d1c98bac2a0fbb96234ab7f8bd884896f5d",
+        "input_sha256": "5e915ffbfecf7fc776e6e7d7dc8b987c0eabc6902d125f03330bc66afbac78b5",
+        "raw": {
+          "collision_int32": -24014,
+          "steering_int32": 517
+        },
+        "decoded": {
+          "collision_int32": -24014,
+          "steering_int32": 517,
+          "collision_logit": -2.669477355430335,
+          "risk_score": 0.06479863354474187,
+          "steering_value": 0.025211965646209294,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 362
+        }
+      },
+      "recv_call_ns": 105737000,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 581,
+      "line_bytes": 581,
+      "json_parse_ns": 41400,
+      "pc_validate_ns": 1700,
+      "pc_validated_ns": 15522610900
+    },
+    {
+      "pc_received_ns": 15627367900,
+      "event": {
+        "event": "image_result",
+        "run_id": 2,
+        "frame_id": 2,
+        "source_sha256": "e3271c5cea78ec41a913601ca6623e13c9a67563b0e2d5c3f4df24b975649240",
+        "input_sha256": "f3c75a827d9cd15a08f99209d13b668fb3a3016f73e01912be970508a9484a7c",
+        "raw": {
+          "collision_int32": -24359,
+          "steering_int32": 1107
+        },
+        "decoded": {
+          "collision_int32": -24359,
+          "steering_int32": 1107,
+          "collision_logit": -2.7078287207848564,
+          "risk_score": 0.06251297861988953,
+          "steering_value": 0.05398384133530694,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 363
+        }
+      },
+      "recv_call_ns": 104772100,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 583,
+      "line_bytes": 583,
+      "json_parse_ns": 46800,
+      "pc_validate_ns": 1700,
+      "pc_validated_ns": 15627469300
+    },
+    {
+      "pc_received_ns": 15732609300,
+      "event": {
+        "event": "image_result",
+        "run_id": 2,
+        "frame_id": 3,
+        "source_sha256": "c71ee567ac6f6178bf7612ccc59a42fc9a65cd559c6c7b156436084ebed20698",
+        "input_sha256": "c065931f93013a01d4994c5a5e0a3d87888095861527ce8d84f3378f37844169",
+        "raw": {
+          "collision_int32": -19639,
+          "steering_int32": 1454
+        },
+        "decoded": {
+          "collision_int32": -19639,
+          "steering_int32": 1454,
+          "collision_logit": -2.183137577383874,
+          "risk_score": 0.10127499324316579,
+          "steering_value": 0.07090560551177623,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 364
+        }
+      },
+      "recv_call_ns": 105158900,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 582,
+      "line_bytes": 582,
+      "json_parse_ns": 48200,
+      "pc_validate_ns": 1800,
+      "pc_validated_ns": 15732715200
+    },
+    {
+      "pc_received_ns": 15837606800,
+      "event": {
+        "event": "image_result",
+        "run_id": 2,
+        "frame_id": 4,
+        "source_sha256": "7d6304b1d800b9378c4da77037a5705e5e9c40aa7c043b998ef2f0d758fff36f",
+        "input_sha256": "7a42639b1a3e47d852bb33b794399d63919b7c91aab6fd2d31f2c61ca7ca50cc",
+        "raw": {
+          "collision_int32": -27251,
+          "steering_int32": 1533
+        },
+        "decoded": {
+          "collision_int32": -27251,
+          "steering_int32": 1533,
+          "collision_logit": -3.029313209495797,
+          "risk_score": 0.046119030954039505,
+          "steering_value": 0.07475811090065541,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 365
+        }
+      },
+      "recv_call_ns": 104909900,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 583,
+      "line_bytes": 583,
+      "json_parse_ns": 51700,
+      "pc_validate_ns": 1700,
+      "pc_validated_ns": 15837719100
+    },
+    {
+      "pc_received_ns": 15943069800,
+      "event": {
+        "event": "image_result",
+        "run_id": 2,
+        "frame_id": 5,
+        "source_sha256": "cee86fbaca08b1e2ace00a895372d0bca9c157bab3d5b0a9dab0428281131415",
+        "input_sha256": "c5c3867ec1a8f6fe422f5d8ca1c95ec1e13f42a80e9d55fee800393761cf2c55",
+        "raw": {
+          "collision_int32": -22505,
+          "steering_int32": 276
+        },
+        "decoded": {
+          "collision_int32": -22505,
+          "steering_int32": 276,
+          "collision_logit": -2.5017318182709958,
+          "risk_score": 0.07573686226671258,
+          "steering_value": 0.013459385915577882,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 366
+        }
+      },
+      "recv_call_ns": 105374900,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 582,
+      "line_bytes": 582,
+      "json_parse_ns": 53600,
+      "pc_validate_ns": 1700,
+      "pc_validated_ns": 15943182000
+    },
+    {
+      "pc_received_ns": 16048196100,
+      "event": {
+        "event": "image_result",
+        "run_id": 2,
+        "frame_id": 6,
+        "source_sha256": "0f72f9726db987d461139b395f49e94469a6324b46aaec4369a7bc213f12edd9",
+        "input_sha256": "1c14781af8e497f32c50beaae57ac23174a00174374f6701373045b7e7d96d2c",
+        "raw": {
+          "collision_int32": -16979,
+          "steering_int32": -130
+        },
+        "decoded": {
+          "collision_int32": -16979,
+          "steering_int32": -130,
+          "collision_logit": -1.8874429923316258,
+          "risk_score": 0.13153629281740203,
+          "steering_value": -0.006339565829801176,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 367
+        }
+      },
+      "recv_call_ns": 105036500,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 585,
+      "line_bytes": 585,
+      "json_parse_ns": 48400,
+      "pc_validate_ns": 2300,
+      "pc_validated_ns": 16048312800
+    },
+    {
+      "pc_received_ns": 16153307400,
+      "event": {
+        "event": "image_result",
+        "run_id": 2,
+        "frame_id": 7,
+        "source_sha256": "fe89675711e15247348dc36dd190e11c08434c33e2f26165cd47549d67bafc86",
+        "input_sha256": "2628734de4cbb8bcde9fe332a585af18694d16c68dd4adef387e5704f5933405",
+        "raw": {
+          "collision_int32": -22578,
+          "steering_int32": 580
+        },
+        "decoded": {
+          "collision_int32": -22578,
+          "steering_int32": 580,
+          "collision_logit": -2.509846744853257,
+          "risk_score": 0.07517076310458985,
+          "steering_value": 0.02828421677911294,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 368
+        }
+      },
+      "recv_call_ns": 105022200,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 580,
+      "line_bytes": 580,
+      "json_parse_ns": 50900,
+      "pc_validate_ns": 1900,
+      "pc_validated_ns": 16153417300
+    },
+    {
+      "pc_received_ns": 16257813300,
+      "event": {
+        "event": "image_result",
+        "run_id": 2,
+        "frame_id": 8,
+        "source_sha256": "6fc334b83bf2cb1ae936980669b5f69c6a0e2491674ce31d53db44e9c66a445d",
+        "input_sha256": "fafc8c2e192ae6f9fb13d249bc049073c83dd31c8fefda4adb0b45df880b112d",
+        "raw": {
+          "collision_int32": -19101,
+          "steering_int32": 733
+        },
+        "decoded": {
+          "collision_int32": -19101,
+          "steering_int32": 733,
+          "collision_logit": -2.1233316801063893,
+          "risk_score": 0.10684970206052588,
+          "steering_value": 0.03574539810187894,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 369
+        }
+      },
+      "recv_call_ns": 104421200,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 581,
+      "line_bytes": 581,
+      "json_parse_ns": 41700,
+      "pc_validate_ns": 1800,
+      "pc_validated_ns": 16257916200
+    },
+    {
+      "pc_received_ns": 16360051600,
+      "event": {
+        "event": "image_result",
+        "run_id": 2,
+        "frame_id": 9,
+        "source_sha256": "b22c575e3a5071df2e1b87fd0ae5aec3482f6bda363aabe1592b20bfdba91c0d",
+        "input_sha256": "010752fb4b6f55c6913cd3c0630e9ed7ffad6dbe60e12a074f5825ac48ae65f4",
+        "raw": {
+          "collision_int32": -27633,
+          "steering_int32": 655
+        },
+        "decoded": {
+          "collision_int32": -27633,
+          "steering_int32": 655,
+          "collision_logit": -3.071777619830368,
+          "risk_score": 0.04428652843881009,
+          "steering_value": 0.03194165860399823,
+          "steering_units": "rad_label_space"
+        },
+        "native": {
+          "readback_verified": true,
+          "count_checks": 1024,
+          "bytes_read": 4096,
+          "bytes_written": 4096,
+          "result_seq": 370
+        }
+      },
+      "recv_call_ns": 102151600,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 627,
+      "line_bytes": 580,
+      "json_parse_ns": 46300,
+      "pc_validate_ns": 1800,
+      "pc_validated_ns": 16360174000
+    },
+    {
+      "pc_received_ns": 16360122700,
+      "event": {
+        "event": "run_complete",
+        "run_id": 2,
+        "count": 10
+      },
+      "recv_call_ns": 102151600,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 627,
+      "line_bytes": 47,
+      "json_parse_ns": 8800
+    },
+    {
+      "pc_received_ns": 16431620100,
+      "event": {
+        "event": "service_complete",
+        "status": "PASS",
+        "count": 30,
+        "error": null,
+        "network_before": {
+          "monotonic_ns": 8677631453882,
+          "rx_bytes": 43834562,
+          "rx_packets": 34415,
+          "rx_errors": 910,
+          "rx_crc_errors": 909,
+          "rx_frame_errors": 0,
+          "rx_length_errors": 1,
+          "rx_dropped": 0,
+          "tx_bytes": 8770440,
+          "tx_packets": 12690,
+          "tx_errors": 0,
+          "tx_dropped": 0,
+          "speed": "1000",
+          "duplex": "full",
+          "carrier": "1",
+          "tcp": {
+            "RtoAlgorithm": 1,
+            "RtoMin": 200,
+            "RtoMax": 120000,
+            "MaxConn": -1,
+            "ActiveOpens": 50,
+            "PassiveOpens": 22,
+            "AttemptFails": 49,
+            "EstabResets": 0,
+            "CurrEstab": 1,
+            "InSegs": 10149,
+            "OutSegs": 12567,
+            "RetransSegs": 50,
+            "InErrs": 0,
+            "OutRsts": 49,
+            "InCsumErrors": 0
+          }
+        },
+        "network_after": {
+          "monotonic_ns": 8680938617729,
+          "rx_bytes": 48190960,
+          "rx_packets": 37437,
+          "rx_errors": 910,
+          "rx_crc_errors": 909,
+          "rx_frame_errors": 0,
+          "rx_length_errors": 1,
+          "rx_dropped": 0,
+          "tx_bytes": 8803318,
+          "tx_packets": 12891,
+          "tx_errors": 0,
+          "tx_dropped": 0,
+          "speed": "1000",
+          "duplex": "full",
+          "carrier": "1",
+          "tcp": {
+            "RtoAlgorithm": 1,
+            "RtoMin": 200,
+            "RtoMax": 120000,
+            "MaxConn": -1,
+            "ActiveOpens": 50,
+            "PassiveOpens": 22,
+            "AttemptFails": 49,
+            "EstabResets": 0,
+            "CurrEstab": 1,
+            "InSegs": 10489,
+            "OutSegs": 12768,
+            "RetransSegs": 50,
+            "InErrs": 0,
+            "OutRsts": 49,
+            "InCsumErrors": 0
+          }
+        }
+      },
+      "recv_call_ns": 71467700,
+      "recv_includes_blocking_wait": true,
+      "recv_block_bytes": 1128,
+      "line_bytes": 1128,
+      "json_parse_ns": 73000
+    }
+  ],
+  "pc_all_results_ns": 16360051600,
+  "total_ns": 16792634500
+}

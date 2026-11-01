@@ -1,0 +1,7 @@
+{
+  "dual_task_int8\\check_fp32.py": "af29ddb44a5ada2cad484ec2b20c96a45a77406906337fb45ece7329e503684d",
+  "dual_task_int8\\finalize.py": "97c2cde6e54804c3ff550f6a01ee9aeeabdc273623e22f43a720d85d9ed1dc54",
+  "dual_task_int8\\integer_model.py": "af3eca268304c2fc0f48e4917b1c75e0aa08a69976d5b150091e4fe2a96138ec",
+  "dual_task_int8\\qat.py": "d7d3805252aae212cb7a880ac723dc23847df44ecb5036ce5543891d4d2c2fda",
+  "dual_task_int8\\run_quantization.py": "09c4efba9a153d05b9d6e73fa18d8681fc0687c0963f79daf8cc67f496b4408e"
+}

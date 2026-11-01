@@ -1,0 +1,435 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Sun Nov  1 16:01:10 2026
+| Host         : LAPTOP-ABFF0DL3 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -file D:/work/FPGA/pynq_cnn_delivery/.runtime/o_b955814e/reports/overlay/finish_timing_summary.rpt
+| Design       : cnn_system_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (0)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (0)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      4.600        0.000                      0                67834        0.023        0.000                      0                67834        8.750        0.000                       0                 22844  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock       Waveform(ns)       Period(ns)      Frequency(MHz)
+-----       ------------       ----------      --------------
+clk_fpga_0  {0.000 10.000}     20.000          50.000          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_fpga_0          4.600        0.000                      0                67834        0.023        0.000                      0                67834        8.750        0.000                       0                 22844  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                      clk_fpga_0    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_fpga_0
+  To Clock:  clk_fpga_0
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.600ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.023ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        8.750ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.600ns  (required time - arrival time)
+  Source:                 cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/network_control.network/state_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/output_buffer/lanes[3].groups[25].bank0_reg[821]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_fpga_0 rise@20.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        15.094ns  (logic 0.828ns (5.486%)  route 14.266ns (94.514%))
+  Logic Levels:           3  (LUT3=2 LUT4=1)
+  Clock Path Skew:        0.201ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.036ns = ( 23.036 - 20.000 ) 
+    Source Clock Delay      (SCD):    2.950ns
+    Clock Pessimism Removal (CPR):    0.115ns
+  Clock Uncertainty:      0.302ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.600ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  cnn_system_i/ps7/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    cnn_system_i/ps7/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  cnn_system_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=22846, routed)       1.656     2.950    cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/network_control.network/s_axi_aclk
+    SLICE_X53Y45         FDRE                                         r  cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/network_control.network/state_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y45         FDRE (Prop_fdre_C_Q)         0.456     3.406 r  cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/network_control.network/state_reg[1]/Q
+                         net (fo=28, routed)          1.391     4.797    cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/network_control.network/state_reg_n_0_[1]
+    SLICE_X48Y46         LUT4 (Prop_lut4_I0_O)        0.124     4.921 r  cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/network_control.network/a_skew[1].v[0]_i_2/O
+                         net (fo=51, routed)          1.511     6.431    cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/linear_mode
+    SLICE_X56Y58         LUT3 (Prop_lut3_I1_O)        0.124     6.555 r  cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/act_full[1]_i_4/O
+                         net (fo=13, routed)          0.859     7.414    cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/array/rows[1].cols[0].pe/array_done
+    SLICE_X48Y60         LUT3 (Prop_lut3_I0_O)        0.124     7.538 r  cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/array/rows[1].cols[0].pe/lanes[0].groups[0].bank0[31]_i_1/O
+                         net (fo=4096, routed)       10.506    18.044    cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/output_buffer/E[0]
+    SLICE_X109Y146       FDRE                                         r  cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/output_buffer/lanes[3].groups[25].bank0_reg[821]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     20.000    20.000 r  
+    PS7_X0Y0             PS7                          0.000    20.000 r  cnn_system_i/ps7/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    21.088    cnn_system_i/ps7/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    21.179 r  cnn_system_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=22846, routed)       1.857    23.036    cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/output_buffer/s_axi_aclk
+    SLICE_X109Y146       FDRE                                         r  cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/output_buffer/lanes[3].groups[25].bank0_reg[821]/C
+                         clock pessimism              0.115    23.151    
+                         clock uncertainty           -0.302    22.849    
+    SLICE_X109Y146       FDRE (Setup_fdre_C_CE)      -0.205    22.644    cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/output_buffer/lanes[3].groups[25].bank0_reg[821]
+  -------------------------------------------------------------------
+                         required time                         22.644    
+                         arrival time                         -18.044    
+  -------------------------------------------------------------------
+                         slack                                  4.600    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.023ns  (arrival time - required time)
+  Source:                 cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/abs_index_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/round_index_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.355ns  (logic 0.141ns (39.718%)  route 0.214ns (60.282%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.262ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.185ns
+    Source Clock Delay      (SCD):    0.888ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  cnn_system_i/ps7/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    cnn_system_i/ps7/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  cnn_system_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=22846, routed)       0.552     0.888    cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/s_axi_aclk
+    SLICE_X48Y62         FDRE                                         r  cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/abs_index_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y62         FDRE (Prop_fdre_C_Q)         0.141     1.029 r  cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/abs_index_reg[4]/Q
+                         net (fo=1, routed)           0.214     1.243    cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/abs_index[4]
+    SLICE_X51Y59         FDRE                                         r  cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/round_index_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  cnn_system_i/ps7/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    cnn_system_i/ps7/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  cnn_system_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=22846, routed)       0.819     1.185    cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/s_axi_aclk
+    SLICE_X51Y59         FDRE                                         r  cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/round_index_reg[4]/C
+                         clock pessimism             -0.035     1.150    
+    SLICE_X51Y59         FDRE (Hold_fdre_C_D)         0.070     1.220    cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/round_index_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.220    
+                         arrival time                           1.243    
+  -------------------------------------------------------------------
+                         slack                                  0.023    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_fpga_0
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { cnn_system_i/ps7/inst/PS7_i/FCLKCLK[0] }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     DSP48E1/CLK  n/a            3.884         20.000      16.116     DSP48_X3Y33   cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/post/product_reg[0]/CLK
+Low Pulse Width   Slow    RAMD32/CLK   n/a            1.250         10.000      8.750      SLICE_X32Y42  cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/activation_buffer/taps[0].lanes[0].bank0_reg_r1_0_15_0_5/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK   n/a            1.250         10.000      8.750      SLICE_X32Y42  cnn_system_i/cnn_axi_accelerator_0/inst/cnn/core/activation_buffer/taps[0].lanes[0].bank0_reg_r1_0_15_0_5/RAMA/CLK
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  clk_fpga_0
+
+Max Delay             1 Endpoint
+Min Delay             1 Endpoint
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 cnn_system_i/ps7/inst/PS7_i/FCLKRESETN[0]
+                            (internal pin)
+  Destination:            cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Setup (Max at Slow Process Corner)
+  Data Path Delay:        2.431ns  (logic 0.124ns (5.101%)  route 2.307ns (94.899%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Uncertainty:      0.301ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.600ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    PS7_X0Y0             PS7                          0.000     0.000 f  cnn_system_i/ps7/inst/PS7_i/FCLKRESETN[0]
+                         net (fo=1, routed)           2.307     2.307    cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/ext_reset_in
+    SLICE_X27Y50         LUT1 (Prop_lut1_I0_O)        0.124     2.431 r  cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1/O
+                         net (fo=1, routed)           0.000     2.431    cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/exr_d1
+    SLICE_X27Y50         FDRE                                         r  cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  cnn_system_i/ps7/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088     1.088    cnn_system_i/ps7/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  cnn_system_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=22846, routed)       1.522     2.701    cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/slowest_sync_clk
+    SLICE_X27Y50         FDRE                                         r  cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 cnn_system_i/ps7/inst/PS7_i/FCLKRESETN[0]
+                            (internal pin)
+  Destination:            cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             (none)
+  Path Type:              Hold (Min at Fast Process Corner)
+  Data Path Delay:        0.945ns  (logic 0.045ns (4.762%)  route 0.900ns (95.238%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Uncertainty:      0.301ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Total Input Jitter      (TIJ):    0.600ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Timing Exception:       False Path
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    PS7_X0Y0             PS7                          0.000     0.000 f  cnn_system_i/ps7/inst/PS7_i/FCLKRESETN[0]
+                         net (fo=1, routed)           0.900     0.900    cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/ext_reset_in
+    SLICE_X27Y50         LUT1 (Prop_lut1_I0_O)        0.045     0.945 r  cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to_i_1/O
+                         net (fo=1, routed)           0.000     0.945    cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/exr_d1
+    SLICE_X27Y50         FDRE                                         r  cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  cnn_system_i/ps7/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    cnn_system_i/ps7/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  cnn_system_i/ps7/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=22846, routed)       0.844     1.210    cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/slowest_sync_clk
+    SLICE_X27Y50         FDRE                                         r  cnn_system_i/reset_50m/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to/C
+
+
+
+
+

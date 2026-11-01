@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# xsim v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Nov  1 15:41:19 2026
+# Process ID: 39736
+# Current directory: D:/work/FPGA/pynq_cnn_delivery/.runtime/o_08f54e0e/build/sim_network
+# Command line: xsim.exe -log xsim.log -mode tcl -source {xsim.dir/sim_axi_network/xsim_script.tcl}
+# Log file: D:/work/FPGA/pynq_cnn_delivery/.runtime/o_08f54e0e/build/sim_network/xsim.log
+# Journal file: D:/work/FPGA/pynq_cnn_delivery/.runtime/o_08f54e0e/build/sim_network\xsim.jou
+# Running On: LAPTOP-ABFF0DL3, OS: Windows, CPU Frequency: 2995 MHz, CPU Physical cores: 16, Host memory: 16450 MB
+#-----------------------------------------------------------
+source xsim.dir/sim_axi_network/xsim_script.tcl
+# xsim {sim_axi_network} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS AXI network sample=0 collision=-16265 steering=1202 input_write_readback=4096
+PASS AXI network sample=1 collision=-18541 steering=166 input_write_readback=4096
+PASS AXI network sample=2 collision=-22660 steering=1445 input_write_readback=4096
+PASS AXI network sample=3 collision=-16894 steering=266 input_write_readback=4096
+PASS AXI network sample=4 collision=-25288 steering=-409 input_write_readback=4096
+PASS AXI network sample=5 collision=-18233 steering=177 input_write_readback=4096
+PASS AXI network sample=6 collision=-28795 steering=-131 input_write_readback=4096
+PASS AXI network sample=7 collision=-35546 steering=-1512 input_write_readback=4096
+PASS AXI network sample=8 collision=-25608 steering=-304 input_write_readback=4096
+PASS AXI network sample=9 collision=-33720 steering=92 input_write_readback=4096
+PASS AXI network sample=10 collision=18522 steering=568 input_write_readback=4096
+PASS AXI network sample=11 collision=67587 steering=1092 input_write_readback=4096
+PASS AXI network sample=12 collision=79778 steering=-151 input_write_readback=4096
+PASS AXI network sample=13 collision=88862 steering=-914 input_write_readback=4096
+PASS AXI network sample=14 collision=91393 steering=-1568 input_write_readback=4096
+PASS AXI network sample=15 collision=83230 steering=-3118 input_write_readback=4096
+PASS AXI network sample=16 collision=86951 steering=-1955 input_write_readback=4096
+PASS AXI network sample=17 collision=85462 steering=-1679 input_write_readback=4096
+PASS AXI network sample=18 collision=61347 steering=-3426 input_write_readback=4096
+PASS AXI network sample=19 collision=62572 steering=-3252 input_write_readback=4096
+PASS AXI network sample=20 collision=40109 steering=78 input_write_readback=4096
+PASS AXI network sample=21 collision=34791 steering=-1037 input_write_readback=4096
+PASS AXI network sample=22 collision=22583 steering=-1633 input_write_readback=4096
+PASS AXI network sample=23 collision=-1283 steering=-3826 input_write_readback=4096
+PASS AXI network sample=24 collision=33942 steering=-1027 input_write_readback=4096
+PASS AXI network sample=25 collision=16335 steering=1688 input_write_readback=4096
+PASS AXI network sample=26 collision=27509 steering=144 input_write_readback=4096
+PASS AXI network sample=27 collision=13535 steering=-1965 input_write_readback=4096
+PASS AXI network sample=28 collision=-10751 steering=-1494 input_write_readback=4096
+PASS AXI network sample=29 collision=-27350 steering=-3416 input_write_readback=4096
+PASS tb_axi_network: samples=30 heads=60 input_bytes=122880 reads=519513 writes=30780
+$finish called at time : 54895020 ns : File "D:/work/FPGA/pynq_cnn_delivery/.runtime/o_08f54e0e/sim/tb_axi_network.sv" Line 124
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:02:55 . Memory (MB): peak = 218.129 ; gain = 0.000
+exit
+INFO: xsimkernel Simulation Memory Usage: 17540 KB (Peak: 17540 KB), Simulation CPU Usage: 168796 ms
+INFO: [Common 17-206] Exiting xsim at Sun Nov  1 15:44:16 2026...
