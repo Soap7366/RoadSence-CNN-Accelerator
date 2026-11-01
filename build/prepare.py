@@ -1,5 +1,4 @@
 """Windows first-use wizard. Credentials exist only in this process's memory."""
-import contextlib
 import ipaddress
 import json
 import queue
@@ -8,6 +7,7 @@ import socket
 import subprocess
 import sys
 import threading
+import time
 from pathlib import Path
 from types import SimpleNamespace
 import tkinter as tk
@@ -26,7 +26,7 @@ def board_address(value):
 
 def reachable(host, port=22):
     try:
-        with socket.create_connection((host, port), 3):
+        with socket.create_connection((host, port), 5):
             return True
     except OSError:
         return False
@@ -74,29 +74,44 @@ def register_host(host, secret):
         client.close()
 
 
-def prepare_board(host, secret):
+def prepare_board(host, secret, stage=None):
     from pscnn.runtime_config import load_config, save_config
     from build import remote_control
     from board_adapter import BoardAdapter
+    stage=stage or (lambda text,timeout:print(text+'……',flush=True))
+    stage('检查本地交付包',30)
+    from sim.verify_package import check
+    integrity=check()
+    if integrity['status']!='PASS':
+        raise RuntimeError('本地交付包不完整：'+'; '.join(integrity['errors'][:5]))
     cfg = load_config()
     cfg.pop('known_hosts', None)
     cfg['host'] = host
     save_config(cfg)
-    register_host(host, secret)
+    stage('验证板卡身份和密码',65)
+    for attempt in range(2):
+        try:
+            register_host(host, secret)
+            break
+        except (TimeoutError,ConnectionError):
+            if attempt:raise
+            print('连接暂时超时，正在重试一次……',flush=True)
+            time.sleep(1)
     existing = load_config()['remote_root']
     if '/releases/release_' in existing:
         try:
-            print('检查已有板端部署……', flush=True)
+            stage('检查已有板端部署',60)
             remote_control.board_check(SimpleNamespace(boot=False), password=secret)
-        except Exception:
-            print('已有部署不可用，创建新版本……', flush=True)
+        except remote_control.RemoteCommandError as exc:
+            print('已有部署检查失败：'+str(exc),flush=True)
+            stage('部署板端程序并构建验证',600)
             remote_control.deploy(SimpleNamespace(overlay=None), password=secret)
     else:
-        print('正在上传并验证板端程序……', flush=True)
+        stage('部署板端程序并构建验证',600)
         remote_control.deploy(SimpleNamespace(overlay=None), password=secret)
-    print('正在加载板端镜像……', flush=True)
+    stage('加载板端镜像',120)
     remote_control.board_check(SimpleNamespace(boot=True), password=secret)
-    print('正在验证真实图像推理……', flush=True)
+    stage('验证真实图像推理',120)
     adapter = BoardAdapter()
     try:
         adapter.connect(host, secret)
@@ -115,15 +130,12 @@ def prepare_board(host, secret):
         finally:
             writer.release()
         adapter.process(str(video), 4, 'prepare_check')
+        results=[value for kind,value in list(adapter.events.queue) if kind=='complete']
+        if not results or len(results[-1]['samples'])!=1:
+            raise RuntimeError('真实单帧推理没有返回完整结果')
+        print('真实图像推理通过。',flush=True)
     finally:
         adapter.close()
-
-
-class Log:
-    def __init__(self, events): self.events = events
-    def write(self, value):
-        if value: self.events.put(('log', value))
-    def flush(self): pass
 
 
 class Wizard(tk.Tk):
@@ -131,9 +143,12 @@ class Wizard(tk.Tk):
         super().__init__()
         from pscnn.runtime_config import load_config
         self.title('PYNQ CNN · 一键准备')
-        self.geometry('760x560')
+        self.geometry('800x640')
         self.events = queue.Queue()
         self.busy = False
+        self.cancelled=threading.Event()
+        self.stage_text='等待开始'
+        self.started=0
         self.host = tk.StringVar(value=load_config()['host'])
         self.secret = tk.StringVar()
         ttk.Label(self, text='板卡通电并用网线连接电脑；首次准备请保持电脑联网。').pack(pady=12)
@@ -144,6 +159,9 @@ class Wizard(tk.Tk):
         ttk.Entry(row, textvariable=self.secret, show='*', width=24).grid(row=1, column=1)
         ttk.Label(self, text='首次连接自动登记指纹，请确认网线连接的是你的板卡。密码不保存。').pack(pady=8)
         self.button = ttk.Button(self, text='开始准备', command=self.begin); self.button.pack(pady=5)
+        self.cancel_button=ttk.Button(self,text='取消准备',command=self.cancel,state='disabled');self.cancel_button.pack(pady=3)
+        self.status=ttk.Label(self,text='等待开始');self.status.pack(pady=4)
+        self.progress=ttk.Progressbar(self,mode='indeterminate');self.progress.pack(fill='x',padx=20)
         self.restore = ttk.Button(self, text='恢复上次修改前的网卡设置', command=self.restore_network); self.restore.pack(pady=3)
         self.output = tk.Text(self, wrap='word', height=19); self.output.pack(fill='both', expand=True, padx=16, pady=12)
         self.protocol('WM_DELETE_WINDOW', self.close)
@@ -151,8 +169,14 @@ class Wizard(tk.Tk):
 
     def close(self):
         if self.busy:
-            messagebox.showinfo('正在准备', '请等待当前步骤结束后关闭窗口。')
+            self.cancel()
+            self.closing=True
         else: self.destroy()
+
+    def cancel(self):
+        self.cancelled.set()
+        self.status.configure(text='正在停止准备任务并关闭连接……')
+        if hasattr(self,'selection_ready'):self.selection_ready.set()
 
     def elevate(self, action, index, address='', host=''):
         # Only validated numeric values reach PowerShell. The password never does.
@@ -186,10 +210,16 @@ class Wizard(tk.Tk):
         raw = subprocess.check_output(['powershell.exe', '-NoProfile', '-File', str(ROOT/'build/network.ps1'), '-Action', 'list'], creationflags=subprocess.CREATE_NO_WINDOW)
         adapters = json.loads(raw.decode('utf-8-sig'))
         if not adapters: raise RuntimeError('未发现已连接的有线网卡，请检查网线和板卡电源。')
+        network=ipaddress.ip_network(host+'/24',strict=False)
+        if any(ipaddress.IPv4Address(address) in network for item in adapters for address in item['addresses']):
+            # A busy SSH port must not trigger unnecessary network reconfiguration.
+            self.events.put(('log','有线网卡已在板卡网段，保留现有配置并重试 SSH。\n'))
+            return
         self.selection = None
         self.selection_ready = threading.Event()
         self.events.put(('network', (host, adapters)))
         self.selection_ready.wait()
+        if self.cancelled.is_set():raise RuntimeError('准备已取消。')
         if self.selection is None: raise RuntimeError('已取消网卡配置。')
         prefix = host.rsplit('.', 1)[0]
         used = {a for item in adapters for a in item['addresses']}
@@ -222,13 +252,22 @@ class Wizard(tk.Tk):
         except ValueError as exc:
             messagebox.showerror('输入有误', str(exc)); return
         self.secret.set('')
+        self.output.delete('1.0','end')
+        self.cancelled.clear()
         self.busy = True
+        self.started=time.monotonic()
+        self.stage_text='检查网络'
+        self.cancel_button.configure(state='normal')
+        self.progress.start(12)
         self.button.configure(state='disabled'); self.restore.configure(state='disabled')
         def worker():
             try:
-                with contextlib.redirect_stdout(Log(self.events)), contextlib.redirect_stderr(Log(self.events)):
-                    self.ensure_network(host)
-                    prepare_board(host, secret)
+                self.ensure_network(host)
+                from task_runner import run_task
+                import manage
+                run_task([sys.executable,'-u','-B',str(ROOT/'build/prepare_worker.py')],
+                         dict(host=host,password=secret),self.events,self.cancelled,
+                         ROOT/'.runtime/prepare.log',env=manage.clean_env())
                 self.events.put(('success', '准备完成，可以双击 Start.exe 或 start.cmd 使用。'))
             except Exception as exc:
                 # Do not print credentials even if a third-party exception includes them.
@@ -240,14 +279,29 @@ class Wizard(tk.Tk):
             try: kind, value = self.events.get_nowait()
             except queue.Empty: break
             if kind == 'network': self.select_network(value)
+            elif kind == 'stage': self.stage_text=value
             elif kind == 'log': self.output.insert('end', value); self.output.see('end')
             else:
                 self.busy = False
+                self.cancel_button.configure(state='disabled')
+                self.progress.stop()
+                self.status.configure(text='准备完成' if kind=='success' else '准备已停止')
                 self.button.configure(state='normal'); self.restore.configure(state='normal')
                 self.output.insert('end', '\n'+value+'\n'); self.output.see('end')
+                if getattr(self,'closing',False):self.destroy();return
                 (messagebox.showinfo if kind == 'success' else messagebox.showerror)('一键准备', value)
+        if self.busy and not self.cancelled.is_set():
+            self.status.configure(text=f'{self.stage_text} · 已用时 {int(time.monotonic()-self.started)} 秒')
         self.after(100, self.poll)
 
 
 if __name__ == '__main__':
-    Wizard().mainloop()
+    from process_lock import SingleInstance
+    instance=SingleInstance(ROOT/'.runtime/prepare.lock')
+    try:
+        if instance.acquire():Wizard().mainloop()
+        else:
+            notice=tk.Tk();notice.withdraw()
+            messagebox.showinfo('一键准备已打开','此文件夹的准备程序已经在运行，请使用已打开的窗口。')
+            notice.destroy()
+    finally:instance.close()

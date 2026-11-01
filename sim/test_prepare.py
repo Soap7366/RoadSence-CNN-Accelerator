@@ -9,6 +9,7 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path[:0]=[str(ROOT),str(ROOT/'build'),str(ROOT/'src/stream')]
 import prepare
 import paramiko
+from build import remote_control
 
 
 class PrepareTests(unittest.TestCase):
@@ -70,9 +71,11 @@ class PrepareTests(unittest.TestCase):
     def test_existing_deployment_reuses_one_in_memory_password(self):
         from unittest.mock import Mock
         adapter=Mock(ready=True)
+        adapter.events.queue=[('complete',dict(samples=[{}]))]
         cfg=dict(host='192.168.2.99',remote_root='/home/xilinx/pynq_cnn_delivery/releases/release_test')
         with patch('pscnn.runtime_config.load_config',return_value=cfg), \
              patch('pscnn.runtime_config.save_config'),patch.object(prepare,'register_host'), \
+             patch('sim.verify_package.check',return_value=dict(status='PASS')), \
              patch('build.remote_control.board_check') as check, \
              patch('build.remote_control.deploy') as deploy, \
              patch('board_adapter.BoardAdapter',return_value=adapter):
@@ -83,6 +86,100 @@ class PrepareTests(unittest.TestCase):
         adapter.connect.assert_called_once_with('192.168.2.99','memory-secret')
         adapter.process.assert_called_once()
         adapter.close.assert_called_once()
+
+    def test_task_deadline_and_cancellation_stop_child(self):
+        import queue,threading,time,json
+        from task_runner import run_task
+        for mode in ('timeout','cancel'):
+            with self.subTest(mode=mode),tempfile.TemporaryDirectory() as directory:
+                events=queue.Queue();cancel=threading.Event()
+                if mode=='cancel':cancel.set()
+                # Uses an actual child that prints a stage then blocks, matching
+                # a transport stuck inside a C socket call.
+                code="import sys,time,json;sys.stdin.readline();print(json.dumps(dict(kind='stage',text='blocked',timeout=.3)),flush=True);time.sleep(60)"
+                started=time.monotonic()
+                with self.assertRaises((TimeoutError,RuntimeError)):
+                    run_task([sys.executable,'-u','-c',code],dict(password='private'),events,cancel,
+                             Path(directory)/'task.log',startup_timeout=10,idle_timeout=10)
+                self.assertLess(time.monotonic()-started,10)
+
+    def test_task_redacts_secrets_and_requires_success(self):
+        import queue,threading
+        from task_runner import run_task
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'task.log';events=queue.Queue()
+            code="import sys,json;p=json.loads(sys.stdin.readline())['password'];print(json.dumps(dict(kind='log',text='password='+p)));print(json.dumps(dict(kind='success')))"
+            run_task([sys.executable,'-u','-c',code],dict(password='private-secret'),events,threading.Event(),path)
+            self.assertNotIn('private-secret',path.read_text())
+            self.assertIn('***',path.read_text())
+
+    def test_network_timeout_does_not_redeploy(self):
+        cfg=dict(host='192.168.2.99',remote_root='/home/xilinx/pynq_cnn_delivery/releases/release_test')
+        with patch('pscnn.runtime_config.load_config',return_value=cfg), \
+             patch('pscnn.runtime_config.save_config'),patch.object(prepare,'register_host'), \
+             patch('sim.verify_package.check',return_value=dict(status='PASS')), \
+             patch('build.remote_control.board_check',side_effect=TimeoutError('network timeout')), \
+             patch('build.remote_control.deploy') as deploy:
+            with self.assertRaises(TimeoutError):prepare.prepare_board('192.168.2.99','secret')
+        deploy.assert_not_called()
+
+    def test_same_subnet_does_not_prompt_to_change_network(self):
+        import queue,json
+        app=SimpleNamespace(events=queue.Queue())
+        adapters=[dict(index=20,addresses=['192.168.2.1'])]
+        with patch.object(prepare,'reachable',return_value=False), \
+             patch('subprocess.check_output',return_value=json.dumps(adapters).encode()):
+            prepare.Wizard.ensure_network(app,'192.168.2.99')
+        self.assertFalse(hasattr(app,'selection_ready'))
+
+    def test_completion_receipt_finishes_without_ssh_exit_status(self):
+        from build.remote_control import execute,RemoteCommandError
+        from unittest.mock import Mock
+        for code in (0,3):
+            channel=Mock()
+            channel.recv_ready.side_effect=[True,False]
+            channel.recv.return_value=f'result\nPSCNN_DONE_test:{code}\n'.encode()
+            channel.recv_stderr_ready.return_value=False
+            channel.exit_status_ready.return_value=False
+            stdin=Mock();stdout=SimpleNamespace(channel=channel)
+            client=SimpleNamespace(exec_command=lambda *a,**k:(stdin,stdout,Mock()))
+            with self.subTest(code=code),patch('build.remote_control.uuid.uuid4',return_value=SimpleNamespace(hex='test')):
+                if code:
+                    with self.assertRaises(RemoteCommandError):execute(client,'false')
+                else:self.assertEqual(execute(client,'true'),'result')
+            channel.recv_exit_status.assert_not_called()
+
+    def test_preparation_lock_releases_after_process_exit(self):
+        from process_lock import SingleInstance
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/'prepare.lock'
+            first=SingleInstance(path);second=SingleInstance(path)
+            try:
+                self.assertTrue(first.acquire())
+                self.assertFalse(second.acquire())
+                first.close()
+                self.assertTrue(second.acquire())
+            finally:first.close();second.close()
+
+    def test_completed_remote_command_recovers_from_durable_receipt(self):
+        import itertools
+        from unittest.mock import Mock
+        from build.remote_control import execute
+        channel=Mock()
+        channel.recv_ready.return_value=False
+        channel.recv_stderr_ready.return_value=False
+        channel.exit_status_ready.return_value=False
+        probe=Mock()
+        probe.recv_ready.side_effect=[True,False]
+        probe.recv.return_value=b'0\ncompleted without SSH exit\n'
+        probe.exit_status_ready.return_value=True
+        client=Mock()
+        client.exec_command.return_value=(Mock(),SimpleNamespace(channel=channel),Mock())
+        client.get_transport.return_value.open_session.return_value=probe
+        with patch('build.remote_control.time.monotonic',side_effect=itertools.count()), \
+             patch('build.remote_control.time.sleep'):
+            self.assertEqual(execute(client,'true'),'completed without SSH exit\n')
+        channel.recv_exit_status.assert_not_called()
 
 
 if __name__=='__main__':unittest.main()

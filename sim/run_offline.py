@@ -12,6 +12,7 @@ def main():
     jobs = [
         ('skill',ROOT,[sys.executable,'-B','-m','unittest','discover','-s','sim','-p','test_skill.py']),
         ('automation',ROOT,[sys.executable,'-B','-m','unittest','discover','-s','sim','-p','test_automation.py']),
+        ('prepare',ROOT,[sys.executable,'-B','-m','unittest','discover','-s','sim','-p','test_prepare.py']),
         ('stream',ROOT/'src/stream',[sys.executable,'-B','-m','unittest','discover','-s','tests']),
         ('desktop',ROOT/'src/desktop',[sys.executable,'-B','test_board_adapter.py']),
     ]

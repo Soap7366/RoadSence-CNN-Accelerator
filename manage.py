@@ -252,7 +252,7 @@ def main():
     p=sub.add_parser('setup',help='Create isolated PC environment; install pinned wheels')
     p.add_argument('--python');p.add_argument('--offline',action='store_true');p.add_argument('--wheelhouse')
     p=sub.add_parser('doctor');p.add_argument('--gui',action='store_true')
-    sub.add_parser('verify');sub.add_parser('test');sub.add_parser('start')
+    sub.add_parser('verify');sub.add_parser('test');sub.add_parser('start');sub.add_parser('prepare')
     sub.add_parser('platform-check',help='Resolve Linux/macOS pinned wheels; does not execute those operating systems')
     p=sub.add_parser('configure')
     for name in ('host','username','remote-base','remote-python'):p.add_argument('--'+name)
@@ -282,6 +282,7 @@ def main():
     elif args.command=='test':
         run([sys.executable,'-B','sim/verify_package.py'])
         runtime(['sim/run_offline.py'])
+    elif args.command=='prepare':runtime(['build/prepare.py'])
     elif args.command=='start':
         runtime(['build/doctor.py','--gui'])
         runtime(['src/desktop/desktop.py'])
