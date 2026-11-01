@@ -18,7 +18,7 @@ class Launcher {
             info.UseShellExecute = false;
             info.CreateNoWindow = mode == "start";
             using (var process = Process.Start(info)) { process.WaitForExit();
-                if (process.ExitCode != 0) MessageBox.Show("Operation failed. Run " + (mode == "prepare" ? "Prepare.cmd" : "start.cmd") + " to view details.", "RoadSense");
+                if (process.ExitCode != 0) MessageBox.Show("Operation failed. Run " + (mode == "prepare" ? "build\\prepare.cmd" : "build\\start_demo.cmd") + " to view details.", "RoadSense");
                 return process.ExitCode;
             }
         } catch (Exception e) { MessageBox.Show(e.Message, "RoadSense"); return 1; }

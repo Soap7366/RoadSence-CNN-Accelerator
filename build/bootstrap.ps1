@@ -22,7 +22,7 @@ try {
     }
     if ($Mode -eq 'start') {
         Add-Type -AssemblyName System.Windows.Forms
-        [System.Windows.Forms.MessageBox]::Show('Please run Prepare.exe or Prepare.cmd first.', 'RoadSense') | Out-Null
+        [System.Windows.Forms.MessageBox]::Show('Please run Prepare.exe or build\prepare.cmd first.', 'RoadSense') | Out-Null
         exit 1
     }
     $candidates = @()
@@ -68,7 +68,7 @@ try {
         Move-Item -LiteralPath $envFolder -Destination (Join-Path $runtime ('pc_env_previous_' + [guid]::NewGuid().ToString('N')))
     }
     & $basePython -B manage.py setup --python $basePython
-    if ($LASTEXITCODE -ne 0) { throw 'PC environment setup failed. Check Internet access and retry Prepare.cmd.' }
+    if ($LASTEXITCODE -ne 0) { throw 'PC environment setup failed. Check Internet access and retry build\prepare.cmd.' }
     & $venv -B manage.py prepare
     exit $LASTEXITCODE
 } catch {

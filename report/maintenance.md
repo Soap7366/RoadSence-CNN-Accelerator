@@ -38,3 +38,9 @@
 五组离线回归通过（skill 2项、automation 9项、prepare 13项、stream 10项通过且18项ARM专用跳过、desktop 4项），真实RoadSense窗口构造通过。本机交付清单与临时新目录导出检查均通过，覆盖708个清单条目；导出测试副本已清理。
 
 697个非文档/清单文件与整理基线逐字节相同；622项来源记录的当前副本哈希一致，原始来源SHA未改。当前入口文档本地链接有效。核对记录在sim/results/cleanup_verification.json、cleanup_export_validation.json。本次没有重新部署板卡、加载镜像或改变网卡设置。
+
+## 后续入口精简
+
+用户确认后删除根目录重复Start.exe、start.cmd，将Prepare.cmd移为build/prepare.cmd；根start.sh与已有build/start_demo.sh重复，删除根副本并保留后者。build/start_demo.cmd统一调用bootstrap.ps1以使用项目内环境。根目录日常入口仅Prepare.exe和RoadSense.exe，manage.py及版本管理文件保留，核心目录不变。
+
+同步更新EXE构建列表、失败时的备用脚本路径、准备完成提示、命名检查及交付清单。历史实测中的Start名称保持原样供追溯，当前操作以根README为准。该调整不改变算法、模型、采样、播放或板端运算逻辑。

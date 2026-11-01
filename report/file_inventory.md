@@ -1,6 +1,6 @@
 # 最终文件取舍与复现入口
 
-本包软件名为RoadSense，Windows入口为Prepare.exe准备、RoadSense.exe使用，Start.exe/start.cmd保留；命令行入口是manage.py。运行文件来自最终桌面、stream v0.3.0、v0.7.0镜像启动基础、SystolicCNN计算核心，以及旧交接包中的pynq_axi_integration_20261029板级集成源码。原目录不修改。
+本包软件名为RoadSense，Windows入口为Prepare.exe准备、RoadSense.exe使用；命令行入口是manage.py，备用CMD/SH集中在build目录。运行文件来自最终桌面、stream v0.3.0、v0.7.0镜像启动基础、SystolicCNN计算核心，以及旧交接包中的pynq_axi_integration_20261029板级集成源码。原目录不修改。
 
 | 内容 | 新位置 | 取舍理由 |
 |---|---|---|
@@ -16,7 +16,7 @@
 | 3张JPEG、模型结构/量化/来源 | data | 支持快速smoke，不带全量训练/视频数据集 |
 | 工作流、校验脚本、提示词、踩坑表 | skill | 提炼为其他PYNQ题目可适配的方法 |
 | 自动环境、构建、部署、检查 | manage.py、build、sim | 不要求手动设置旧路径，不要求WinSCP逐文件部署 |
-| 启动器与品牌资源 | 根目录EXE、build/roadsense.png与.ico | 同时保留RoadSense入口、旧Start兼容入口与Prepare；图标为用户指定图片 |
+| 启动器与品牌资源 | 根目录两个EXE、build/roadsense.png与.ico | RoadSense用于体验、Prepare用于准备；备用入口集中在build，图标为用户指定图片 |
 
 不收录：旧桌面网页、stream v0.1/v0.2整包、全部候选模型、旧vendor/ssh_vendor/ssh_py39、解释器、历史回退整包、已有桌面records和大视频。旧目录原地保留。
 

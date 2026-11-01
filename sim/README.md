@@ -8,4 +8,4 @@ acceptance.py是真实Tk与板卡验收入口：`python sim/acceptance.py --pack
 
 计算核心RTL通过manage.py rtl sim调用；完整AXI接口通过manage.py overlay sim调用；PS7预设通过overlay check检查。CLI返回非零表示失败，不以进程启动成功代替仿真PASS标记。
 
-README.md和SKILL.md保留固定入口名，Windows兼容入口保留RoadSense.exe?Start.exe、Prepare.exe、Prepare.cmd；其余自有文件名采用小写英文/数字/下划线/连字符与扩展名。第三方工具产生的本机文件只留.runtime，不进入交付命名检查。
+README.md和SKILL.md保留固定入口名，根目录Windows入口保留RoadSense.exe、Prepare.exe；备用脚本为build/prepare.cmd、build/start_demo.cmd与build/start_demo.sh。其余自有文件名采用小写英文/数字/下划线/连字符与扩展名。第三方工具产生的本机文件只留.runtime，不进入交付命名检查。

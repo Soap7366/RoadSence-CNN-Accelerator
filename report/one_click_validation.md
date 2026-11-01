@@ -2,6 +2,8 @@
 
 日期：2026-11-01（America/Los_Angeles）。修复基线：Git `8ca16b2`。
 
+本文保留当时实测的入口名。当前日常入口已统一为RoadSense.exe，原Start入口已移除；备用入口为build/start_demo.cmd，当前结构见maintenance.md。
+
 ## 卡住原因与处理
 
 对用户卡住的真实进程抓取调用栈，工作线程位于 Paramiko packet.write_all → SFTP put。该循环可持续重试 socket timeout，原先的远程命令超时无法覆盖上传。旧流程还把已有部署检查的任何异常都当作部署损坏，网络超时会触发重传，且没有显示文件进度。

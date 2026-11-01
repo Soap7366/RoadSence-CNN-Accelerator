@@ -272,7 +272,7 @@ class Wizard(tk.Tk):
                 run_task([sys.executable,'-u','-B',str(ROOT/'build/prepare_worker.py')],
                          dict(host=host,password=secret),self.events,self.cancelled,
                          ROOT/'.runtime/prepare.log',env=manage.clean_env())
-                self.events.put(('success', '准备完成，可以双击 Start.exe 或 start.cmd 使用。'))
+                self.events.put(('success', '准备完成，可以双击 RoadSense.exe 使用。'))
             except Exception as exc:
                 # Do not print credentials even if a third-party exception includes them.
                 self.events.put(('error', str(exc).replace(secret, '***')))
