@@ -2,6 +2,18 @@
 
 这是独立的源码与运行交付包。PC端不再读取原工作区的vendor、SSH依赖、Tcl或交接包路径。统一入口是 `manage.py`，可从任意工作目录调用。首次setup后，Windows可双击根目录start.cmd，Linux/macOS可执行sh start.sh。
 
+## Windows 一键准备与启动
+
+1. 解压完整文件夹到可写目录。板卡插好已有的 PYNQ 参考系统 SD 卡、通电，用网线直连电脑；电脑可同时通过 Wi-Fi 联网。
+2. 双击根目录 `Prepare.exe`（也可双击 `Prepare.cmd`）。已有可用环境会直接打开准备窗口；缺少环境时自动下载依赖，缺少 Python 时从 python.org 下载并验证签名后为当前用户安装 Python 3.12.10。
+3. 输入板卡实际 IP（默认 `192.168.2.99`）和密码，点击“开始准备”。无需填写电脑 IP。
+4. 已能连接板卡时不修改网卡；无法连接时选择直连板卡的有线网卡，程序添加同网段 `/24` 地址，Windows 会请求管理员授权。不修改 Wi-Fi；带默认网关的有线网卡不会自动配置。准备窗口可恢复程序修改前的网卡设置。
+5. 等待“准备完成”。以后双击 `Start.exe` 或 `start.cmd` 即可使用，软件内连接板卡时再次输入密码。
+
+准备程序会完成首次 SSH 指纹登记、密码验证、独立版本部署、文件读回校验、板端构建、镜像加载与真实图像推理检查。首次登记依赖你输入正确地址并连接可信板卡；已有指纹发生变化时拒绝覆盖。密码只保留在当前进程内存中，不写入配置、环境变量或启动参数。已有可用部署会先检查并复用，失败时尝试创建新版本。
+
+`Start.exe` 和 `Prepare.exe` 是 Windows 启动器，必须与整个文件夹一起保留；不需要安装 Vivado。源码位于 `build/launcher.cs`，可通过 `powershell -ExecutionPolicy Bypass -File build/build_launchers.ps1` 重建。安装程序不会制作 SD 卡或替换 PYNQ 系统；板端仍需满足下文的参考环境要求。Linux/macOS 保持原命令行流程。
+
 ## 支持范围
 
 - PC：Windows x64、Linux x64、macOS13+ Intel/Apple Silicon；Python 3.9–3.12，含正常的Tcl/Tk。平台通用代码与CI矩阵已提供，实际执行的平台见report/validation_status.md。

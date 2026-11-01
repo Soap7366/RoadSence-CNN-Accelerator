@@ -30,7 +30,7 @@ def check():
         errors.append('unmanifested distribution file: '+extra)
     for path in shipped:
         for part in path.relative_to(ROOT).parts:
-            if part not in ('README.md', 'SKILL.md') and not re.fullmatch('[a-z0-9_.-]+',part):
+            if part not in ('README.md', 'SKILL.md', 'Start.exe', 'Prepare.exe', 'Prepare.cmd') and not re.fullmatch('[a-z0-9_.-]+',part):
                 errors.append('invalid name: '+str(path.relative_to(ROOT)))
         if path.suffix == '.py':
             try:

@@ -8,7 +8,6 @@ import shutil
 import shlex
 import socket
 import sys
-import threading
 import time
 import uuid
 from pathlib import Path, PurePosixPath
@@ -47,21 +46,32 @@ def execute(client,command,password=None):
     stdin,stdout,stderr=client.exec_command(command,timeout=180)
     if password is not None:
         stdin.write(password+'\n');stdin.flush()
-    errors=[]
-    read_errors=[]
-    def drain():
-        try:
-            for line in iter(stderr.readline,''):
-                errors.append(line);print(line,end='',file=sys.stderr,flush=True)
-        except BaseException as exc:
-            read_errors.append(exc)
-    worker=threading.Thread(target=drain,daemon=True);worker.start()
+    # These are finite deployment commands. Signal EOF after the optional sudo
+    # password so sshd can finish the channel after the remote command exits.
+    stdin.channel.shutdown_write()
+    channel=stdout.channel
     output=[]
-    for line in iter(stdout.readline,''):
-        output.append(line);print(line,end='',flush=True)
-    code=stdout.channel.recv_exit_status();worker.join(timeout=10)
-    if worker.is_alive() or read_errors:
-        raise RuntimeError('Remote stderr was not fully drained: '+str(read_errors))
+    deadline=time.monotonic()+180
+    import codecs
+    decoder=codecs.getincrementaldecoder('utf-8')(errors='replace')
+    error_decoder=codecs.getincrementaldecoder('utf-8')(errors='replace')
+    while True:
+        while channel.recv_ready():
+            chunk=decoder.decode(channel.recv(65536))
+            output.append(chunk);print(chunk,end='',flush=True)
+        while channel.recv_stderr_ready():
+            print(error_decoder.decode(channel.recv_stderr(65536)),end='',file=sys.stderr,flush=True)
+        if channel.exit_status_ready() and not channel.recv_ready() and not channel.recv_stderr_ready():
+            break
+        if time.monotonic()>deadline:
+            channel.close()
+            raise TimeoutError('Remote command exceeded 180 seconds: '+command)
+        time.sleep(.02)
+    tail=decoder.decode(b'',final=True)
+    output.append(tail)
+    print(tail,end='',flush=True)
+    print(error_decoder.decode(b'',final=True),end='',file=sys.stderr,flush=True)
+    code=channel.recv_exit_status()
     if code:raise RuntimeError('Remote command failed (%s): %s'%(code,command))
     return ''.join(output)
 
@@ -85,7 +95,7 @@ def mkdir(sftp,path):
     except FileNotFoundError:sftp.mkdir(path)
 
 
-def deploy(args):
+def deploy(args, password=None):
     cfg=load_config();base=release_base(cfg)
     source=ROOT
     overlay=getattr(args,'overlay',None)
@@ -114,7 +124,7 @@ def deploy(args):
         manifest={p.relative_to(source).as_posix():hashlib.sha256(p.read_bytes()).hexdigest()
                   for p in package_files(source) if p.relative_to(source).as_posix()!='report/package_manifest.json'}
         (source/'report/package_manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
-    client,secret,_=connect()
+    client,secret,_=connect(password=password)
     release=base+'/releases/release_'+time.strftime('%Y%m%d_%H%M%S',time.gmtime())+'_'+uuid.uuid4().hex[:8]
     q=shlex.quote
     try:
@@ -151,8 +161,8 @@ def deploy(args):
         secret=None;client.close()
 
 
-def board_check(args):
-    cfg=load_config();client,secret,_=connect()
+def board_check(args, password=None):
+    cfg=load_config();client,secret,_=connect(password=password)
     try:
         options=['--boot'] if args.boot else []
         output=execute(client,remote_python(cfg,cfg['remote_root']+'/board/setup.py',*options,sudo=args.boot),

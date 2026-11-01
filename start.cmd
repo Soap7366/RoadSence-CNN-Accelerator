@@ -1,5 +1,5 @@
 @echo off
 setlocal
-python "%~dp0manage.py" start
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0build\bootstrap.ps1" -Mode start
 if errorlevel 1 pause
 endlocal
