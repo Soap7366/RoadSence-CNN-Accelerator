@@ -1,4 +1,4 @@
-# RoadSense
+# RoadSence (CNN Accelerator)
 
 这是 RoadSense 行驶录像碰撞预警演示软件的独立源码与运行交付包。PC端不再读取原工作区的vendor、SSH依赖、Tcl或交接包路径。Windows首次使用运行 `Prepare.exe`，准备完成后运行 `RoadSense.exe`。命令行统一入口是 `manage.py`，可从任意工作目录调用；Linux/macOS先setup，再执行 `sh build/start_demo.sh`。
 
