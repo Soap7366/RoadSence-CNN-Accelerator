@@ -2,7 +2,7 @@
 
 统一调用项目根manage.py，可从其他工作目录用其绝对路径调用。
 
-Windows普通使用入口为 Prepare.exe → roadsense.exe，Start.exe/start.cmd保留兼容。bootstrap.ps1准备本地环境；prepare.py提供向导；prepare_worker.py、task_runner.py负责隔离执行、超时和取消；process_lock.py防止同一目录重复准备。launcher.cs和build_launchers.ps1生成三个启动器，roadsense.png/roadsense.ico是窗口和EXE图标。资源文件名不随显示名RoadSense的大小写调整。
+Windows普通使用入口为 Prepare.exe → RoadSense.exe，Start.exe/start.cmd保留兼容。bootstrap.ps1准备本地环境；prepare.py提供向导；prepare_worker.py、task_runner.py负责隔离执行、超时和取消；process_lock.py防止同一目录重复准备。launcher.cs和build_launchers.ps1生成三个启动器，roadsense.png/roadsense.ico是窗口和EXE图标。资源文件名不随显示名RoadSense的大小写调整。
 
 - setup：检查Python/Tk，创建项目内隔离环境，下载锁定wheel，以no-index安装，再做pip check和模块来源检查。
 - doctor / doctor --gui：验证实际运行环境；有GUI时检查真实Tk窗口。

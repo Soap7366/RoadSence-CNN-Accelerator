@@ -4,7 +4,7 @@
 
 ## 更新内容
 
-- README统一RoadSense名称、Prepare与roadsense.exe使用入口，保留Start兼容入口，说明录像按钮、每4帧采样及当前上传校验流程。
+- README统一RoadSense名称、Prepare与RoadSense.exe使用入口，保留Start兼容入口，说明录像按钮、每4帧采样及当前上传校验流程。
 - build、sim、board与report导航补齐准备任务、图标、验收和诊断脚本的用途；文件取舍及验证状态更新为当前结果。
 - validation_status.md移除已经过时的“尚未真板部署/ARM构建/录像端到端”判断，保留“新综合镜像未上板”和物理网卡配网未实测等边界。
 - source_inventory.json更新desktop.py与test_board_adapter.py的当前副本SHA；原始来源SHA、adapted及历史省略项保持原样。

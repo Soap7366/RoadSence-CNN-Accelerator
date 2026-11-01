@@ -1,6 +1,6 @@
 # PYNQ-Z2部署与证据
 
-Windows首次使用可直接运行根目录Prepare.exe，输入板卡IP和密码，自动完成身份登记、部署或复用、构建、镜像加载及真实图像检查；准备完成后运行roadsense.exe。命令行仍可通过manage.py configure、trust、deploy、board-check --boot、smoke完成流程。远程默认基目录/home/xilinx/pynq_cnn_delivery；deploy只接管带本包标记的目录或创建全新目录，拒绝已有未标记目录和旧项目目录。每次上传一个新release，失败保留原运行配置。
+Windows首次使用可直接运行根目录Prepare.exe，输入板卡IP和密码，自动完成身份登记、部署或复用、构建、镜像加载及真实图像检查；准备完成后运行RoadSense.exe。命令行仍可通过manage.py configure、trust、deploy、board-check --boot、smoke完成流程。远程默认基目录/home/xilinx/pynq_cnn_delivery；deploy只接管带本包标记的目录或创建全新目录，拒绝已有未标记目录和旧项目目录。每次上传一个新release，失败保留原运行配置。
 
 前提：正常PYNQ-Z2 SD系统（参考PYNQ3.1.1）、SSH和网络、/usr/local/share/pynq-venv/bin/python3、PYNQ/XRT、NumPy、Pillow9.0.1。不得将PC端requirements_pc.txt安装到板卡。
 

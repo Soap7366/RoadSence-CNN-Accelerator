@@ -1,6 +1,6 @@
 # 最终文件取舍与复现入口
 
-本包软件名为RoadSense，Windows入口为Prepare.exe准备、roadsense.exe使用，Start.exe/start.cmd保留；命令行入口是manage.py。运行文件来自最终桌面、stream v0.3.0、v0.7.0镜像启动基础、SystolicCNN计算核心，以及旧交接包中的pynq_axi_integration_20261029板级集成源码。原目录不修改。
+本包软件名为RoadSense，Windows入口为Prepare.exe准备、RoadSense.exe使用，Start.exe/start.cmd保留；命令行入口是manage.py。运行文件来自最终桌面、stream v0.3.0、v0.7.0镜像启动基础、SystolicCNN计算核心，以及旧交接包中的pynq_axi_integration_20261029板级集成源码。原目录不修改。
 
 | 内容 | 新位置 | 取舍理由 |
 |---|---|---|
