@@ -540,7 +540,7 @@ class Demo(tk.Tk):
                 title_label.grid_configure(pady=12)
                 value.grid_configure(pady=12)
             self.metric_values[key] = value
-        self.metric_values['pl'].configure(text='待实测')
+        self.metric_values['pl'].configure(text='待测量')
         self.label(self.metrics_body, '传输：PS接收JPEG正文的计时与有效速率，包含SSH缓冲影响。', 10, MUTED).grid(row=5, column=0, columnspan=2, sticky='w', pady=(6, 0))
 
         self.dashboard = tk.Frame(self, bg=BG)
