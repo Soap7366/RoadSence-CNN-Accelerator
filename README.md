@@ -183,7 +183,7 @@ python manage.py smoke
 
 默认部署使用已验证的 `board/base/overlays/cnn_v1`；`build/rebuilt_overlay` 保存另一份已完成构建、尚未上板的重建产物。新构建不会自动替换默认镜像。
 
-## 仓库导航
+## 代码目录与功能对照
 
 | 目录 / 入口 | 内容 |
 |---|---|
@@ -197,6 +197,87 @@ python manage.py smoke
 | [sim](sim) | 自动化验证与仿真证据 |
 | [build](build) | 环境、部署、构建脚本与实现报告 |
 | [report](report) | 设计、性能与验证说明 |
+
+### 代码目录树
+
+```text
+src/
+├── core/                  # PL：CNN 计算核心
+│   ├── rtl/               # 整网控制、PE 阵列、存储与后处理
+│   ├── sim/               # 核心模块与整网测试平台
+│   ├── data/              # 权重、量化参数与 golden 数据
+│   ├── constraints/       # 时钟约束
+│   └── scripts/           # 核心仿真与实现脚本
+├── integration/           # PS7 / AXI / CNN 板级集成
+│   ├── rtl/               # AXI-Lite 桥与加速器封装
+│   ├── sim/               # AXI 协议与整网测试
+│   ├── scripts/           # 板级 Vivado 构建脚本
+│   ├── config/            # 集成配置
+│   ├── reports/           # 来源追溯记录
+│   └── upstream/          # 固定版本上游源码快照
+├── stream/                # 图像传输与 PS 侧推理运行代码
+│   ├── tools/             # 客户端、板端服务与测量入口
+│   ├── pscnn/             # Python 推理、预处理与 PL 访问
+│   ├── native/            # C 图像处理与 MMIO 运行代码
+│   ├── config/            # 模型合同、量化参数与寄存器定义
+│   └── tests/             # 图像流、预处理与故障测试
+└── desktop/               # 桌面界面与板卡连接适配
+board/
+├── base/                  # 基础板端运行包
+│   ├── pscnn/             # 基础推理与板卡控制模块
+│   ├── tools/             # 启动、检查与批量推理入口
+│   ├── config/            # 模型与寄存器配置
+│   ├── fixtures/          # 30 组硬件 golden 输入
+│   └── overlays/cnn_v1/   # 默认 bit / HWH / 镜像清单
+└── evidence/              # 板卡部署与推理证据
+build/                     # 环境、部署、启动器与构建自动化
+├── rebuilt_overlay/       # 重建镜像及实现报告
+└── reports/overlay/       # 历史板级实现报告
+sim/                       # 项目级检查、回归与验收脚本
+└── evidence/              # 随仓库保存的验证记录
+data/                      # 演示图像与模型元数据
+report/                    # 架构、性能、验证及交付清单
+skill/                     # 可复用的加速器验证流程
+.github/workflows/         # CI 工作流
+```
+
+根目录的 `manage.py` 是统一命令入口，`Prepare.exe` 和 `RoadSense.exe` 分别用于准备与演示。`.runtime/` 保存本机环境和构建缓存，`src/desktop/records/` 保存录像处理记录；这些运行时目录不作为源码发布，首次克隆时可能不存在。
+
+### PL 核心文件对照
+
+| 功能 | 源码位置 | 主要职责 |
+|---|---|---|
+| 整网顶层 | [cnn_accelerator.v](src/core/rtl/cnn_accelerator.v) | 连接层引擎、整网控制、在线 GAP 与双任务结果接口 |
+| 整网调度 | [cnn_network_controller.v](src/core/rtl/cnn_network_controller.v) | 自动调度三个卷积块、GAP 与 Linear |
+| 单层计算封装 | [cnn_layer_accelerator.v](src/core/rtl/cnn_layer_accelerator.v) | 集成存储、数据准备、计算阵列与后处理 |
+| 层内与分块控制 | [cnn_controller.v](src/core/rtl/cnn_controller.v)、[tile_controller.v](src/core/rtl/tile_controller.v) | 管理层配置、权重加载与分块计算时序 |
+| 卷积输入准备 | [prep.v](src/core/rtl/prep.v)、[data_mapper.v](src/core/rtl/data_mapper.v) | 生成卷积窗口，按计算时序向阵列提供数据 |
+| 计算阵列与 PE | [systolic_array.v](src/core/rtl/systolic_array.v)、[mac_pe.v](src/core/rtl/mac_pe.v) | 构成 8×16 PE 阵列，执行有符号乘累加 |
+| 参数与片上存储 | [weight_loader.v](src/core/rtl/weight_loader.v)、[memories.v](src/core/rtl/memories.v) | 加载模型参数，提供特征与计算所需的片上存储 |
+| 卷积后处理 | [post_processing.v](src/core/rtl/post_processing.v) | 偏置、重定标、激活与池化等输出处理 |
+| 在线全局池化 | [online_gap.v](src/core/rtl/online_gap.v) | 在 Conv3 输出写入时完成通道累加与 GAP 重定标 |
+| AXI 接口与封装 | [cnn_axi_lite_bridge.sv](src/integration/rtl/cnn_axi_lite_bridge.sv)、[cnn_axi_accelerator.sv](src/integration/rtl/cnn_axi_accelerator.sv) | 连接 PS 的 AXI-Lite 访问与 CNN 控制、输入和结果接口 |
+| 整网验证 | [tb_network.sv](src/core/sim/tb_network.sv) | 驱动 golden 样本，核对中间结果、最终输出与运行周期 |
+
+### 软件、部署与验证代码对照
+
+| 要查看或修改的功能 | 对应位置 | 说明 |
+|---|---|---|
+| 界面与录像操作 | [desktop.py](src/desktop/desktop.py) | 桌面窗口、录像处理与结果展示 |
+| 桌面与板卡衔接 | [board_adapter.py](src/desktop/board_adapter.py) | 将桌面操作接入板卡推理流程 |
+| 图像客户端 / 板端服务 | [client_images.py](src/stream/tools/client_images.py)、[serve_images.py](src/stream/tools/serve_images.py) | 图像发送与板端处理入口 |
+| PS 侧 Python 运行逻辑 | [src/stream/pscnn](src/stream/pscnn) | 图像流、预处理、原生调用、PL 访问与输出解码 |
+| PS 侧 C 实现 | [src/stream/native](src/stream/native) | 灰度转换、缩放、帧处理与 MMIO 访问 |
+| 基础板端启动与检查 | [board/base/tools](board/base/tools)、[board/base/pscnn](board/base/pscnn) | 基础推理、镜像启动和板卡状态检查 |
+| 模型与接口约定 | [data/model](data/model)、[src/stream/config](src/stream/config) | 模型结构、量化参数、输入输出合同与寄存器配置 |
+| 一键准备与部署 | [prepare.py](build/prepare.py)、[prepare_worker.py](build/prepare_worker.py)、[remote_control.py](build/remote_control.py) | 准备向导、后台任务与远程部署 |
+| EXE 启动器源码 | [launcher.cs](build/launcher.cs)、[build_launchers.ps1](build/build_launchers.ps1) | Windows 启动器实现与编译 |
+| 项目级回归 | [sim](sim)、[src/stream/tests](src/stream/tests) | 包完整性、自动化、图像流及准备流程测试 |
+| 验证证据 | [sim/evidence](sim/evidence)、[board/evidence](board/evidence) | 仿真与真实板卡验收记录 |
+
+**推荐阅读路线：** 先看 `desktop.py` 与 `board_adapter.py` 了解应用入口，再看 `src/stream/tools`、`pscnn` 和 `native` 的图像传输及 PS 处理，随后通过 `src/integration/rtl` 的 AXI 接口进入 `cnn_accelerator.v`。理解整网调度后，依次阅读数据准备、PE 阵列、后处理和在线 GAP，最后结合 `tb_network.sv` 与 `sim/evidence/rtl_network.txt` 核对行为和周期。
+
+`src/core` 是独立计算核心工程，`src/integration/upstream` 是带来源记录的固定快照；修改板级构建时需核对集成脚本和 `src/integration/reports/source_provenance.json`，不能只凭同名文件判断实际构建来源。`board/base` 是基础运行包，`src/stream` 包含流式运行代码，修改推理路径时也需确认实际部署入口。
 
 交付完整性检查与导出：
 
